@@ -125,8 +125,5 @@ library(tidyverse)
 library(readr)
 mtcarsREAD <- read_csv(readr_example("mtcars.csv"))
 
-# library(vroom)
-# mtcarsREAD <- vroom(readr_example("mtcars.csv"))
-
 library(readxl)
 read_xlsx(readxl_example("datasets.xlsx"))
