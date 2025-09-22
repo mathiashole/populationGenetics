@@ -74,85 +74,136 @@ Explicar cómo se toma la decisión de moverlo o no.
 En las respuestas, incluir tanto las explicaciones como el código de R o los cálculos
 equivalentes.
 
-## Construir un diagrama de tallos y hojas (extendido) para estos tiempos.
+# Ejercicio 1: Frecuencia de alelo p=0.1
 
-| Stem | Leaf |
-|------|------|
-| 0    | 9    |
-| 1    | 0 0 1 1 2 2 3 3 4 5 5 5 6 7 8 8 8 9 9 9 |
-| 2    | 0 0 1 1 2 3 4 6 |
+Para responder a estas preguntas, tratamos la extracción de cada alelo como un ensayo de Bernoulli, donde "éxito" es obtener el alelo A.
 
-## Construir una tabla de frecuencias y densidades para estos tiempos.
+    ¿Cuál es el número esperado de alelos A en una muestra de 20 alelos?
+    La esperanza de una distribución binomial se calcula como E(X)=n⋅p. En este caso, el tamaño de la muestra (n) es 20 y la frecuencia alélica (p) es 0.1.
+    E(X)=20⋅0.1=2.
+    Se espera que, en promedio, haya 2 alelos A en una muestra de 20.
 
-```{r}
-# Cargar los tiempos
-tiempos <- c(15, 18, 19, 21, 23, 26, 17, 18, 24, 20, 13, 10, 16, 11, 9,
-             12, 14, 10, 19, 13, 20, 15, 11, 18, 15, 21, 12, 19, 18, 22)
+    ¿Cuál es la probabilidad de no observar el alelo A en la muestra?
+    Aquí buscamos la probabilidad de obtener 0 éxitos (k=0) en 20 ensayos. Usamos la fórmula de la función de masa de probabilidad binomial: P(X=k)=C(n,k)⋅pk⋅(1−p)n−k.
+    P(X=0)=C(20,0)⋅(0.1)0⋅(1−0.1)20=1⋅1⋅(0.9)20≈0.1216.
+    Hay un 12.16% de probabilidad de no encontrar ningún alelo A en la muestra.
 
-# Crear los intervalos de 5 unidades
-intervalos <- seq(0, 30, by = 5) # avanza de 5 en 5 de 0 a 30
+Ejercicio 2: Simulación con rbinom
 
-# Tabla de frecuencias
-tabla_frecuencias <- cut(tiempos, breaks = intervalos, right = FALSE) # Divide los 
-# datos en intervalos ("bins"), para eso se usa cut
-frecuencia <- table(tabla_frecuencias) # Crea una tabla que tiene el conteo de cada
-# categoria, en este caso intervalos
-
-# Densidades (frecuencia / tamaño del intervalo)
-densidad <- prop.table(frecuencia) # Partiendo de la tabla de frecuencias esta 
-# funcion se usa para calcular la densidad de frecuencias
-
-# Mostrar la tabla de frecuencias y densidades
-tabla_resultado <- data.frame(Intervalo = names(frecuencia),
-    Frecuencia = as.vector(frecuencia),
-    Densidad = as.vector(densidad))
-print(tabla_resultado)
-
-```
-
-
-## Dibujar un histograma para estos tiempos dividiendo el intervalo [0, 30] en 6 intervalos de longitud 5 en escala frecuencia y en escala densidad.
-
+El objetivo de este ejercicio es simular el proceso de muestreo miles de veces para ver cómo los resultados se distribuyen alrededor del valor esperado. rbinom en R genera números aleatorios basados en una distribución binomial.
+R
 ```{r}
 
-library(ggplot2)
+# Definir los parámetros
+n <- 20  # Tamaño de la muestra
+p <- 0.1  # Frecuencia del alelo A
 
-# Crear el dataframe para ggplot
-df_tiempos <- data.frame(tiempos) # vector a dataframe
+# Simular 10,000 muestras
+num_simulaciones <- 10000
+muestras_simuladas <- rbinom(n = num_simulaciones, size = n, prob = p)
 
-# Histograma en escala de frecuencia
-ggplot(df_tiempos, aes(x = tiempos)) +
-  geom_histogram(breaks = intervalos, # intervalos para separar
-                  fill = "lightblue", # relleno
-                  color = "black") + # borde
-  labs(title = "Histograma de Frecuencia", x = "Tiempos", y = "Frecuencia") +
-  theme_minimal()
+# Descriptores numéricos
+media_simulada <- mean(muestras_simuladas)
+print(paste("La media de las simulaciones es:", round(media_simulada, 2)))
+print(paste("La desviación estándar de las simulaciones es:", round(sd(muestras_simuladas), 2)))
 
-# Histograma en escala de densidad
-ggplot(df_tiempos, aes(x = tiempos)) +
-  geom_histogram(aes(y = after_stat(density)),
-   breaks = intervalos,
-   fill = "lightgreen", # relleno
-   color = "black") + # borde
-  geom_density() + # agrega capa de densidad
-  labs(title = "Histograma de Densidad", x = "Tiempos", y = "Densidad") +
-  theme_minimal()
-
+# Gráfico de la distribución
+hist(muestras_simuladas,
+     breaks = seq(-0.5, n + 0.5, by = 1),
+     col = "skyblue",
+     border = "white",
+     main = "Distribución de alelos A en 10,000 muestras",
+     xlab = "Número de alelos A",
+     ylab = "Frecuencia")
 ```
 
-# Ejercicio 7: Tablas de contingencia II
+# Ejercicio 3: Frecuencia de alelo p=0.01
 
-|         | Café | Té | Refresco |
-|---------|------|----|----------|
-| Hombres | 50 | 30 | 20 |
-| Mujeres | 40 | 45 | 15 |
+Para encontrar la probabilidad de observar el alelo A, es más fácil calcular la probabilidad de no observarlo (0 alelos) y restarla de 1.
 
-Tabla 1: Tabla de contingencia de preferencias de bebidas por género.
+P(observar A)=1−P(no observar A)
+P(X≥1)=1−P(X=0)=1−C(20,0)⋅(0.01)0⋅(0.99)20=1−(0.99)20≈1−0.8179=0.1821.
+La probabilidad de observar al menos un alelo A es de aproximadamente 18.21%.
 
-La hipótesis a probar es la siguiente:
+Ejercicio 4: Frecuencia observada de 3/10
 
-Hipótesis nula $H_0$: No existe dependencia entre el género y la preferencia de bebida.
-Hipótesis alternativa $H_1$: Existe dependencia entre el género y la preferencia de bebida.
+Aquí invertimos el problema: tenemos la muestra y queremos saber qué tan probable es esta observación para diferentes frecuencias poblacionales. Usamos dbinom, que calcula la probabilidad de un número específico de éxitos.
+R
+
+```{r}
+# Definir los parámetros de la muestra
+k_observado <- 3
+n_muestra <- 10
+
+# Rango de frecuencias poblacionales para evaluar
+frecuencias_poblacionales <- seq(0.01, 0.99, by = 0.01)
+
+# Calcular la probabilidad para cada frecuencia poblacional
+probabilidades <- dbinom(x = k_observado, size = n_muestra, prob = frecuencias_poblacionales)
+
+# Gráfico de la verosimilitud
+plot(frecuencias_poblacionales,
+     probabilidades,
+     type = "l",
+     lwd = 2,
+     col = "darkgreen",
+     main = "Probabilidad de observar 3/10 alelos A",
+     xlab = "Frecuencia poblacional hipotética (p)",
+     ylab = "Probabilidad de la muestra observada")
+
+# Marcar el punto de máxima probabilidad
+max_p <- frecuencias_poblacionales[which.max(probabilidades)]
+points(max_p, max(probabilidades), col = "red", pch = 19)
+text(max_p, max(probabilidades), labels = paste("p =", round(max_p, 2)), pos = 4, col = "red")
+```
+
+# Ejercicio 5: Proporciones de Hardy-Weinberg (HW)
+
+Las proporciones de Hardy-Weinberg describen la distribución de genotipos en una población en equilibrio. Podemos ver la formación de un genotipo como el resultado de tomar una muestra de 2 alelos, uno de cada padre.
+
+    Genotipo homocigoto dominante (AA): Para obtener este genotipo, ambos alelos deben ser A. La probabilidad de que esto ocurra es la de obtener 2 éxitos (k=2) en 2 ensayos, lo que es igual a p2.
+    P(X=2)=C(2,2)⋅p2⋅(1−p)0=p2.
+
+    Genotipo heterocigoto (Aa): Para obtener este genotipo, necesitamos 1 alelo A y 1 alelo a. La probabilidad de obtener 1 éxito (k=1) en 2 ensayos es 2p(1−p).
+    P(X=1)=C(2,1)⋅p1⋅(1−p)1=2p(1−p).
+
+Las proporciones de HW (p2, 2pq, q2) son, de hecho, las esperanzas de una distribución binomial con n=2 ensayos, modelando la selección aleatoria de alelos para formar un genotipo.
+
+# Ejercicio 6: Frecuencia esperada de heterocigotos
+
+Primero calculamos la frecuencia esperada de heterocigotos en la población usando las proporciones de HW, y luego usamos rbinom para simular su variación en muestras.
+
+    Frecuencia esperada de heterocigotos:
+    Si la frecuencia de un alelo es p=0.3, la frecuencia de heterocigotos en la población es 2p(1−p)=2⋅0.3⋅(1−0.3)=0.42. En una muestra de 10 individuos, el número esperado de heterocigotos es 10⋅0.42=4.2.
+
+    Simulación de la variación:
+    El tamaño de la muestra es de 10 individuos, y la probabilidad de que un individuo sea heterocigoto es 0.42. Usamos rbinom para simular esto.
+
+```{r}
+# Definir los parámetros
+p_alelo_A <- 0.3
+prob_heterocigoto <- 2 * p_alelo_A * (1 - p_alelo_A)
+n_individuos <- 10
+
+# Simular la variación de la frecuencia de heterocigotos
+num_simulaciones <- 10000
+muestras_heterocigotos <- rbinom(n = num_simulaciones, size = n_individuos, prob = prob_heterocigoto)
+
+# Caracterizar la distribución
+media_simulada_h <- mean(muestras_heterocigotos)
+print(paste("La media de heterocigotos simulados es:", round(media_simulada_h, 2)))
+print(paste("La desviación estándar de las simulaciones es:", round(sd(muestras_heterocigotos), 2)))
+
+# Gráfico de la distribución
+hist(muestras_heterocigotos,
+     breaks = seq(-0.5, n_individuos + 0.5, by = 1),
+     col = "lightcoral",
+     border = "white",
+     main = "Distribución de heterocigotos en 10,000 muestras",
+     xlab = "Número de heterocigotos",
+     ylab = "Frecuencia")
+```
+
 
 ```{r}
 # Datos observados
