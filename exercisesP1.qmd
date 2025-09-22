@@ -88,7 +88,7 @@ Para responder a estas preguntas, tratamos la extracción de cada alelo como un 
     P(X=0)=C(20,0)⋅(0.1)0⋅(1−0.1)20=1⋅1⋅(0.9)20≈0.1216.
     Hay un 12.16% de probabilidad de no encontrar ningún alelo A en la muestra.
 
-Ejercicio 2: Simulación con rbinom
+# Ejercicio 2: Simulación con rbinom
 
 El objetivo de este ejercicio es simular el proceso de muestreo miles de veces para ver cómo los resultados se distribuyen alrededor del valor esperado. rbinom en R genera números aleatorios basados en una distribución binomial.
 R
