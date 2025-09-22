@@ -28,6 +28,49 @@ format:
 
 # Ejercicio 5: Estudio farmaceutico
 
+1. La frecuencia de un alelo autosómico A en una población es p = 0.1.
+¿Cuál es el número esperado de alelos A en una muestra de 20 alelos?
+¿Cuál es la probabilidad de no observar el alelo A en la muestra?
+2. Utilizando la función rbinom, simule un gran número de muestras de tamaño n = 20 y
+caracterice la distribución de los resultados utilizando descriptores gráficos y numéricos
+apropiados.
+3. Considere ahora el caso de f(A) = p = 0.01.¿Cuál es la probabilidad de observar el alelo
+A en una muestra de n = 20?
+4. La frecuencia observada de un alelo autosómico diploide A es 3/10 (tamaño de la
+muestra n = 10). Utilice dbinom para calcular la probabilidad de observar esta frecuencia
+en la muestra para un rango de frecuencias subyacentes en la población entre 0,01 y
+0,99.
+5. Genotipos como muestras aleatorias de tamaño n = 2. Para un locus autosómico
+diploide con dos alelos, describa las proporciones de HW como esperanzas de la
+distribución binomial.
+6. Para una muestra de n = 10 individuos, obtenga la frecuencia esperada de
+heterocigotos para f(A) = 0.3 y utilice rbinom para simular un gran número de muestras
+y caracterizar la variación aleatoria de la frecuencia observada de heterocigotos.
+7. nota: el 3 muestra (no demuestra) que $MLE(p) = \hat{p}$
+8. Para n=4, obtener en R una simulación de todos los componentes del proceso
+coalescente. Asumir que $N = 5\times 10^{5}$ y $\mu = 10-5$. Para la realización obtenida, calcular $\pi$, $S$
+y 𝜃w.
+9. Structure:
+El programa structure se corrió con $K = 2$ y 90 genotipos, y la cadena de MCMC paró en la
+generación $m-1$. Nos enfocamos en un sólo locus con alelos.
+El estado de la cadena en $m-1$ es el siguiente:
+Frecuencias del alelo de referencia en cada subpoblación:
+$P(m-1)1 = 0.5$, $P(m-1)2 = 0.8$.
+Ubicación de los genotipos a subpoblaciones:
+Subpoblación 1 Subpoblación 2
+$𝐴𝐴$ 13 25
+$𝐴𝑎$ 24 13
+$𝑎𝑎$ 13 2
+Total 50 40
+a) Usando una distribución apropiada, obtener valores propuestos de para la $P$
+generación $m[P(m)]$ para cada subpoblación. Explicar, en cada caso, si deberían ser 
+aceptadas como los nuevos valores $P(m)_{1}$ y $P(m)_{2}$ y con qué regla de
+probabilidad.
+b) Ahora considerar un genotipo que puede moverse de la subpoblación 1 a la 2.𝐴𝑎
+Explicar cómo se toma la decisión de moverlo o no.
+En las respuestas, incluir tanto las explicaciones como el código de R o los cálculos
+equivalentes.
+
 ## Construir un diagrama de tallos y hojas (extendido) para estos tiempos.
 
 | Stem | Leaf |
