@@ -131,10 +131,9 @@ P(observar A)=1−P(no observar A)
 P(X≥1)=1−P(X=0)=1−C(20,0)⋅(0.01)0⋅(0.99)20=1−(0.99)20≈1−0.8179=0.1821.
 La probabilidad de observar al menos un alelo A es de aproximadamente 18.21%.
 
-Ejercicio 4: Frecuencia observada de 3/10
+# Ejercicio 4: Frecuencia observada de 3/10
 
 Aquí invertimos el problema: tenemos la muestra y queremos saber qué tan probable es esta observación para diferentes frecuencias poblacionales. Usamos dbinom, que calcula la probabilidad de un número específico de éxitos.
-R
 
 ```{r}
 # Definir los parámetros de la muestra
