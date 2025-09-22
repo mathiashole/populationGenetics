@@ -28,23 +28,23 @@ format:
 
 # Ejercicio 5: Estudio farmaceutico
 
-1. La frecuencia de un alelo autosómico A en una población es p = 0.1.
+1. La frecuencia de un alelo autosómico A en una población es $p = 0.1$.
 ¿Cuál es el número esperado de alelos A en una muestra de 20 alelos?
 ¿Cuál es la probabilidad de no observar el alelo A en la muestra?
-2. Utilizando la función rbinom, simule un gran número de muestras de tamaño n = 20 y
+2. Utilizando la función rbinom, simule un gran número de muestras de tamaño $n = 20$ y
 caracterice la distribución de los resultados utilizando descriptores gráficos y numéricos
 apropiados.
-3. Considere ahora el caso de f(A) = p = 0.01.¿Cuál es la probabilidad de observar el alelo
-A en una muestra de n = 20?
+3. Considere ahora el caso de $f(A) = p = 0.01$.¿Cuál es la probabilidad de observar el alelo
+A en una muestra de $n = 20$?
 4. La frecuencia observada de un alelo autosómico diploide A es 3/10 (tamaño de la
-muestra n = 10). Utilice dbinom para calcular la probabilidad de observar esta frecuencia
+muestra $n = 10$). Utilice dbinom para calcular la probabilidad de observar esta frecuencia
 en la muestra para un rango de frecuencias subyacentes en la población entre 0,01 y
 0,99.
-5. Genotipos como muestras aleatorias de tamaño n = 2. Para un locus autosómico
+5. Genotipos como muestras aleatorias de tamaño $n = 2$. Para un locus autosómico
 diploide con dos alelos, describa las proporciones de HW como esperanzas de la
 distribución binomial.
-6. Para una muestra de n = 10 individuos, obtenga la frecuencia esperada de
-heterocigotos para f(A) = 0.3 y utilice rbinom para simular un gran número de muestras
+6. Para una muestra de $n = 10$ individuos, obtenga la frecuencia esperada de
+heterocigotos para $f(A) = 0.3$ y utilice rbinom para simular un gran número de muestras
 y caracterizar la variación aleatoria de la frecuencia observada de heterocigotos.
 7. nota: el 3 muestra (no demuestra) que $MLE(p) = \hat{p}$
 8. Para n=4, obtener en R una simulación de todos los componentes del proceso
