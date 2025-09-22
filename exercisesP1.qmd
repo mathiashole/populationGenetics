@@ -91,7 +91,13 @@ Para responder a estas preguntas, tratamos la extracción de cada alelo como un 
 # Ejercicio 2: Simulación con rbinom
 
 El objetivo de este ejercicio es simular el proceso de muestreo miles de veces para ver cómo los resultados se distribuyen alrededor del valor esperado. rbinom en R genera números aleatorios basados en una distribución binomial.
-R
+
+- rbinom simula el número de alelos A en muestras de tamaño fijo.
+
+- Esperamos ver que la media ≈ 2 y la desviación estándar ≈ 1.34.
+
+- El histograma muestra que la mayoría de las muestras tienen entre 0 y 5 alelos A, con el 2 como valor más probable.
+
 ```{r}
 
 # Definir los parámetros
