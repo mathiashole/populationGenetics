@@ -1,0 +1,154 @@
+---
+title: "EJERCICIOS P1"
+date: today
+date-format: "DD MMMM, YYYY"
+author: 
+  Mathias
+abstract:
+    Genetica de poblaciones
+abstractspacing: double
+appendix: false
+fontfamily: libertine
+monofont: inconsolata
+monofontoptions: scaled=.95
+fontsize: 12pt
+geometry: 
+  - top=2cm
+  - bottom=2cm
+  - left=2cm
+  - right=2cm
+urlcolor: darkblue
+highlight-style: arrow
+format: 
+    pdf:
+      toc: true
+      number-sections: true
+      colorlinks: true
+---
+
+# Ejercicio 5: Estudio farmaceutico
+
+## Construir un diagrama de tallos y hojas (extendido) para estos tiempos.
+
+| Stem | Leaf |
+|------|------|
+| 0    | 9    |
+| 1    | 0 0 1 1 2 2 3 3 4 5 5 5 6 7 8 8 8 9 9 9 |
+| 2    | 0 0 1 1 2 3 4 6 |
+
+## Construir una tabla de frecuencias y densidades para estos tiempos.
+
+```{r}
+# Cargar los tiempos
+tiempos <- c(15, 18, 19, 21, 23, 26, 17, 18, 24, 20, 13, 10, 16, 11, 9,
+             12, 14, 10, 19, 13, 20, 15, 11, 18, 15, 21, 12, 19, 18, 22)
+
+# Crear los intervalos de 5 unidades
+intervalos <- seq(0, 30, by = 5) # avanza de 5 en 5 de 0 a 30
+
+# Tabla de frecuencias
+tabla_frecuencias <- cut(tiempos, breaks = intervalos, right = FALSE) # Divide los 
+# datos en intervalos ("bins"), para eso se usa cut
+frecuencia <- table(tabla_frecuencias) # Crea una tabla que tiene el conteo de cada
+# categoria, en este caso intervalos
+
+# Densidades (frecuencia / tamaño del intervalo)
+densidad <- prop.table(frecuencia) # Partiendo de la tabla de frecuencias esta 
+# funcion se usa para calcular la densidad de frecuencias
+
+# Mostrar la tabla de frecuencias y densidades
+tabla_resultado <- data.frame(Intervalo = names(frecuencia),
+    Frecuencia = as.vector(frecuencia),
+    Densidad = as.vector(densidad))
+print(tabla_resultado)
+
+```
+
+
+## Dibujar un histograma para estos tiempos dividiendo el intervalo [0, 30] en 6 intervalos de longitud 5 en escala frecuencia y en escala densidad.
+
+```{r}
+
+library(ggplot2)
+
+# Crear el dataframe para ggplot
+df_tiempos <- data.frame(tiempos) # vector a dataframe
+
+# Histograma en escala de frecuencia
+ggplot(df_tiempos, aes(x = tiempos)) +
+  geom_histogram(breaks = intervalos, # intervalos para separar
+                  fill = "lightblue", # relleno
+                  color = "black") + # borde
+  labs(title = "Histograma de Frecuencia", x = "Tiempos", y = "Frecuencia") +
+  theme_minimal()
+
+# Histograma en escala de densidad
+ggplot(df_tiempos, aes(x = tiempos)) +
+  geom_histogram(aes(y = after_stat(density)),
+   breaks = intervalos,
+   fill = "lightgreen", # relleno
+   color = "black") + # borde
+  geom_density() + # agrega capa de densidad
+  labs(title = "Histograma de Densidad", x = "Tiempos", y = "Densidad") +
+  theme_minimal()
+
+```
+
+# Ejercicio 7: Tablas de contingencia II
+
+|         | Café | Té | Refresco |
+|---------|------|----|----------|
+| Hombres | 50 | 30 | 20 |
+| Mujeres | 40 | 45 | 15 |
+
+Tabla 1: Tabla de contingencia de preferencias de bebidas por género.
+
+La hipótesis a probar es la siguiente:
+
+Hipótesis nula $H_0$: No existe dependencia entre el género y la preferencia de bebida.
+Hipótesis alternativa $H_1$: Existe dependencia entre el género y la preferencia de bebida.
+
+```{r}
+# Datos observados
+observados <- matrix(c(50, 30, 20, 40, 45, 15), nrow = 2, byrow = TRUE)
+
+# Realizar el test chi-cuadrado
+test_chi2 <- chisq.test(observados)
+
+# Resultado del test
+test_chi2
+
+```
+
+No hay suficiente evidencia para rechazar la $H_0$.
+
+
+## Cálculo del estadístico $\chi^2$ sin usar funcion de R:
+
+La prueba $\chi^2$ que da el valor de X-squared, se calcula usando la ecuacion
+
+$$
+\chi^2 = \sum_{i=1}^{r} \sum_{j=1}^{c} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}
+$$
+
+Donde $O_{ij}$ son las frecuencias observadas y $E_{ij}$ son las frecuencias esperadas.
+
+$$
+\chi^2 = \frac{(50 - 45)^2}{45} + \frac{(30 - 37.5)^2}{37.5} + \frac{(20 - 17.5)^2}{17.5} + \frac{(40 - 45)^2}{45} + \frac{(45 - 37.5)^2}{37.5} + \frac{(15 - 17.5)^2}{17.5}
+$$
+
+Siendo
+
+$$
+\chi^2 = \frac{25}{45} + \frac{56.25}{37.5} + \frac{6.25}{17.5} + \frac{25}{45} + \frac{56.25}{37.5} + \frac{6.25}{17.5} = 0.556 + 1.5 + 0.357 + 0.556 + 1.5 + 0.357 = 4.826
+$$
+
+Los grados de libertad se calculan segun los numeros de r = row (fila) y c = column (columna):
+
+$$
+\text{gl} = (r - 1)(c - 1) = (2 - 1)(3 - 1) = 2
+$$
+
+El valor de la tabla ($\chi^2$) para un nivel de significancia ($\alpha = 0.05$) y 2 grados de libertad es aproximadamente 5.99. Ver tabla $\chi^2$
+
+Como el estadístico calculado ($\chi^2 = 4.826$) es menor que 5.99, no rechazamos la hipótesis nula.
