@@ -57,11 +57,13 @@ El estado de la cadena en $m-1$ es el siguiente:
 Frecuencias del alelo de referencia en cada subpoblación:
 $P(m-1)1 = 0.5$, $P(m-1)2 = 0.8$.
 Ubicación de los genotipos a subpoblaciones:
-Subpoblación 1 Subpoblación 2
-$𝐴𝐴$ 13 25
-$𝐴𝑎$ 24 13
-$𝑎𝑎$ 13 2
-Total 50 40
+|      | Subpoblación 1 | Subpoblación 2 |
+|------|----------------|----------------|
+| $𝐴𝐴$ |      13        |      25        |
+| $𝐴𝑎$ |      24        |       13       |
+| $𝑎𝑎$  |      13        |      2         |
+| Total |     50        |       40       |
+
 a) Usando una distribución apropiada, obtener valores propuestos de para la $P$
 generación $m[P(m)]$ para cada subpoblación. Explicar, en cada caso, si deberían ser 
 aceptadas como los nuevos valores $P(m)_{1}$ y $P(m)_{2}$ y con qué regla de
