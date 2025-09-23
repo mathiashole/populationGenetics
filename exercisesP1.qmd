@@ -209,6 +209,356 @@ hist(muestras_heterocigotos,
      ylab = "Frecuencia")
 ```
 
+# Ejercicio 8: Simulación del proceso coalescente con n=4
+
+Queremos simular el coalescente para n=4 alelos, con:
+
+Tamaño efectivo de la población:
+
+N=5×105
+N=5×10
+5
+
+Tasa de mutación:
+
+μ=10−5
+μ=10
+−5
+
+Y a partir de esa genealogía calcular:
+
+π (diversidad nucleotídica promedio por par)
+
+S (número de sitios segregantes)
+
+θw (estimador de Watterson).
+
+1. Los tiempos de coalescencia
+
+Imaginemos que empezamos con n=4 linajes.
+El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
+
+🔹 La probabilidad de coalescencia por generación depende de:
+
+El número de pares posibles: 
+C(n,2)=n(n−1)/2
+C(n,2)=n(n−1)/2.
+
+Y de 
+1/(2N)
+1/(2N), que es la probabilidad de que un par coalesca en una generación.
+
+👉 El tiempo de espera hasta el evento coalescente es el inverso de esa probabilidad.
+
+De 4 a 3 linajes:
+
+Pares posibles: 
+C(4,2)=6
+C(4,2)=6.
+
+Probabilidad por generación: 
+6/(2N)
+6/(2N).
+
+Tiempo esperado:
+
+E[T4]=2N6=1066≈1.67×105
+E[T
+4
+	​
+
+]=
+6
+2N
+	​
+
+=
+6
+10
+6
+	​
+
+≈1.67×10
+5
+
+De 3 a 2 linajes:
+
+Pares posibles: 
+C(3,2)=3
+C(3,2)=3.
+
+Probabilidad por generación: 
+3/(2N)
+3/(2N).
+
+Tiempo esperado:
+
+E[T3]=2N3≈3.33×105
+E[T
+3
+	​
+
+]=
+3
+2N
+	​
+
+≈3.33×10
+5
+
+De 2 a 1 linajes (MRCA):
+
+Pares posibles: 
+C(2,2)=1
+C(2,2)=1.
+
+Probabilidad por generación: 
+1/(2N)
+1/(2N).
+
+Tiempo esperado:
+
+E[T2]=2N=106
+E[T
+2
+	​
+
+]=2N=10
+6
+
+👉 Entonces los tiempos de espera esperados son:
+
+T4≈1.67×105
+T
+4
+	​
+
+≈1.67×10
+5
+
+T3≈3.33×105
+T
+3
+	​
+
+≈3.33×10
+5
+
+T2=106
+T
+2
+	​
+
+=10
+6
+
+2. Tiempo total de ramas del árbol
+
+Cada intervalo de tiempo tiene un cierto número de linajes que lo “recorren”:
+
+Ttotal=(n1⋅T4)+(n2⋅T3)+(n3⋅T2)
+T
+total
+	​
+
+=(n
+1
+	​
+
+⋅T
+4
+	​
+
+)+(n
+2
+	​
+
+⋅T
+3
+	​
+
+)+(n
+3
+	​
+
+⋅T
+2
+	​
+
+)
+
+Con 4 linajes durante 
+T4
+T
+4
+	​
+
+:
+
+4⋅1.67×105≈6.68×105
+4⋅1.67×10
+5
+≈6.68×10
+5
+
+Con 3 linajes durante 
+T3
+T
+3
+	​
+
+:
+
+3⋅3.33×105≈9.99×105
+3⋅3.33×10
+5
+≈9.99×10
+5
+
+Con 2 linajes durante 
+T2
+T
+2
+	​
+
+:
+
+2⋅106=2×106
+2⋅10
+6
+=2×10
+6
+
+👉 Sumando:
+
+Ttotal≈3.67×106
+T
+total
+	​
+
+≈3.67×10
+6
+3. Número de mutaciones (S)
+
+El número esperado de mutaciones es simplemente:
+
+S=Ttotal⋅μ
+S=T
+total
+	​
+
+⋅μ
+S≈(3.67×106)⋅(10−5)≈36.7
+S≈(3.67×10
+6
+)⋅(10
+−5
+)≈36.7
+
+👉 En una simulación podríamos obtener un valor aleatorio cercano, pero si lo hacemos “a mano” decimos por ejemplo:
+
+S=37
+S=37
+4. Cálculo de π (diversidad nucleotídica)
+
+π mide las diferencias promedio entre pares de secuencias.
+
+En el coalescente, la esperanza de π es:
+
+π=4Nμ
+π=4Nμ
+
+Con nuestros valores:
+
+π=4⋅(5×105)⋅10−5=20
+π=4⋅(5×10
+5
+)⋅10
+−5
+=20
+
+👉 En la práctica, π dependerá de cómo se reparten las 37 mutaciones en el árbol, pero el valor esperado es π ≈ 20.
+
+5. Cálculo de θW (Theta de Watterson)
+
+Se define como:
+
+θW=San,an=∑i=1n−11i
+θ
+W
+	​
+
+=
+a
+n
+	​
+
+S
+	​
+
+,a
+n
+	​
+
+=
+i=1
+∑
+n−1
+	​
+
+i
+1
+	​
+
+
+Para 
+n=4
+n=4:
+
+a4=1+12+13≈1.833
+a
+4
+	​
+
+=1+
+2
+1
+	​
+
++
+3
+1
+	​
+
+≈1.833
+
+Entonces:
+
+θW=371.833≈20.18
+θ
+W
+	​
+
+=
+1.833
+37
+	​
+
+≈20.18
+✅ Resultado final (simulación “a mano”)
+
+S=37
+S=37
+
+π≈20
+π≈20
+
+θW≈20.18
+θ
+W
+	​
+
+≈20.18
 
 ```{r}
 # Datos observados
