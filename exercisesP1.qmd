@@ -232,117 +232,29 @@ El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta lleg
 
 🔹 La probabilidad de coalescencia por generación depende de:
 
-El número de pares posibles: 
-C(n,2)=n(n−1)/2
-C(n,2)=n(n−1)/2.
-
-Y de 
-1/(2N)
-1/(2N), que es la probabilidad de que un par coalesca en una generación.
-
+El número de pares posibles: $C(n,2)=n(n−1)/2$
+Y de $1/(2N)$, que es la probabilidad de que un par coalesca en una generación.
 👉 El tiempo de espera hasta el evento coalescente es el inverso de esa probabilidad.
+- De 4 a 3 linajes:
+    Pares posibles: $C(4,2)=6$ usando el coficiente binomial $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
+    Probabilidad por generación: $6/(2N)$
+    Tiempo esperado: $E[T_4]=2N/6=10^6/6≈1.67×10^5$
 
-De 4 a 3 linajes:
+- De 3 a 2 linajes:
+    Pares posibles: $C(3,2)=3$ usando el coficiente binomial $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
+    Probabilidad por generación: $3/(2N)$
+    Tiempo esperado: $E[T_3]=2N/3≈3.33×10^5$
 
-Pares posibles: 
-C(4,2)=6
-C(4,2)=6.
-
-Probabilidad por generación: 
-6/(2N)
-6/(2N).
-
-Tiempo esperado:
-
-E[T4]=2N6=1066≈1.67×105
-E[T
-4
-	​
-
-]=
-6
-2N
-	​
-
-=
-6
-10
-6
-	​
-
-≈1.67×10
-5
-
-De 3 a 2 linajes:
-
-Pares posibles: 
-C(3,2)=3
-C(3,2)=3.
-
-Probabilidad por generación: 
-3/(2N)
-3/(2N).
-
-Tiempo esperado:
-
-E[T3]=2N3≈3.33×105
-E[T
-3
-	​
-
-]=
-3
-2N
-	​
-
-≈3.33×10
-5
-
-De 2 a 1 linajes (MRCA):
-
-Pares posibles: 
-C(2,2)=1
-C(2,2)=1.
-
-Probabilidad por generación: 
-1/(2N)
-1/(2N).
-
-Tiempo esperado:
-
-E[T2]=2N=106
-E[T
-2
-	​
-
-]=2N=10
-6
+- De 2 a 1 linajes (MRCA):
+    Pares posibles: $C(2,2)=1$ usando el coficiente binomial $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
+    Probabilidad por generación: $1/(2N)$
+    Tiempo esperado:  $E[T_2]=2N=10^6$
 
 👉 Entonces los tiempos de espera esperados son:
 
-T4≈1.67×105
-T
-4
-	​
-
-≈1.67×10
-5
-
-T3≈3.33×105
-T
-3
-	​
-
-≈3.33×10
-5
-
-T2=106
-T
-2
-	​
-
-=10
-6
+$T_4≈1.67×10^5$
+$T_3≈3.33×10^5$
+$T_2=10^6$
 
 2. Tiempo total de ramas del árbol
 
