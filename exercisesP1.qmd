@@ -213,25 +213,17 @@ hist(muestras_heterocigotos,
 
 Queremos simular el coalescente para n=4 alelos, con:
 
-Tamaño efectivo de la población:
+Tamaño efectivo de la población $N=5 \times 10^5$
 
-N=5×105
-N=5×10
-5
-
-Tasa de mutación:
-
-μ=10−5
-μ=10
-−5
+Tasa de mutación $\mu=10^−5$
 
 Y a partir de esa genealogía calcular:
 
-π (diversidad nucleotídica promedio por par)
+$\pi$ (diversidad nucleotídica promedio por par)
 
-S (número de sitios segregantes)
+$S$ (número de sitios segregantes)
 
-θw (estimador de Watterson).
+$\theta_w$ (estimador de Watterson).
 
 1. Los tiempos de coalescencia
 
