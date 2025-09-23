@@ -258,90 +258,16 @@ $T_2=10^6$
 
 2. Tiempo total de ramas del árbol
 
-Cada intervalo de tiempo tiene un cierto número de linajes que lo “recorren”:
+Cada intervalo de tiempo tiene un cierto número de linajes que lo “recorren”: $Ttotal=(n_1⋅T_4)+(n_2⋅T_3)+(n_3⋅T_2)$
 
-Ttotal=(n1⋅T4)+(n2⋅T3)+(n3⋅T2)
-T
-total
-	​
+- Con 4 linajes durante $T_4$ : $4 \cdot 1.67 \times 10^5≈6.68 \times 10^5$
 
-=(n
-1
-	​
+- Con 3 linajes durante $T_3$ : $3 \cdot 3.33 \times 10^5≈9.99 \times 10^5$
 
-⋅T
-4
-	​
+- Con 2 linajes durante $T_2$ : $2 \cdot 10^6=2 \times 10^6$
 
-)+(n
-2
-	​
+👉 Sumando: $Ttotal≈3.67 \times 10^6$
 
-⋅T
-3
-	​
-
-)+(n
-3
-	​
-
-⋅T
-2
-	​
-
-)
-
-Con 4 linajes durante 
-T4
-T
-4
-	​
-
-:
-
-4⋅1.67×105≈6.68×105
-4⋅1.67×10
-5
-≈6.68×10
-5
-
-Con 3 linajes durante 
-T3
-T
-3
-	​
-
-:
-
-3⋅3.33×105≈9.99×105
-3⋅3.33×10
-5
-≈9.99×10
-5
-
-Con 2 linajes durante 
-T2
-T
-2
-	​
-
-:
-
-2⋅106=2×106
-2⋅10
-6
-=2×10
-6
-
-👉 Sumando:
-
-Ttotal≈3.67×106
-T
-total
-	​
-
-≈3.67×10
-6
 3. Número de mutaciones (S)
 
 El número esperado de mutaciones es simplemente:
