@@ -78,10 +78,10 @@ equivalentes.
 
 Para responder a estas preguntas, tratamos la extracción de cada alelo como un ensayo de Bernoulli, donde "éxito" es obtener el alelo A.
 
-    ¿Cuál es el número esperado de alelos A en una muestra de 20 alelos?
-    La esperanza de una distribución binomial se calcula como E(X)=n⋅p. En este caso, el tamaño de la muestra (n) es 20 y la frecuencia alélica (p) es 0.1.
-    E(X)=20⋅0.1=2.
-    Se espera que, en promedio, haya 2 alelos A en una muestra de 20.
+- ¿Cuál es el número esperado de alelos A en una muestra de 20 alelos?
+La esperanza de una distribución binomial se calcula como $E(X)=n⋅p$. En este caso, el tamaño de la muestra (n) es 20 y la frecuencia alélica (p) es 0.1.
+    $E(X)=20⋅0.1=2$
+Se espera que, en promedio, haya 2 alelos A en una muestra de 20.
 
     ¿Cuál es la probabilidad de no observar el alelo A en la muestra?
     Aquí buscamos la probabilidad de obtener 0 éxitos (k=0) en 20 ensayos. Usamos la fórmula de la función de masa de probabilidad binomial: P(X=k)=C(n,k)⋅pk⋅(1−p)n−k.
