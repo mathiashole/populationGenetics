@@ -287,86 +287,22 @@ Con nuestros valores: $\pi=4⋅(5 \times 10^5)⋅10^−5=20$
 
 👉 En la práctica, $\pi$ dependerá de cómo se reparten las 37 mutaciones en el árbol, pero el valor esperado es $\pi ≈ 20$.
 
-5. Cálculo de θW (Theta de Watterson)
+5. Cálculo de $\theta_W$ (Theta de Watterson)
 
-Se define como:
+Se define como: $\theta_W = S/a_n$ donde $a_n = \sum_{i=1}^{n-1}1/i$
 
-θW=San,an=∑i=1n−11i
-θ
-W
-	​
+Para $n=4$: $a_4=1+1/2+1/3≈1.833$
 
-=
-a
-n
-	​
+Entonces: $\theta_W=37/1.833≈20.18$
 
-S
-	​
+✅ Resultado final
 
-,a
-n
-	​
+$S=37$
 
-=
-i=1
-∑
-n−1
-	​
+$\pi≈20$
 
-i
-1
-	​
+$\theta_W≈20.18$
 
-
-Para 
-n=4
-n=4:
-
-a4=1+12+13≈1.833
-a
-4
-	​
-
-=1+
-2
-1
-	​
-
-+
-3
-1
-	​
-
-≈1.833
-
-Entonces:
-
-θW=371.833≈20.18
-θ
-W
-	​
-
-=
-1.833
-37
-	​
-
-≈20.18
-✅ Resultado final (simulación “a mano”)
-
-S=37
-S=37
-
-π≈20
-π≈20
-
-θW≈20.18
-θ
-W
-	​
-
-≈20.18
 
 ```{r}
 # Datos observados
