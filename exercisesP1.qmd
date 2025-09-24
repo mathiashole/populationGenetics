@@ -234,7 +234,7 @@ El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta lleg
 
 El número de pares posibles: $C(n,2)=n(n−1)/2$
 Y de $1/(2N)$, que es la probabilidad de que un par coalesca en una generación.
-👉 El tiempo de espera hasta el evento coalescente es el inverso de esa probabilidad.
+El tiempo de espera hasta el evento coalescente es el inverso de esa probabilidad.
 - De 4 a 3 linajes:
     Pares posibles: $C(4,2)=6$ usando el coficiente binomial $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
     Probabilidad por generación: $6/(2N)$
@@ -250,7 +250,7 @@ Y de $1/(2N)$, que es la probabilidad de que un par coalesca en una generación.
     Probabilidad por generación: $1/(2N)$
     Tiempo esperado:  $E[T_2]=2N=10^6$
 
-👉 Entonces los tiempos de espera esperados son:
+Entonces los tiempos de espera esperados son:
 
 $T_4≈1.67×10^5$
 $T_3≈3.33×10^5$
@@ -266,7 +266,7 @@ Cada intervalo de tiempo tiene un cierto número de linajes que lo “recorren�
 
 - Con 2 linajes durante $T_2$ : $2 \cdot 10^6=2 \times 10^6$
 
-👉 Sumando: $Ttotal≈3.67 \times 10^6$
+Sumando: $Ttotal≈3.67 \times 10^6$
 
 3. Número de mutaciones $(S)$
 
@@ -274,7 +274,7 @@ El número esperado de mutaciones es simplemente: $S=Ttotal \cdot \mu$
 
 $S≈(3.67 \times 10^6) \cdot (10^−5)≈36.7$
 
-👉 En una simulación podríamos obtener un valor aleatorio cercano, pero si lo hacemos “a mano” decimos por ejemplo:
+En una simulación podríamos obtener un valor aleatorio cercano, pero si lo hacemos “a mano” decimos por ejemplo:
 $S=37$
 
 4. Cálculo de $\pi$ (diversidad nucleotídica)
@@ -285,7 +285,7 @@ En el coalescente, la esperanza de $\pi$ es: $\pi =4N\mu$
 
 Con nuestros valores: $\pi=4⋅(5 \times 10^5)⋅10^−5=20$
 
-👉 En la práctica, $\pi$ dependerá de cómo se reparten las 37 mutaciones en el árbol, pero el valor esperado es $\pi ≈ 20$.
+En la práctica, $\pi$ dependerá de cómo se reparten las 37 mutaciones en el árbol, pero el valor esperado es $\pi ≈ 20$.
 
 5. Cálculo de $\theta_W$ (Theta de Watterson)
 
