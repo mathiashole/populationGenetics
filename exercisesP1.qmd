@@ -230,7 +230,7 @@ $\theta_w$ (estimador de Watterson).
 Imaginemos que empezamos con n=4 linajes.
 El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
 
-🔹 La probabilidad de coalescencia por generación depende de:
+La probabilidad de coalescencia por generación depende de:
 
 El número de pares posibles: $C(n,2)=n(n−1)/2$
 Y de $1/(2N)$, que es la probabilidad de que un par coalesca en una generación.
