@@ -359,6 +359,79 @@ cat("θW estimado =", theta_W, "\n")
 
 ```
 
+# Ejercicio 9: Sobre el algoritmo MCMC (Markov chain Monte Carlo)
+
+a) Obtener y decidir sobre las nuevas frecuencias alélicas
+
+El objetivo aquí es simular el Paso 1 del algoritmo MCMC, donde se actualizan las frecuencias alélicas de cada subpoblación.
+
+Cálculo de Verosimilitud
+
+Primero, necesitas entender que la verosimilitud de un conjunto de datos (los genotipos observados) es la probabilidad de observar esos datos, dada una frecuencia alélica hipotética. La verosimilitud se puede ver como una medida de "qué tan bien" la frecuencia alélica se ajusta a los datos.
+
+La verosimilitud de una subpoblación con nAA​ genotipos AA, nAa​ genotipos Aa, y naa​ genotipos aa para una frecuencia alélica p es proporcional a la función de la distribución binomial:
+
+L(p)∝[p2]nAA​⋅[2p(1−p)]nAa​⋅[(1−p)2]naa​
+
+Subpoblación 1
+
+    Estado actual (m−1): Frecuencia P1​=0.5.
+
+        Genotipos: 13 AA, 24 Aa, 13 aa.
+
+        Verosimilitud actual: L(0.5)∝[0.52]13⋅[2⋅0.5⋅0.5]24⋅[0.52]13=[0.25]13⋅[0.5]24⋅[0.25]13=0.2526⋅0.524.
+
+    Nuevo valor propuesto: El algoritmo propone un nuevo valor de p para la siguiente iteración. Para un ejemplo práctico, supongamos que la nueva propuesta es P1prop​=0.45.
+
+        Verosimilitud propuesta: L(0.45)∝[0.452]13⋅[2⋅0.45⋅0.55]24⋅[0.552]13=[0.2025]13⋅[0.495]24⋅[0.3025]13.
+
+Regla de Decisión (Metropolis-Hastings)
+
+El algoritmo decide si aceptar el nuevo valor usando el ratio de aceptación α=L(ppropuesto​)/L(pactual​).
+
+    α1​=L(0.5)L(0.45)​=0.2526⋅0.5240.202513⋅0.49524⋅0.302513​.
+
+    Si α1​≥1, el nuevo valor se acepta.
+
+    Si α1​<1, el nuevo valor se acepta con una probabilidad igual a α1​.
+
+Subpoblación 2
+
+El mismo proceso se aplica a la subpoblación 2.
+
+    Estado actual (m−1): Frecuencia P2​=0.8.
+
+    Nuevo valor propuesto: Supongamos que se propone P2prop​=0.75.
+
+    Ratio de aceptación: α2​=L(0.8)L(0.75)​.
+
+b) Decidir si mover un genotipo
+
+Este es el Paso 2 del algoritmo MCMC, donde se decide la reasignación de un individuo.
+
+    Genotipo considerado: Aa.
+
+    Subpoblaciones involucradas: De la subpoblación 1 a la 2.
+
+    Frecuencias alélicas a usar: Las frecuencias actualizadas del Paso 1, P1m​ y P2m​ (aunque para este ejemplo, usaremos P1m−1​=0.5 y P2m−1​=0.8).
+
+Cálculo de la Probabilidad de Pertenencia
+
+El algoritmo compara la probabilidad del genotipo Aa en cada subpoblación, dada la frecuencia de alelos de cada una:
+
+    Probabilidad en Subpoblación 1: Pr(Aa∣Subpop 1)=2⋅P1​⋅(1−P1​)=2⋅0.5⋅(1−0.5)=0.5.
+
+    Probabilidad en Subpoblación 2: Pr(Aa∣Subpop 2)=2⋅P2​⋅(1−P2​)=2⋅0.8⋅(1−0.8)=2⋅0.8⋅0.2=0.32.
+
+Regla de Decisión
+
+El algoritmo no solo mueve el genotipo a la subpoblación más probable. Utiliza la misma regla de Metropolis-Hastings para decidir si aceptar o rechazar el movimiento.
+
+    α=Probabilidad de pertenecer a la subpoblacioˊn actual (1)Probabilidad de pertenecer a la subpoblacioˊn propuesta (2)​=0.50.32​=0.64.
+
+    Dado que α<1, el algoritmo acepta el movimiento con una probabilidad de 0.64.
+
+    Si un número aleatorio entre 0 y 1 es menor que 0.64, el individuo se mueve; de lo contrario, se queda en la subpoblación 1.
 
 ```{r}
 # Datos observados
