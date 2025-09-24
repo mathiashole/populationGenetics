@@ -277,25 +277,15 @@ $S≈(3.67 \times 10^6) \cdot (10^−5)≈36.7$
 👉 En una simulación podríamos obtener un valor aleatorio cercano, pero si lo hacemos “a mano” decimos por ejemplo:
 $S=37$
 
-4. Cálculo de π (diversidad nucleotídica)
+4. Cálculo de $\pi$ (diversidad nucleotídica)
 
-π mide las diferencias promedio entre pares de secuencias.
+$\pi$ mide las diferencias promedio entre pares de secuencias.
 
-En el coalescente, la esperanza de π es:
+En el coalescente, la esperanza de $\pi$ es: $\pi =4N\mu$
 
-π=4Nμ
-π=4Nμ
+Con nuestros valores: $\pi=4⋅(5 \times 10^5)⋅10^−5=20$
 
-Con nuestros valores:
-
-π=4⋅(5×105)⋅10−5=20
-π=4⋅(5×10
-5
-)⋅10
-−5
-=20
-
-👉 En la práctica, π dependerá de cómo se reparten las 37 mutaciones en el árbol, pero el valor esperado es π ≈ 20.
+👉 En la práctica, $\pi$ dependerá de cómo se reparten las 37 mutaciones en el árbol, pero el valor esperado es $\pi ≈ 20$.
 
 5. Cálculo de θW (Theta de Watterson)
 
