@@ -371,7 +371,7 @@ Primero, necesitas entender que la verosimilitud de un conjunto de datos (los ge
 
 La verosimilitud de una subpoblación con nAA​ genotipos AA, nAa​ genotipos Aa, y naa​ genotipos aa para una frecuencia alélica p es proporcional a la función de la distribución binomial:
 
-L(p)∝[p2]nAA​⋅[2p(1−p)]nAa​⋅[(1−p)2]naa​
+$L(p) \propto [p^2]^{n_{\mathrm{AA}}} \cdot [2p(1-p)]^{n_{\mathrm{Aa}}} \cdot [(1-p)^2]^{n_{\mathrm{aa}}}$​
 
 Subpoblación 1
 
