@@ -38,8 +38,8 @@ apropiados.
 A en una muestra de $n = 20$?
 4. La frecuencia observada de un alelo autosómico diploide A es 3/10 (tamaño de la
 muestra $n = 10$). Utilice dbinom para calcular la probabilidad de observar esta frecuencia
-en la muestra para un rango de frecuencias subyacentes en la población entre 0,01 y
-0,99.
+en la muestra para un rango de frecuencias subyacentes en la población entre $0,01$ y
+$0,99$.
 5. Genotipos como muestras aleatorias de tamaño $n = 2$. Para un locus autosómico
 diploide con dos alelos, describa las proporciones de HW como esperanzas de la
 distribución binomial.
@@ -47,9 +47,9 @@ distribución binomial.
 heterocigotos para $f(A) = 0.3$ y utilice rbinom para simular un gran número de muestras
 y caracterizar la variación aleatoria de la frecuencia observada de heterocigotos.
 7. nota: el 3 muestra (no demuestra) que $MLE(p) = \hat{p}$
-8. Para n=4, obtener en R una simulación de todos los componentes del proceso
+8. Para $n=4$, obtener en R una simulación de todos los componentes del proceso
 coalescente. Asumir que $N = 5\times 10^{5}$ y $\mu = 10-5$. Para la realización obtenida, calcular $\pi$, $S$
-y 𝜃w.
+y $\theta_W$.
 9. Structure:
 El programa structure se corrió con $K = 2$ y 90 genotipos, y la cadena de MCMC paró en la
 generación $m-1$. Nos enfocamos en un sólo locus con alelos.
