@@ -135,6 +135,13 @@ La probabilidad de observar al menos un alelo A es de aproximadamente 18.21%.
 
 Aquí invertimos el problema: tenemos la muestra y queremos saber qué tan probable es esta observación para diferentes frecuencias poblacionales. Usamos dbinom, que calcula la probabilidad de un número específico de éxitos.
 
+Tenemos una muestra de 10 copias de un gen, y en ellas observamos que 3 son del alelo A.
+La pregunta es: ¿qué tan probable es esta observación (3 de 10) si asumimos distintas frecuencias del alelo en la población?
+
+La distribución binomial nos dice cuál es la probabilidad de observar un número exacto de “éxitos” (en este caso, alelos A) en un número fijo de ensayos (10 copias).
+
+La función dbinom(k, n, p)
+
 ```{r}
 # Definir los parámetros de la muestra
 k_observado <- 3
@@ -161,6 +168,19 @@ max_p <- frecuencias_poblacionales[which.max(probabilidades)]
 points(max_p, max(probabilidades), col = "red", pch = 19)
 text(max_p, max(probabilidades), labels = paste("p =", round(max_p, 2)), pos = 4, col = "red")
 ```
+
+La curva muestra cómo cambia esa probabilidad cuando vamos variando $p$. La curva tiene un pico en 
+$p=0.3$, porque justamente $3/10 = 0.3$.
+
+Lo que estás dibujando es la función de verosimilitud de una binomial:
+
+$L(p)=P(X=k∣n,p)= \binom{n}{k} p^k(1−p)^{n−k}$ con $k=3$ y $n=10$.
+
+El valor de $p$ que maximiza esta función se llama estimador de máxima verosimilitud (MLE).
+
+Si derivamos respecto a $p$:
+$\frac{d}{dp}[p^k(1−p)n−k]=0$ el resultado es $\hat{p}=k/n$ En este caso seria $\hat{p}=3/10$
+
 
 # Ejercicio 5: Proporciones de Hardy-Weinberg (HW)
 
