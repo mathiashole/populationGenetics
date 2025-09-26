@@ -166,13 +166,13 @@ text(max_p, max(probabilidades), labels = paste("p =", round(max_p, 2)), pos = 4
 
 Las proporciones de Hardy-Weinberg describen la distribución de genotipos en una población en equilibrio. Podemos ver la formación de un genotipo como el resultado de tomar una muestra de 2 alelos, uno de cada padre.
 
-    Genotipo homocigoto dominante (AA): Para obtener este genotipo, ambos alelos deben ser A. La probabilidad de que esto ocurra es la de obtener 2 éxitos (k=2) en 2 ensayos, lo que es igual a p2.
-    P(X=2)=C(2,2)⋅p2⋅(1−p)0=p2.
+Genotipo homocigoto dominante (AA): Para obtener este genotipo, ambos alelos deben ser A. La probabilidad de que esto ocurra es la de obtener 2 éxitos $(k=2)$ en 2 ensayos, lo que es igual a $p^2$.
+    $P(X=2)=\binom{2}{2}⋅p^2⋅(1−p)0=p^2.$ siendo que $\binom{2}{2} =  \frac{2!}{2!(2-2)!} = 1$
 
-    Genotipo heterocigoto (Aa): Para obtener este genotipo, necesitamos 1 alelo A y 1 alelo a. La probabilidad de obtener 1 éxito (k=1) en 2 ensayos es 2p(1−p).
-    P(X=1)=C(2,1)⋅p1⋅(1−p)1=2p(1−p).
+Genotipo heterocigoto (Aa): Para obtener este genotipo, necesitamos 1 alelo A y 1 alelo a. La probabilidad de obtener 1 éxito (k=1) en 2 ensayos es $2p(1−p)$.
+    $P(X=1)=\binom{2}{1}⋅p^1⋅(1−p)^1 = 2p(1−p)$. siendo que $\binom{2}{1} =  \frac{2!}{1!(2-1)!} = \frac{2}{1} = 2$
 
-Las proporciones de HW (p2, 2pq, q2) son, de hecho, las esperanzas de una distribución binomial con n=2 ensayos, modelando la selección aleatoria de alelos para formar un genotipo.
+Las proporciones de HW $(p2, 2pq, q2)$ son, de hecho, las esperanzas de una distribución binomial con n=2 ensayos, modelando la selección aleatoria de alelos para formar un genotipo.
 
 # Ejercicio 6: Frecuencia esperada de heterocigotos
 
