@@ -179,7 +179,7 @@ $L(p)=P(X=k∣n,p)= \binom{n}{k} p^k(1−p)^{n−k}$ con $k=3$ y $n=10$.
 El valor de $p$ que maximiza esta función se llama estimador de máxima verosimilitud (MLE).
 
 Si derivamos respecto a $p$:
-$\frac{d}{dp}[p^k(1−p)n−k]=0$ el resultado es $\hat{p}=k/n$ En este caso seria $\hat{p}=3/10$
+$\frac{d}{dp}[p^k(1−p)n−k]=0$ el resultado es $\hat{p}=k/n$ En este caso seria $\hat{p}=3/10$ Esto significa que, si tu muestra observada son 3 éxitos en 10 intentos, el valor de $p$ que hace esa observación más probable es exactamente la frecuencia muestral (la proporción observada).
 
 
 # Ejercicio 5: Proporciones de Hardy-Weinberg (HW)
