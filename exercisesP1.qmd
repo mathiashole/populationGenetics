@@ -84,9 +84,9 @@ La esperanza de una distribución binomial se calcula como $E(X)=n⋅p$. En este
 Se espera que, en promedio, haya 2 alelos A en una muestra de 20.
 
 - ¿Cuál es la probabilidad de no observar el alelo A en la muestra?
-    Aquí buscamos la probabilidad de obtener 0 éxitos (k=0) en 20 ensayos. Usamos la fórmula de la función de masa de probabilidad binomial: P(X=k)=C(n,k)⋅pk⋅(1−p)n−k.
-    P(X=0)=C(20,0)⋅(0.1)0⋅(1−0.1)20=1⋅1⋅(0.9)20≈0.1216.
-    Hay un 12.16% de probabilidad de no encontrar ningún alelo A en la muestra.
+Aquí buscamos la probabilidad de obtener 0 éxitos (k=0) en 20 ensayos. Usamos la fórmula de la función de la probabilidad binomial: $P(X=k)=\binom{n}{k} p^k⋅(1−p)^{n−k}$.
+    $P(X = 0) = \binom{20}{0} (0.1)^0⋅(1−0.1)^20 = 1⋅1⋅(0.9)^20 \simeq 0.1216$.
+    Hay un $12.16\%$ de probabilidad de no encontrar ningún alelo A en la muestra.
 
 # Ejercicio 2: Simulación con rbinom
 
