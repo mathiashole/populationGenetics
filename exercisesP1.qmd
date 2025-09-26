@@ -94,7 +94,7 @@ El objetivo de este ejercicio es simular el proceso de muestreo miles de veces p
 
 - rbinom simula el número de alelos A en muestras de tamaño fijo.
 
-- Esperamos ver que la media ≈ 2 y la desviación estándar ≈ 1.34.
+- Esperamos ver que la media $\simeq 2$ y la desviación estándar $\simeq 1.34$.
 
 - El histograma muestra que la mayoría de las muestras tienen entre 0 y 5 alelos A, con el 2 como valor más probable.
 
@@ -125,10 +125,10 @@ hist(muestras_simuladas,
 
 # Ejercicio 3: Frecuencia de alelo p=0.01
 
-Para encontrar la probabilidad de observar el alelo A, es más fácil calcular la probabilidad de no observarlo (0 alelos) y restarla de 1.
+Para encontrar la probabilidad de observar el alelo A, es más fácil calcular la probabilidad de no observarlo (0 alelos) y restarla de 1. ¿Cuál es la probabilidad de que, en esas 20 copias, aparezca al menos una vez el alelo A?.
 
-P(observar A)=1−P(no observar A)
-P(X≥1)=1−P(X=0)=1−C(20,0)⋅(0.01)0⋅(0.99)20=1−(0.99)20≈1−0.8179=0.1821.
+$P(observar A)=1−P(no observar A)$
+$P(X \geq 1) = 1−P(X=0) = 1 − \binom{20}{0}(0.01)^0⋅(0.99)^20= 1 − (0.99)^20 \simeq 1−0.8179 = 0.1821$.
 La probabilidad de observar al menos un alelo A es de aproximadamente 18.21%.
 
 # Ejercicio 4: Frecuencia observada de 3/10
@@ -141,7 +141,7 @@ k_observado <- 3
 n_muestra <- 10
 
 # Rango de frecuencias poblacionales para evaluar
-frecuencias_poblacionales <- seq(0.01, 0.99, by = 0.01)
+frecuencias_poblacionales <- seq(0.01, 0.99, by = 0.01) # Esto permite que recorra el vector cada 0.01
 
 # Calcular la probabilidad para cada frecuencia poblacional
 probabilidades <- dbinom(x = k_observado, size = n_muestra, prob = frecuencias_poblacionales)
