@@ -315,6 +315,8 @@ Ten en cuenta que usamos $H$ para el ADNmt, ya que se trata de un solo locus, mi
 
 ¿Cómo se pueden interpretar estos resultados y qué nos indican sobre la variación entre subpoblaciones?
 
+**Frecuencias haplotípicas**
+
 $P = \frac{\text{Numero de diferencias}}{\text{Total de diferencias}}$
 
 Pine forest 
@@ -330,6 +332,8 @@ $P_4 = 3/10$
 $P_5 = 1/10$
 $P_6 = 1/10$
 
+**Heterocigosidad ($H$)**
+
 Pine forest
 
 $H = 1 - \sum_{i}P_i^2$
@@ -339,6 +343,8 @@ Warner Mts.
 
 $H = 1 - \sum_{i}P_i^2$
 $H = 1 - (0.5)^2 + (0.3)^2 + (0.1)^2 + (0.1)^2$
+
+**Diversidad nucleotídica ($\pi$)**
 
 Pine forest
 
@@ -359,6 +365,8 @@ haplotipo 4 vs 5 $\pi = 2 (0.3)(0.1)7$
 haplotipo 4 vs 6 $\pi = 2 (0.3)(0.1)12$
 haplotipo 5 vs 6 $\pi = 2 (0.1)(0.1)5$
 
+**Resumen de resultados**
+
 |                  | Pine Forest | Warner Mts |
 |------------------|-------------|------------|
 | ADN mitocondrial |             |            |
@@ -370,6 +378,12 @@ haplotipo 5 vs 6 $\pi = 2 (0.1)(0.1)5$
 |  Microsatélites  | Pine Forest | Warner Mts |
 |------------------|-------------|------------|
 |        $\bar{H}$ |     0.37    |    0.78    |
+
+Mayor diversidad en Warner Mts.: Tanto el número de haplotipos ($A$), como el número de sitios segregantes ($S$), la heterocigosidad ($H$) y la diversidad nucleotídica ($\pi$) son mayores en Warner Mts. que en Pine Forest.
+
+ADN mitocondrial vs microsatélites: El patrón es consistente: ambas fuentes de datos muestran más variabilidad genética en Warner Mts.
+
+Implicancia biológica: La subpoblación Warner Mts. conserva mayor variabilidad genética, lo que sugiere un historial poblacional distinto (p. ej. mayor tamaño efectivo, menor efecto fundador o menos deriva genética). En contraste, Pine Forest muestra menor diversidad, posiblemente por un cuello de botella o mayor aislamiento.
 
 # Ejercicio 1: Frecuencia de alelo p=0.1
 
