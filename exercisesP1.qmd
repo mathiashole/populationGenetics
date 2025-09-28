@@ -442,11 +442,44 @@ La verosimilitud de una subpoblación con nAA​ genotipos AA, nAa​ genotipos 
 
 $L(p) \propto [p^2]^{n_{\mathrm{AA}}} \cdot [2p(1-p)]^{n_{\mathrm{Aa}}} \cdot [(1-p)^2]^{n_{\mathrm{aa}}}$​
 
+o lo que es lo mismo si en la subpoblación hay $n$ individuos ($= 2n$ alelos), y observaste $k$ alelos $A$, la probabilidad de ver $k$ éxitos bajo $p$ es
+
+$Pr⁡(K=k∣p)=(\binom{2n}{k}p^k(1−p)^{2n−k}$
+
+En R eso se calcula con dbinom(k, size=2*n, prob=p).
+
 Subpoblación 1
 
-    Estado actual (m−1): Frecuencia P1​=0.5.
+Datos de la subpoblacion 1: Frecuencia $P1​=0.5$, Genotipos: 13 AA, 24 Aa, 13 aa, $N=50$, $2N=100$
 
-        Genotipos: 13 AA, 24 Aa, 13 aa.
+Numero de alelos $A:k = 2.13 + 24 = 50$
+
+En **Metropolis-Hastings**:
+
+Si $\alpha \geq 1$, aceptás siempre.
+Si $\alpha < 1$, aceptás con probabilidad $\alpha$. 
+
+Si $u < \alpha$, aceptás.
+Si $u \geq \alpha$, rechazás.
+
+```{r}
+p1 <- 0.5
+p2 <- runif(1)
+p2 # La frecuencia propuesta
+
+conteo_p1 <- dbinom(50, 100, p1)
+conteo_p1
+conteo_p2 <- dbinom(50, 100, p2)
+conteo_p2
+
+# Por lo tanto alfa
+alpha = conteo_p2/conteo_p1
+alpha
+# Si u < alpha ACEPTAS
+# Si u >= alpha RECHAZAS
+runif(1)
+
+```
 
         Verosimilitud actual: L(0.5)∝[0.52]13⋅[2⋅0.5⋅0.5]24⋅[0.52]13=[0.25]13⋅[0.5]24⋅[0.25]13=0.2526⋅0.524.
 
