@@ -269,6 +269,50 @@ $P(S_1 | G_1) = \frac{L_1}{L_1 + L_2} = \frac{0.002592}{0.002592 + 0.0006} = 0.8
 
 Con la información genética disponible, el individuo tiene un 81.2% de probabilidad de pertenecer a $S_1$.
 
+# Ejercicio 4: Ejemplo 2 practico 1 HW y F
+
+4. Para este ejercicio, seleccionamos un subconjunto de 20 individuos (10 de Pine Forest y 10 de la
+subpoblación Warner Mts.) tomados aleatoriamente de las secuencias generadas en el trabajo citado. De los 701 pares de bases reportados en el artículo, se seleccionaron 620 sitios tras excluir los sitios que no se secuenciaron en todos los individuos. De estos, 50 fueron polimórficos, y solo esos sitios se presentan a continuación. Observamos que el número total de sitios polimórficos (= variables o, usando un término mendeliano, segregantes) en las secuencias es de aproximadamente el 8%. 
+
+En la tabla resumen, cada tipo de secuencia (haplotipo) representa una clase alélica. El segundo y tercer bloque proporcionan los datos por separado para cada subpoblación.
+
+Con base en los datos mitocondriales, complete la siguiente tabla con las siguientes estadísticas descriptivas
+para cada subpoblación:
+
+$A$: número de clases de alelos (= haplotipos distintos)
+$S$: número de sitios segregantes
+$H$: heterocigosidad
+$\pi$: diversidad nucleotídica
+
+Calcular es un poco engorroso, por lo que le recomendamos completar la siguiente tabla como punto de
+partida:
+
+Número de diferencias entre pares de alelos (haplotipos):
+
+|         | Haplo_1 | Haplo_2 | Haplo_3 | Haplo_4 | Haplo_5 |
+|---------|---------|---------|---------|---------|---------|
+| Haplo_2 |   1     |    -    |         |         |         |
+| Haplo_3 |   3     |    2    |    -    |         |         |
+| Haplo_4 |   40    |    39   |    39   |    -    |         |
+| Haplo_5 |   47    |    46   |    44   |    7    |    -    |
+| Haplo_6 |   48    |    47   |    45   |    12   |    5    |
+
+La tabla incluye datos de heterocigosidad del artículo, basados en los 11 loci microsatélites. Complete la tabla con los valores obtenidos anteriormente.
+
+|                  | Pine Forest | Warner Mts |
+|------------------|-------------|------------|
+| ADN mitocondrial |             |            |
+|        $A$       |             |            |
+|        $S$       |             |            |
+|        $H$       |             |    0.64    |
+|        $\pi$     |             |    22.74   |
+|  Microsatélites  |             |            |
+|        $\bar{H}$ |     0.37    |    0.78    |
+
+Ten en cuenta que usamos $H$ para el ADNmt, ya que se trata de un solo locus, mientras que $\bar{H}$ para los microsatélites, ya que 0,37 es la heterocigosidad promedio de 11 loci de microsatélites.
+
+¿Cómo se pueden interpretar estos resultados y qué nos indican sobre la variación entre subpoblaciones?
+
 # Ejercicio 1: Frecuencia de alelo p=0.1
 
 1. La frecuencia de un alelo autosómico A en una población es $p = 0.1$.
