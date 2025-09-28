@@ -450,12 +450,12 @@ $Pr⁡(K=k∣p)=(\binom{2n}{k}p^k(1−p)^{2n−k}$
 
 En **R** eso se calcula con **dbinom(k, size=2*n, prob=p)**.
 
+**Subpoblación 1**
+
+Datos de la **subpoblacion 1**: Frecuencia $P1​=0.5$, Genotipos: 13 AA, 24 Aa, 13 aa, $N=50$, $2N=100$
+
 a mano la ecuacion seria $L(p)=Pr⁡(datos∣p)=\binom{(2\cdot50)}{50}0.5^50(1−0.5)^{(2\cdot50)−50}$
 el propuesto $L(p\prime)=Pr⁡(datos∣p\prime)=\binom{(2\cdot50)}{50}p\prime^50(1−p\prime)^{(2\cdot50)−50}$
-
-Subpoblación 1
-
-Datos de la subpoblacion 1: Frecuencia $P1​=0.5$, Genotipos: 13 AA, 24 Aa, 13 aa, $N=50$, $2N=100$
 
 Numero de alelos $A:k = 2.13 + 24 = 50$
 
@@ -506,31 +506,68 @@ decision
 
 ```
 
-        Verosimilitud actual: L(0.5)∝[0.52]13⋅[2⋅0.5⋅0.5]24⋅[0.52]13=[0.25]13⋅[0.5]24⋅[0.25]13=0.2526⋅0.524.
+Como la probabilidad binomial la subpoblación hay $n$ individuos ($= 2n$ alelos), y observaste $k$ alelos $A$, la probabilidad de ver $k$ éxitos bajo $p$ es
 
-    Nuevo valor propuesto: El algoritmo propone un nuevo valor de p para la siguiente iteración. Para un ejemplo práctico, supongamos que la nueva propuesta es P1prop​=0.45.
+$L(p)=Pr⁡(K=k∣p)=(\binom{2n}{k}p^k(1−p)^{2n−k}$
 
-        Verosimilitud propuesta: L(0.45)∝[0.452]13⋅[2⋅0.45⋅0.55]24⋅[0.552]13=[0.2025]13⋅[0.495]24⋅[0.3025]13.
+**Subpoblación 2**
 
-Regla de Decisión (Metropolis-Hastings)
+Datos de la **subpoblacion 2**: Frecuencia $P1​=0.8$, Genotipos: 25 AA, 13 Aa, 2 aa, $N=40$, $2N=80$
 
-El algoritmo decide si aceptar el nuevo valor usando el ratio de aceptación α=L(ppropuesto​)/L(pactual​).
+En **R** eso se calcula con **dbinom(k, size=2*n, prob=p)**.
 
-    α1​=L(0.5)L(0.45)​=0.2526⋅0.5240.202513⋅0.49524⋅0.302513​.
+a mano la ecuacion seria $L(p)=Pr⁡(datos∣p)=\binom{(2\cdot63)}{63}0.8^63(1−0.8)^{(2\cdot63)−63}$
+el propuesto $L(p\prime)=Pr⁡(datos∣p\prime)=\binom{(2\cdot63)}{63}p\prime^63(1−p\prime)^{(2\cdot63)−63}$
 
-    Si α1​≥1, el nuevo valor se acepta.
+Numero de alelos $A:k = 2.25 + 13 = 63$
 
-    Si α1​<1, el nuevo valor se acepta con una probabilidad igual a α1​.
+Recordemos:
 
-Subpoblación 2
+Cada individuo tiene 2 alelos (porque estamos en organismos diploides).
+Un AA aporta 2 copias del alelo A. Entonces $A=2 \times 25$
 
-El mismo proceso se aplica a la subpoblación 2.
+Un Aa aporta 1 copia de A y 1 de a. Entonces $A=1 \times 13$
 
-    Estado actual (m−1): Frecuencia P2​=0.8.
+Un aa aporta 0 copias de A. Entonces $A=0 \times 2$
 
-    Nuevo valor propuesto: Supongamos que se propone P2prop​=0.75.
+En **Metropolis-Hastings**:
 
-    Ratio de aceptación: α2​=L(0.8)L(0.75)​.
+Si $\alpha \geq 1$, aceptás siempre.
+Si $\alpha < 1$, aceptás con probabilidad $\alpha$. 
+
+Si $u < \alpha$, aceptás.
+Si $u \geq \alpha$, rechazás.
+
+En este caso, $\alpha$ compara qué tan probable es observar los datos con la frecuencia propuesta $p'$ respecto de la frecuencia actual $p$. Si $\alpha$ es grande ($\geq 1$), significa que $p'$ explica igual o mejor los datos y se acepta siempre. Si $\alpha < 1$, se acepta con probabilidad proporcional a esa razón de verosimilitudes.
+
+```{r}
+p1 <- 0.8 # La frecuencia actual
+p2 <- runif(1)
+p2 # La frecuencia propuesta
+
+# Verosimilitud bajo p1
+conteo_p1 <- dbinom(63, 100, p1)
+conteo_p1
+# Verosimilitud bajo p2
+conteo_p2 <- dbinom(63, 100, p2)
+conteo_p2
+
+
+# Razón de verosimilitudes (alpha)
+alpha = conteo_p2/conteo_p1
+alpha
+
+# Decisión de aceptar o rechazar
+u <- runif(1)
+if (u < alpha) {
+  decision <- "ACEPTAR"
+} else {
+  decision <- "RECHAZAR"
+}
+decision
+
+```
+
 
 b) Decidir si mover un genotipo
 
