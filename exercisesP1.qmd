@@ -305,9 +305,9 @@ Sumando: $Ttotal≈3.67 \times 10^6$
 
 4. Número de sitios segregantes $(S)$
 
-El número de sitios segregantes es simplemente: $S=Ttotal \cdot \mu$
+El número de sitios segregantes es simplemente: $S=Ttotal \cdot \mu$ 
 
-$S≈(3.67 \times 10^6) \cdot (10^−5)≈36.7$
+$S≈(3.67 \times 10^6) \cdot (10^−5)≈36.7$ mutaciones (sitios segregantes)
 
 5. Cálculo de $\pi$ (diversidad nucleotídica promedio por par)
 
@@ -317,11 +317,13 @@ En el coalescente, la esperanza de $\pi$ es: $\pi =4N\mu$
 
 Con nuestros valores: $\pi=4⋅(5 \times 10^5)⋅10^−5=20$
 
-En la práctica, $\pi$ dependerá de cómo se reparten las 37 mutaciones en el árbol, pero el valor esperado es $\pi ≈ 20$.
+En la práctica, $\pi$ dependerá de cómo se reparten las 37 mutaciones (sitios segregantes) en el árbol, pero el valor esperado es $\pi ≈ 20$.
+
+Si muchas mutaciones cayeron en ramas profundas (compartidas por muchos individuos), eso hará que muchos pares de secuencias difieran en esas posiciones $\pi$ será grande. Si la mayoría de las mutaciones cayeron en ramas terminales (propias de un solo individuo), entonces solo unos pocos pares mostrarán esas diferencias $\pi$ será más chico.
 
 6. Cálculo de $\theta_W$ (Theta de Watterson)
 
-Se define como: $\theta_W = S/a_n$ donde $a_n = \sum_{i=1}^{n-1}1/i$
+Se define como: $\theta_W = \frac{S}{a_n}$ donde $a_n = \sum_{i=1}^{n-1}1/i$ entonces $\theta_W = \frac{S}{\sum_{i=1}^{n-1}1/i}$
 
 Para $n=4$: $a_4=1+1/2+1/3≈1.833$
 
