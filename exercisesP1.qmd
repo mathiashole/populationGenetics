@@ -436,23 +436,37 @@ El objetivo aquí es simular el Paso 1 del algoritmo MCMC, donde se actualizan l
 
 Cálculo de Verosimilitud
 
-Primero, necesitas entender que la verosimilitud de un conjunto de datos (los genotipos observados) es la probabilidad de observar esos datos, dada una frecuencia alélica hipotética. La verosimilitud se puede ver como una medida de "qué tan bien" la frecuencia alélica se ajusta a los datos.
+La verosimilitud de los genotipos bajo una frecuencia alélica $p$ puede escribirse de dos formas equivalentes:
 
-La verosimilitud de una subpoblación con nAA​ genotipos AA, nAa​ genotipos Aa, y naa​ genotipos aa para una frecuencia alélica p es proporcional a la función de la distribución binomial:
+1. Como producto de probabilidades de genotipos (modelo de Hardy–Weinberg).
 
 $L(p) \propto [p^2]^{n_{\mathrm{AA}}} \cdot [2p(1-p)]^{n_{\mathrm{Aa}}} \cdot [(1-p)^2]^{n_{\mathrm{aa}}}$​
 
-o lo que es lo mismo si en la subpoblación hay $n$ individuos ($= 2n$ alelos), y observaste $k$ alelos $A$, la probabilidad de ver $k$ éxitos bajo $p$ es
+2. Como probabilidad binomial de observar $k$ alelos $A$ en $2n$ intentos, dado $p$.
+
+Como la probabilidad binomial la subpoblación hay $n$ individuos ($= 2n$ alelos), y observaste $k$ alelos $A$, la probabilidad de ver $k$ éxitos bajo $p$ es
 
 $Pr⁡(K=k∣p)=(\binom{2n}{k}p^k(1−p)^{2n−k}$
 
-En R eso se calcula con dbinom(k, size=2*n, prob=p).
+En **R** eso se calcula con **dbinom(k, size=2*n, prob=p)**.
+
+a mano la ecuacion seria $L(p)=Pr⁡(datos∣p)=\binom{(2\cdot50)}{50}0.5^50(1−0.5)^{(2\cdot50)−50}$
+el propuesto $L(p\prime)=Pr⁡(datos∣p\prime)=\binom{(2\cdot50)}{50}p\prime^50(1−p\prime)^{(2\cdot50)−50}$
 
 Subpoblación 1
 
 Datos de la subpoblacion 1: Frecuencia $P1​=0.5$, Genotipos: 13 AA, 24 Aa, 13 aa, $N=50$, $2N=100$
 
 Numero de alelos $A:k = 2.13 + 24 = 50$
+
+Recordemos:
+
+Cada individuo tiene 2 alelos (porque estamos en organismos diploides).
+Un AA aporta 2 copias del alelo A. Entonces $A=2 \times 13$
+
+Un Aa aporta 1 copia de A y 1 de a. Entonces $A=1 \times 24$
+
+Un aa aporta 0 copias de A. Entonces $A=0 \times 13$
 
 En **Metropolis-Hastings**:
 
@@ -462,22 +476,33 @@ Si $\alpha < 1$, aceptás con probabilidad $\alpha$.
 Si $u < \alpha$, aceptás.
 Si $u \geq \alpha$, rechazás.
 
+En este caso, $\alpha$ compara qué tan probable es observar los datos con la frecuencia propuesta $p'$ respecto de la frecuencia actual $p$. Si $\alpha$ es grande ($\geq 1$), significa que $p'$ explica igual o mejor los datos y se acepta siempre. Si $\alpha < 1$, se acepta con probabilidad proporcional a esa razón de verosimilitudes.
+
 ```{r}
-p1 <- 0.5
+p1 <- 0.5 # La frecuencia actual
 p2 <- runif(1)
 p2 # La frecuencia propuesta
 
+# Verosimilitud bajo p1
 conteo_p1 <- dbinom(50, 100, p1)
 conteo_p1
+# Verosimilitud bajo p2
 conteo_p2 <- dbinom(50, 100, p2)
 conteo_p2
 
-# Por lo tanto alfa
+
+# Razón de verosimilitudes (alpha)
 alpha = conteo_p2/conteo_p1
 alpha
-# Si u < alpha ACEPTAS
-# Si u >= alpha RECHAZAS
-runif(1)
+
+# Decisión de aceptar o rechazar
+u <- runif(1)
+if (u < alpha) {
+  decision <- "ACEPTAR"
+} else {
+  decision <- "RECHAZAR"
+}
+decision
 
 ```
 
