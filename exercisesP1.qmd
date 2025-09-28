@@ -28,6 +28,17 @@ format:
 
 # Total de ejercicios de genetica de poblaciones
 
+1. Completar la siguiente tabla, en la que y son las frecuencias de un alelo de referencia en las
+subpoblaciones 1 y 2, respectivamente:
+
+| $p_1$ | $H_1$ | $p_2$ | $H_2$ | $\bar{H_s}$ | $\frac{(p_1-p_2)^2}{2}$ | $\bar{H_t}$ |
+|-------|-------|-------|-------|-------------|-------------------------|-------------|
+|  0.4  |       |  0.6  |       |             |                         |             |
+|  0.1  |       |  0.3  |       |             |                         |             |
+|  0 1  |       |       |       |             |                         |             |
+
+¿Cómo se comparan los dos primeros casos?
+
 1. La frecuencia de un alelo autosómico A en una población es $p = 0.1$.
 ¿Cuál es el número esperado de alelos A en una muestra de 20 alelos?
 ¿Cuál es la probabilidad de no observar el alelo A en la muestra?
@@ -72,6 +83,61 @@ b) Ahora considerar un genotipo que puede moverse de la subpoblación 1 a la 2.�
 Explicar cómo se toma la decisión de moverlo o no.
 En las respuestas, incluir tanto las explicaciones como el código de R o los cálculos
 equivalentes.
+
+# Ejercicio 1: Frecuencias en subpoblaciones, practico Efecto Wahalund
+
+1. Completar la siguiente tabla, en la que y son las frecuencias de un alelo de referencia en las
+subpoblaciones 1 y 2, respectivamente:
+
+| $p_1$ | $H_1$ | $p_2$ | $H_2$ | $\bar{H_s}$ | $\frac{(p_1-p_2)^2}{2}$ | $\bar{H_t}$ |
+|-------|-------|-------|-------|-------------|-------------------------|-------------|
+|  0.4  |       |  0.6  |       |             |                         |             |
+|  0.1  |       |  0.3  |       |             |                         |             |
+|  0 1  |       |   1   |       |             |                         |             |
+
+¿Cómo se comparan los dos primeros casos?
+
+$H_1$ y $H_2$ → heterocigosidad esperada dentro de cada subpoblación.
+
+$\bar{H_s}$ → heterocigosidad promedio dentro de subpoblaciones.
+
+$\bar{H_t}$ → heterocigosidad total si las subpoblaciones se trataran como una sola (población combinada).
+
+$\dfrac{(p_1 - p_2)^2}{2}$ → exceso de varianza en frecuencias alélicas entre subpoblaciones, que contribuye a la pérdida de heterocigotos al combinar poblaciones.
+
+Para calcular $H$ usamos Hardy-Weinberg para heterosigotas
+$H = 2 \cdot p \cdot (1-p)$
+Para H1 $p=0.4$ $H=2\cdot0.4\cdot(1-0.4)$, para $p=0.1$ $H=2\cdot0.1\cdot(1-0.1)$, para $p=0$ $H=2\cdot0\cdot(1-0)$  
+Para H2 $p=0.6$ $H=2\cdot0.6\cdot(1-0.6)$, para $p=0.3$ $H=2\cdot0.3\cdot(1-0.3)$, para $p=1$ $H=2\cdot1\cdot(1-1)$  
+
+Para calcular $\bar{H_s}=p_1+p_2-p_1^2-p_2^2$ 
+Para $\bar{H_s}$ $\bar{H_s}=0.4+0.6-0.4^2-0.6^2$, para Para $\bar{H_s}$ $\bar{H_s}=0.1+0.3-0.1^2-0.3^2$ y finalmente Para $\bar{H_s}$ $\bar{H_s}=0+1-0^2-1^2$
+
+Para calcular el termino $\frac{(p_1-p_2)^2}{2}$ simplemente sustituimos
+
+y finalmente usamos los terminos $\bar{H_s}$ y $\frac{(p_1-p_2)^2}{2}$ para calcular $\bar{H_t}$
+
+| $p_1$ | $H_1$ | $p_2$ | $H_2$ | $\bar{H_s}$ | $\frac{(p_1-p_2)^2}{2}$ | $\bar{H_t}$ |
+|-------|-------|-------|-------|-------------|-------------------------|-------------|
+|  0.4  |  0.48 |  0.6  |  0.48 |     0.48    |          0.02           |    0.50     |
+|  0.1  |  0.18 |  0.3  |  0.42 |     0.30    |          0.02           |    0.32     |
+|  0 1  |   0   |   1   |    0  |       0     |          0.50           |    0.50     |
+
+En el primer caso ($p_1=0.4$, $p_2=0.6$), la heterocigosidad dentro de cada subpoblación es relativamente alta ($H_1 = H_2 = 0.48$). Al promediarlas, $\bar{H_s} = 0.48$. Pero cuando juntamos ambas subpoblaciones, la heterocigosidad total es un poco mayor ($\bar{H_t} = 0.50$). La diferencia es pequeña, porque las frecuencias alélicas no difieren demasiado.
+
+En el segundo caso ($p_1=0.1$, $p_2=0.3$), las subpoblaciones están más diferenciadas: $\bar{H_s} = 0.30$, pero la heterocigosidad total sube a $0.32$. La diferencia es otra vez pequeña, pero se ve más clara la contribución de la varianza de frecuencias ($0.02$).
+
+En el tercer caso ($p_1=0$, $p_2=1$), cada subpoblación es completamente homocigótica ($H_1 = H_2 = 0$), pero al combinar ambas el total tiene la máxima heterocigosidad posible ($\bar{H_t} = 0.50$). Este es el ejemplo extremo del **efecto Wahlund**: dentro de cada subpoblación no hay heterocigotos, pero si juntamos los datos parecería que la población combinada debería tener un 50% de heterocigotos.
+
+¿Cómo se comparan los dos primeros casos?
+
+Caso 1 → más heterocigotos porque $p$ está cerca de 0.5.
+
+Caso 2 → menos heterocigotos porque $p$ está más lejos de 0.5.
+
+Aunque las heterocigosidades absolutas difieren entre los dos casos, el **déficit de heterocigotos** al combinar subpoblaciones es el mismo. Esto se debe a que el **efecto Wahlund depende únicamente de la varianza en frecuencias alélicas entre subpoblaciones**. En ambos casos, esa varianza produce el mismo término.
+
+$\frac{(p_1 - p_2)^2}{2}$
 
 # Ejercicio 1: Frecuencia de alelo p=0.1
 
