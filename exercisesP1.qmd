@@ -26,7 +26,7 @@ format:
       colorlinks: true
 ---
 
-# Ejercicio 5: Estudio farmaceutico
+# Total de ejercicios de genetica de poblaciones
 
 1. La frecuencia de un alelo autosómico A en una población es $p = 0.1$.
 ¿Cuál es el número esperado de alelos A en una muestra de 20 alelos?
@@ -46,7 +46,6 @@ distribución binomial.
 6. Para una muestra de $n = 10$ individuos, obtenga la frecuencia esperada de
 heterocigotos para $f(A) = 0.3$ y utilice rbinom para simular un gran número de muestras
 y caracterizar la variación aleatoria de la frecuencia observada de heterocigotos.
-7. nota: el 3 muestra (no demuestra) que $MLE(p) = \hat{p}$
 8. Para $n=4$, obtener en R una simulación de todos los componentes del proceso
 coalescente. Asumir que $N = 5\times 10^{5}$ y $\mu = 10-5$. Para la realización obtenida, calcular $\pi$, $S$
 y $\theta_W$.
@@ -76,6 +75,10 @@ equivalentes.
 
 # Ejercicio 1: Frecuencia de alelo p=0.1
 
+1. La frecuencia de un alelo autosómico A en una población es $p = 0.1$.
+¿Cuál es el número esperado de alelos A en una muestra de 20 alelos?
+¿Cuál es la probabilidad de no observar el alelo A en la muestra?
+
 Para responder a estas preguntas, tratamos la extracción de cada alelo como un ensayo de Bernoulli, donde "éxito" es obtener el alelo A.
 
 - ¿Cuál es el número esperado de alelos A en una muestra de 20 alelos?
@@ -89,6 +92,10 @@ Aquí buscamos la probabilidad de obtener 0 éxitos (k=0) en 20 ensayos. Usamos 
     Hay un $12.16\%$ de probabilidad de no encontrar ningún alelo A en la muestra.
 
 # Ejercicio 2: Simulación con rbinom
+
+2. Utilizando la función rbinom, simule un gran número de muestras de tamaño $n = 20$ y
+caracterice la distribución de los resultados utilizando descriptores gráficos y numéricos
+apropiados.
 
 El objetivo de este ejercicio es simular el proceso de muestreo miles de veces para ver cómo los resultados se distribuyen alrededor del valor esperado. rbinom en R genera números aleatorios basados en una distribución binomial.
 
@@ -125,6 +132,9 @@ hist(muestras_simuladas,
 
 # Ejercicio 3: Frecuencia de alelo p=0.01
 
+3. Considere ahora el caso de $f(A) = p = 0.01$.¿Cuál es la probabilidad de observar el alelo
+A en una muestra de $n = 20$?
+
 Para encontrar la probabilidad de observar el alelo A, es más fácil calcular la probabilidad de no observarlo (0 alelos) y restarla de 1. ¿Cuál es la probabilidad de que, en esas 20 copias, aparezca al menos una vez el alelo A?.
 
 $P(observar A)=1−P(no observar A)$
@@ -132,6 +142,11 @@ $P(X \geq 1) = 1−P(X=0) = 1 − \binom{20}{0}(0.01)^0⋅(0.99)^20= 1 − (0.99
 La probabilidad de observar al menos un alelo A es de aproximadamente 18.21%.
 
 # Ejercicio 4: Frecuencia observada de 3/10
+
+4. La frecuencia observada de un alelo autosómico diploide A es 3/10 (tamaño de la
+muestra $n = 10$). Utilice dbinom para calcular la probabilidad de observar esta frecuencia
+en la muestra para un rango de frecuencias subyacentes en la población entre $0,01$ y
+$0,99$.
 
 Aquí invertimos el problema: tenemos la muestra y queremos saber qué tan probable es esta observación para diferentes frecuencias poblacionales. Usamos dbinom, que calcula la probabilidad de un número específico de éxitos.
 
@@ -183,6 +198,10 @@ $\frac{d}{dp}[p^k(1−p)n−k]=0$ el resultado es $\hat{p}=k/n$ En este caso ser
 
 
 # Ejercicio 5: Proporciones de Hardy-Weinberg (HW)
+
+5. Genotipos como muestras aleatorias de tamaño $n = 2$. Para un locus autosómico
+diploide con dos alelos, describa las proporciones de HW como esperanzas de la
+distribución binomial.
 
 Las proporciones de Hardy-Weinberg describen la distribución de genotipos en una población en equilibrio. Podemos ver la formación de un genotipo como el resultado de tomar una muestra de 2 alelos, uno de cada padre.
 
