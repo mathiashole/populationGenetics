@@ -261,7 +261,7 @@ Si $runif > 0.33333$ nos quedamos con la topologia mas probable, si $runif \leq 
 
 2. Los tiempos de coalescencia
 
-Imaginemos que empezamos con n=4 linajes.
+Imaginemos que empezamos con $n=4$ linajes.
 El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
 
 La probabilidad de coalescencia por generación depende de:
@@ -271,18 +271,18 @@ Y de $1/(2N)$, que es la probabilidad de que un par coalesca en una generación.
 El tiempo de espera hasta el evento coalescente es el inverso de esa probabilidad.
 
 - De 4 a 3 linajes:
-    Pares posibles: $C(4,2)=6$ usando el coficiente binomial $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
-    Probabilidad por generación: $6/(2N)$
+    Pares posibles: $C(4,2)=6$ usando el coficiente binomial $\binom{4}{2} = \frac{4!}{2!(4-2)!}$
+    Probabilidad por generación: $\binom{4}{2}.\frac{1}{2N} = 6/(2N)$
     Tiempo esperado: $E[T_4]=2N/6=10^6/6≈1.67×10^5$
 
 - De 3 a 2 linajes:
-    Pares posibles: $C(3,2)=3$ usando el coficiente binomial $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
-    Probabilidad por generación: $3/(2N)$
+    Pares posibles: $C(3,2)=3$ usando el coficiente binomial $\binom{3}{2} = \frac{3!}{2!(3-2)!}$
+    Probabilidad por generación: $\binom{3}{2}.\frac{1}{2N} = 3/(2N)$
     Tiempo esperado: $E[T_3]=2N/3≈3.33×10^5$
 
 - De 2 a 1 linajes (MRCA):
-    Pares posibles: $C(2,2)=1$ usando el coficiente binomial $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
-    Probabilidad por generación: $1/(2N)$
+    Pares posibles: $C(2,2)=1$ usando el coficiente binomial $\binom{2}{2} = \frac{2!}{2!(2-2)!}$
+    Probabilidad por generación: $\binom{2}{2}.\frac{1}{2N} = 1/(2N)$
     Tiempo esperado:  $E[T_2]=2N=10^6$
 
 Entonces los tiempos de espera esperados son:
@@ -291,7 +291,7 @@ $T_4≈1.67×10^5$
 $T_3≈3.33×10^5$
 $T_2=10^6$
 
-2. Tiempo total de ramas del árbol
+3. Tiempo total de ramas del árbol
 
 Cada intervalo de tiempo tiene un cierto número de linajes que lo “recorren”: $Ttotal=(n_1⋅T_4)+(n_2⋅T_3)+(n_3⋅T_2)$
 
@@ -303,16 +303,13 @@ Cada intervalo de tiempo tiene un cierto número de linajes que lo “recorren�
 
 Sumando: $Ttotal≈3.67 \times 10^6$
 
-3. Número de mutaciones $(S)$
+4. Número de sitios segregantes $(S)$
 
-El número esperado de mutaciones es simplemente: $S=Ttotal \cdot \mu$
+El número de sitios segregantes es simplemente: $S=Ttotal \cdot \mu$
 
 $S≈(3.67 \times 10^6) \cdot (10^−5)≈36.7$
 
-En una simulación podríamos obtener un valor aleatorio cercano, pero si lo hacemos “a mano” decimos por ejemplo:
-$S=37$
-
-4. Cálculo de $\pi$ (diversidad nucleotídica)
+5. Cálculo de $\pi$ (diversidad nucleotídica promedio por par)
 
 $\pi$ mide las diferencias promedio entre pares de secuencias.
 
@@ -322,7 +319,7 @@ Con nuestros valores: $\pi=4⋅(5 \times 10^5)⋅10^−5=20$
 
 En la práctica, $\pi$ dependerá de cómo se reparten las 37 mutaciones en el árbol, pero el valor esperado es $\pi ≈ 20$.
 
-5. Cálculo de $\theta_W$ (Theta de Watterson)
+6. Cálculo de $\theta_W$ (Theta de Watterson)
 
 Se define como: $\theta_W = S/a_n$ donde $a_n = \sum_{i=1}^{n-1}1/i$
 
