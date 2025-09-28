@@ -231,6 +231,10 @@ hist(muestras_heterocigotos,
 
 # Ejercicio 8: Simulación del proceso coalescente con n=4
 
+8. Para $n=4$, obtener en R una simulación de todos los componentes del proceso
+coalescente. Asumir que $N = 5\times 10^{5}$ y $\mu = 10-5$. Para la realización obtenida, calcular $\pi$, $S$
+y $\theta_W$.
+
 Queremos simular el coalescente para n=4 alelos, con:
 
 Tamaño efectivo de la población $N=5 \times 10^5$
@@ -245,16 +249,27 @@ $S$ (número de sitios segregantes)
 
 $\theta_w$ (estimador de Watterson).
 
-1. Los tiempos de coalescencia
+1. Para $n=4$ existen dos topologias posibles que tienen sus probabilidades asociadas. Estas topologias se forman con la siguiente distribucion de alelos (2,2) con probabilidad $1/3$ y la distribucion (3,1) con la probabilidad de $2/3$. Esta ultima distribucion puede tener la bifurcacion mas reciente en uno de los ancestros hermanos por eso su probabilidad es de $2/3$. Para simular este proceso usaremos la funcion de R runif (random uniforme), esta funcion nos proporciona un muestreo de un numero al azar entre 0 y 1.
+
+```{r}
+
+runif(1)
+
+```
+
+Si $runif > 0.33333$ nos quedamos con la topologia mas probable, si $runif \leq 0.33333$ nos quedamos con la manos probable de las topologias.
+
+2. Los tiempos de coalescencia
 
 Imaginemos que empezamos con n=4 linajes.
 El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
 
 La probabilidad de coalescencia por generación depende de:
 
-El número de pares posibles: $C(n,2)=n(n−1)/2$
+El número de pares posibles: $\binom{n}{2}=\frac{n!}{2!(n-2)!}=n(n−1)/2$
 Y de $1/(2N)$, que es la probabilidad de que un par coalesca en una generación.
 El tiempo de espera hasta el evento coalescente es el inverso de esa probabilidad.
+
 - De 4 a 3 linajes:
     Pares posibles: $C(4,2)=6$ usando el coficiente binomial $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
     Probabilidad por generación: $6/(2N)$
