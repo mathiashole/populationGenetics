@@ -191,8 +191,10 @@ Probabilidad en $S_1$
 
 Subpoblacion 1
 
-$Locus1= P(a_1a_1|S_1) = P^2 = 0.3^2$ 
+$Locus1= P(a_1a_1|S_1) = P^2 = 0.3^2$
+
 $Locus2= P(b_1b_2|S_1) = 2\cdot P\cdot (1-P) =  2\cdot 0.2\cdot (1-0.2)$ 
+
 $Locus3= P(c_1c_1|S_1) = P^2 = 0.3^2$ 
 
 $L_1= 0.3^2 \cdot 2\cdot 0.2\cdot (1-0.2) \cdot 0.3^2 = 0.002592$
@@ -202,7 +204,9 @@ Probabilidad en $S_2$
 Subpoblacion 2
 
 $Locus1= P(a_1a_1|S_2) = P^2 = 0.2^2$ 
+
 $Locus2= P(b_1b_2|S_2) + 2\cdot P\cdot (1-P) =  2\cdot 0.25\cdot (1-0.25)$ 
+
 $Locus3= P(c_1c_1|S_1) = P^2 = 0.2^2$ 
 
 $L_2= 0.2^2 \cdot 2\cdot 0.25\cdot (1-0.25) \cdot 0.2^2 = 0.0006$
