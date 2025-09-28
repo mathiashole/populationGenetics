@@ -571,28 +571,56 @@ decision
 
 b) Decidir si mover un genotipo
 
-Este es el Paso 2 del algoritmo MCMC, donde se decide la reasignación de un individuo.
+Este es el **Paso 2 del algoritmo MCMC**, donde se decide la reasignación de un individuo.
 
-    Genotipo considerado: Aa.
+Genotipo considerado: Aa.
 
-    Subpoblaciones involucradas: De la subpoblación 1 a la 2.
+Subpoblaciones involucradas: De la **subpoblación 1 y 2**.
 
-    Frecuencias alélicas a usar: Las frecuencias actualizadas del Paso 1, P1m​ y P2m​ (aunque para este ejemplo, usaremos P1m−1​=0.5 y P2m−1​=0.8).
+Frecuencias alélicas a usar:  $P_{1m−1}​=0.5$ y $P_{2m−1}​=0.8$.
 
 Cálculo de la Probabilidad de Pertenencia
 
 El algoritmo compara la probabilidad del genotipo Aa en cada subpoblación, dada la frecuencia de alelos de cada una:
 
-    Probabilidad en Subpoblación 1: Pr(Aa∣Subpop 1)=2⋅P1​⋅(1−P1​)=2⋅0.5⋅(1−0.5)=0.5.
+Probabilidad en **Subpoblación 1**: $Pr(Aa∣Subpop 1)=2⋅P1​⋅(1−P1​)=2⋅0.5⋅(1−0.5)=0.5$
 
-    Probabilidad en Subpoblación 2: Pr(Aa∣Subpop 2)=2⋅P2​⋅(1−P2​)=2⋅0.8⋅(1−0.8)=2⋅0.8⋅0.2=0.32.
-
-Regla de Decisión
+Probabilidad en **Subpoblación 2**: $Pr(Aa∣Subpop 2)=2⋅P2​⋅(1−P2​)=2⋅0.8⋅(1−0.8)=2⋅0.8⋅0.2=0.32$.
 
 El algoritmo no solo mueve el genotipo a la subpoblación más probable. Utiliza la misma regla de Metropolis-Hastings para decidir si aceptar o rechazar el movimiento.
 
-    α=Probabilidad de pertenecer a la subpoblacioˊn actual (1)Probabilidad de pertenecer a la subpoblacioˊn propuesta (2)​=0.50.32​=0.64.
+Razon de verosimilitud
 
-    Dado que α<1, el algoritmo acepta el movimiento con una probabilidad de 0.64.
+$\alpha= \frac{L(\text{genotipo en subpop 2})}{L(\text{Genotipo en subpop 1})}$
+$​\alpha=\frac{0.32}{0.50}​=0.64$.
 
-    Si un número aleatorio entre 0 y 1 es menor que 0.64, el individuo se mueve; de lo contrario, se queda en la subpoblación 1.
+En este ejemplo, $\alpha = 0.64$ significa que el genotipo Aa tiene un 64% de la probabilidad en la subpoblación 2 respecto de la subpoblación 1.
+Dicho de otra forma: la propuesta es menos consistente con los datos que el estado actual, pero no se descarta de inmediato: el algoritmo le da un 64% de chance de ser aceptada para permitir que la cadena explore también valores menos probables (evitando quedarse atrapada en un único modo).
+
+Regla de Decisión **Metropolis-Hastings**:
+
+Si $\alpha \geq 1$, aceptás siempre.
+Si $\alpha < 1$, aceptás con probabilidad $\alpha$. 
+
+Si $u < \alpha$, aceptás.
+Si $u \geq \alpha$, rechazás.
+
+```{r}
+# Probabilidad de observar un genotipo Aa en cada subpoblación
+sub1H <- 2*0.5*(1-0.5)  # Subpoblación 1 (p = 0.5)
+sub2H <- 2*0.8*(1-0.8)  # Subpoblación 2 (p = 0.8)
+
+# Razón de verosimilitudes (alpha)
+alpha <- sub2H / sub1H
+alpha
+
+# Decisión con Metropolis-Hastings
+u <- runif(1)
+if (u < alpha) {
+  decision <- "ACEPTAR"
+} else {
+  decision <- "RECHAZAR"
+}
+decision
+
+```
