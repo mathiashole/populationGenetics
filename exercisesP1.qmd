@@ -55,6 +55,18 @@ Tabla 1. Frecuencias alélicas en dos subpoblaciones
 ¿Cuáles son las probabilidades de observar este genotipo en particular en cada una de las dos
 subpoblaciones? 
 
+3. Efecto de la endocría: Calculamos $P(S_1)$ y $P(S_2)$ utilizando las expectativas de HW. ¿Cómo variarían estos
+valores y su proporción si ambas subpoblaciones tuvieran cierto grado de endogamia, por ejemplo, $F=0.1$?
+Completa la tabla con las fórmulas y los valores adecuados para $P(G_1|S_1)$. Recuerda que $G_1=a_1a_1b_1b_2c_1c_1$
+
+| (header)      | a1a1                     | b1b2                      | c1c1                     | $P(G1 | S1)$                    |
+|--------------:|:------------------------:|:-------------------------:|:------------------------:|:-------------------------------:|
+|   HW (F = 0)  |       p2                 | 2p(1−p)                   | p2                       |                                 |
+|   HW (F = 0)  |                          |                           |                          |                                 |
+| Con endogamia |                          |                           |                          |                                 |
+|  w / F = 0.1  |                          |                           |                          |                                 |
+
+
 4. Para este ejercicio, seleccionamos un subconjunto de 20 individuos (10 de Pine Forest y 10 de la
 subpoblación Warner Mts.) tomados aleatoriamente de las secuencias generadas en el trabajo citado. De los 701 pares de bases reportados en el artículo, se seleccionaron 620 sitios tras excluir los sitios que no se secuenciaron en todos los individuos. De estos, 50 fueron polimórficos, y solo esos sitios se presentan a continuación. Observamos que el número total de sitios polimórficos (= variables o, usando un término mendeliano, segregantes) en las secuencias es de aproximadamente el 8%. 
 
@@ -197,7 +209,7 @@ Aunque las heterocigosidades absolutas difieren entre los dos casos, el **défic
 
 $\frac{(p_1 - p_2)^2}{2}$
 
-# Ejercicio 2: Asignando genotipos a subpoblaciones con frecuencias alélicas conocidas 
+# Ejercicio 2: Asignando genotipos a subpoblaciones con frecuencias alélicas conocidas - Probabilidad condicional y regla de Bayes
 
 2. Ejemplo 2: Asignando genotipos a subpoblaciones con frecuencias alélicas conocidas
 Nos gustaría asignar un individuo a una de dos posibles subpoblaciones fuente $S_1$ y $S_2$ según su genotipo
@@ -268,6 +280,54 @@ Si asumimos probabilidades a priori iguales (es decir, que antes de ver el genot
 $P(S_1 | G_1) = \frac{L_1}{L_1 + L_2} = \frac{0.002592}{0.002592 + 0.0006} = 0.812$
 
 Con la información genética disponible, el individuo tiene un 81.2% de probabilidad de pertenecer a $S_1$.
+
+# Ejercicio 3: Efecto de la endocría - Probabilidad condicional y regla de Bayes
+
+Fórmulas (Hardy–Weinberg con coeficiente de endogamia F
+Para un alelo con frecuencia $p$ y coeficiente de endogamia $F$:
+
+$P(AA)=p^2+F p(1−p)$
+
+$P(Aa)=2p(1−p)(1−F)$
+
+$P(aa)=(1−p)2+F p(1−p)$
+
+En este ejercicio usamos el mismo genotipo del Ejercicio 2:
+
+$G_1=a_1a_1b_1b_2c_1c_1(es decir: AA, Aa, AA)$
+
+y las frecuencias por subpoblación:
+
+$S1$: $p_a=0.3$, $p_b=0.2$, $p_c=0.3$
+
+$S2$: $p_a=0.2$, $p_b=0.25$, $p_c=0.2$
+
+La verosimilitud de observar $G$ en una subpoblación es el producto de probabilidades por locus:
+
+$L=Plocus1\cdot Plocus2\cdot Plocus3$
+
+
+| (header)      | a1a1                     | b1b2                      | c1c1                     | $P(G1 | S1)$                    |
+|--------------:|:------------------------:|:-------------------------:|:------------------------:|:-------------------------------:|
+|   HW (F = 0)  |       p2                 | 2p(1−p)                   | p2                       |                                 |
+|   HW (F = 0)  |       $0.3^2=0.09$       | $2⋅0.2⋅0.8=0.32$          | $0.3^2=0.09$             | $0.09⋅0.32⋅0.09=0.002592$       |
+| Con endogamia |       $p^2+F p(1−p)$     | $2p(1−p)(1−F)$            | $p^2+F p(1−p)$           |                                 |
+|  w / F = 0.1  | $0.09+0.1⋅0.3⋅0.7=0.111$ | $2⋅0.2⋅0.8⋅(1−0.1)=0.288$ | $0.09+0.1⋅0.3⋅0.7=0.111$ | $0.111⋅0.288⋅0.111=0.003548448$ |
+
+Sin efecto de endogamia
+
+$P(G_1∣S_1)=0.09⋅0.32⋅0.09 = 0.002592$
+
+Esto indica que el genotipo es poco frecuente bajo HW, ya que combina dos homocigotas y un heterocigota.
+
+Con efecto de endogamia 
+
+$P(G_1∣S_1,F=0.1)=0.111⋅0.288⋅0.111≈0.003548$
+
+Comparado con HW, la probabilidad aumenta porque el genotipo tiene dos homocigotas y la endogamia aumenta la frecuencia de los homocigotas mientras reduce la de los heterocigotas.
+
+Para un genotipo mixto como $G1$ (2 homocigotas + 1 heterocigota), el efecto neto es un ligero aumento de la probabilidad de observar ese genotipo en la población.
+
 
 # Ejercicio 4: Ejemplo 2 practico 1 HW y F
 
