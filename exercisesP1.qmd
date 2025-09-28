@@ -39,6 +39,22 @@ subpoblaciones 1 y 2, respectivamente:
 
 ¿Cómo se comparan los dos primeros casos?
 
+2. Ejemplo 2: Asignando genotipos a subpoblaciones con frecuencias alélicas conocidas
+Nos gustaría asignar un individuo a una de dos posibles subpoblaciones fuente $S_1$ y $S_2$ según su genotipo
+$G_1 = a_1a_1b_1b_2c_1c_1 $, obtenido para tres loci bialélicos no ligados. Se conocen las frecuencias alélicas en
+estas dos subpoblaciones:
+
+Tabla 1. Frecuencias alélicas en dos subpoblaciones
+
+|          | $S_1$ | $S_2$ |
+|----------|-------|-------|
+| $f(a_1)$ |   0.3 |  0.2  |
+| $f(b_1)$ |   0.2 |  0.25 |
+| $f(c_1)$ |   0.3 |  0.2  |
+
+¿Cuáles son las probabilidades de observar este genotipo en particular en cada una de las dos
+subpoblaciones? 
+
 1. La frecuencia de un alelo autosómico A en una población es $p = 0.1$.
 ¿Cuál es el número esperado de alelos A en una muestra de 20 alelos?
 ¿Cuál es la probabilidad de no observar el alelo A en la muestra?
@@ -138,6 +154,74 @@ Caso 2 → menos heterocigotos porque $p$ está más lejos de 0.5.
 Aunque las heterocigosidades absolutas difieren entre los dos casos, el **déficit de heterocigotos** al combinar subpoblaciones es el mismo. Esto se debe a que el **efecto Wahlund depende únicamente de la varianza en frecuencias alélicas entre subpoblaciones**. En ambos casos, esa varianza produce el mismo término.
 
 $\frac{(p_1 - p_2)^2}{2}$
+
+# Ejercicio 2: Asignando genotipos a subpoblaciones con frecuencias alélicas conocidas 
+
+2. Ejemplo 2: Asignando genotipos a subpoblaciones con frecuencias alélicas conocidas
+Nos gustaría asignar un individuo a una de dos posibles subpoblaciones fuente $S_1$ y $S_2$ según su genotipo
+$G_1 = a_1a_1b_1b_2c_1c_1 $, obtenido para tres loci bialélicos no ligados. Se conocen las frecuencias alélicas en
+estas dos subpoblaciones:
+
+Tabla 1. Frecuencias alélicas en dos subpoblaciones
+
+|          | $S_1$ | $S_2$ |
+|----------|-------|-------|
+| $f(a_1)$ |   0.3 |  0.2  |
+| $f(b_1)$ |   0.2 |  0.25 |
+| $f(c_1)$ |   0.3 |  0.2  |
+
+¿Cuáles son las probabilidades de observar este genotipo en particular en cada una de las dos
+subpoblaciones? 
+
+Modelo de probabilidades de genotipos
+
+Bajo equilibrio de Hardy–Weinberg, la probabilidad de un genotipo depende de la frecuencia del alelo $p$:
+
+Homocigota ($AA$): $p^2$
+
+Heterocigota ($Aa$): $2p(1-p)$
+
+Homocigota alternativo ($aa$): $(1-p)^2$
+
+Dado que los loci son independientes, la probabilidad total del genotipo en una subpoblación es el producto de las probabilidades en cada locus.
+
+$L_1=P(AA|S_1)\cdot P(Aa|S_1)\cdot P(AA|S_1) \simeq P^2 \cdot 2\cdot P\cdot (1-P) \cdot P^2$
+
+Probabilidad en $S_1$
+
+Subpoblacion 1
+
+$Locus1= P(a_1a_1|S_1) = P^2 = 0.3^2$ 
+$Locus2= P(b_1b_2|S_1) = 2\cdot P\cdot (1-P) =  2\cdot 0.2\cdot (1-0.2)$ 
+$Locus3= P(c_1c_1|S_1) = P^2 = 0.3^2$ 
+
+$L_1= 0.3^2 \cdot 2\cdot 0.2\cdot (1-0.2) \cdot 0.3^2 = 0.002592$
+
+Probabilidad en $S_2$
+
+Subpoblacion 2
+
+$Locus1= P(a_1a_1|S_2) = P^2 = 0.2^2$ 
+$Locus2= P(b_1b_2|S_2) + 2\cdot P\cdot (1-P) =  2\cdot 0.25\cdot (1-0.25)$ 
+$Locus3= P(c_1c_1|S_1) = P^2 = 0.2^2$ 
+
+$L_2= 0.2^2 \cdot 2\cdot 0.25\cdot (1-0.25) \cdot 0.2^2 = 0.0006$
+
+Razon de verosimilitud 
+
+Comparamos qué subpoblación explica mejor el genotipo:
+
+$\frac{L1}{L2} = \frac{0.002592}{0.0006} = 4.32$ es 4.32 veces mas probable la subpoblacion 1 que la 2
+
+El genotipo observado es 4.32 veces más probable en $S_1$ que en $S_2$.
+
+Probabilidad posteriori (Formula de Bayes)
+
+Si asumimos probabilidades a priori iguales (es decir, que antes de ver el genotipo ambos orígenes son igualmente probables), la probabilidad de que el individuo pertenezca a $S_1$ dado su genotipo es:
+
+$P(S_1 | G_1) = \frac{L_1}{L_1 + L_2} = \frac{0.002592}{0.002592 + 0.0006} = 0.812$
+
+Con la información genética disponible, el individuo tiene un 81.2% de probabilidad de pertenecer a $S_1$.
 
 # Ejercicio 1: Frecuencia de alelo p=0.1
 
