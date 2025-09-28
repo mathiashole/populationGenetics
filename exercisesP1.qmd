@@ -306,12 +306,58 @@ La tabla incluye datos de heterocigosidad del artículo, basados en los 11 loci 
 |        $S$       |             |            |
 |        $H$       |             |    0.64    |
 |        $\pi$     |             |    22.74   |
-|  Microsatélites  |             |            |
+
+|  Microsatélites  | Pine Forest | Warner Mts |
+|------------------|-------------|------------|
 |        $\bar{H}$ |     0.37    |    0.78    |
 
 Ten en cuenta que usamos $H$ para el ADNmt, ya que se trata de un solo locus, mientras que $\bar{H}$ para los microsatélites, ya que 0,37 es la heterocigosidad promedio de 11 loci de microsatélites.
 
 ¿Cómo se pueden interpretar estos resultados y qué nos indican sobre la variación entre subpoblaciones?
+
+$P = \frac{\text{Numero de diferencias}}{\text{Total de diferencias}}$
+
+Pine forest 
+
+$P_1 = 1/10$
+$P_2 = 7/10$
+$P_3 = 2/10$
+
+Warner Mts. 
+
+$P_1 = 5/10$
+$P_4 = 3/10$
+$P_5 = 1/10$
+$P_6 = 1/10$
+
+Pine forest
+
+$H = 1 - \sum_{i}P_i^2$
+$H = 1 - (0.1)^2 + (0.7)^2 + (0.2)^2$
+
+Warner Mts.
+
+$H = 1 - \sum_{i}P_i^2$
+$H = 1 - (0.5)^2 + (0.3)^2 + (0.1)^2 + (0.1)^2$
+
+Pine forest
+
+$\pi = \sum_{i<j}2P_iP_j\pi_{ij}$
+
+haplotipo 1 vs 2 $\pi = 2 (0.1)(0.7)1$
+haplotipo 1 vs 3 $\pi = 2 (0.1)(0.2)3$
+haplotipo 2 vs 3 $\pi = 2 (0.2)(0.7)2$
+
+Warner Mts.
+
+$\pi = \sum_{i<j}2P_iP_j\pi_{ij}$
+
+haplotipo 1 vs 4 $\pi = 2 (0.1)(0.7)1$
+haplotipo 1 vs 5 $\pi = 2 (0.1)(0.2)3$
+haplotipo 1 vs 6 $\pi = 2 (0.2)(0.7)2$
+haplotipo 4 vs 5 $\pi = 2 (0.1)(0.7)1$
+haplotipo 4 vs 6 $\pi = 2 (0.1)(0.2)3$
+haplotipo 5 vs 6 $\pi = 2 (0.2)(0.7)2$
 
 # Ejercicio 1: Frecuencia de alelo p=0.1
 
