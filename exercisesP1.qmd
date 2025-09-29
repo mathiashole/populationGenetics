@@ -686,7 +686,9 @@ El tiempo de espera hasta el evento coalescente es el inverso de esa probabilida
 Entonces los tiempos de espera esperados son:
 
 $T_4≈1.67×10^5$
+
 $T_3≈3.33×10^5$
+
 $T_2=10^6$
 
 3. Tiempo total de ramas del árbol
