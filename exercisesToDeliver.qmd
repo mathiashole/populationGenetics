@@ -89,13 +89,13 @@ T_MRCA <- T3 + T2
 
 cat("Esperanza teorica de T_MRCA =", E_TMRCA, " y la esperanza simulada T_MRCA =", mean(T_MRCA), "\n")
 
-# Comparar con la esperanza teórica
+# Comparar con la esperanza teorica
 hist(T_MRCA,
-     main = "Distribución simulada de T_MRCA (Geométrica)",
-     xlab = "Tiempo (en generaciones)",
+     main = "Distribucion simulada de T_MRCA",
+     xlab = "Tiempo",
      col = "lightblue", border = "white")
 abline(v = E_TMRCA, col = "red", lwd = 2, lty = 1)
-legend("topright", legend = c("Esperanza teórica"), col = "red", lty = 1)
+legend("topright", legend = c("Esperanza teorica"), col = "red", lty = 1)
 
 ```
 
