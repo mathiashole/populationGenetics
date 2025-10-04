@@ -25,3 +25,114 @@ format:
       number-sections: true
       colorlinks: true
 ---
+
+
+# Ejercicio 8: Simulación del proceso coalescente con n=4
+
+8. Para $n=4$, obtener en R una simulación de todos los componentes del proceso
+coalescente. Asumir que $N = 5\times 10^{5}$ y $\mu = 10-5$. Para la realización obtenida, calcular $\pi$, $S$
+y $\theta_W$.
+
+Queremos simular el coalescente para n=4 alelos, con:
+
+Tamaño efectivo de la población $N=5 \times 10^5$
+
+Tasa de mutación $\mu=10^−5$
+
+Y a partir de esa genealogía calcular:
+
+$\pi$ (diversidad nucleotídica promedio por par)
+
+$S$ (número de sitios segregantes)
+
+$\theta_w$ (estimador de Watterson).
+
+1. Para $n=4$ existen dos topologias posibles que tienen sus probabilidades asociadas. Estas topologias se forman con la siguiente distribucion de alelos (2,2) con probabilidad $1/3$ y la distribucion (3,1) con la probabilidad de $2/3$. Esta ultima distribucion puede tener la bifurcacion mas reciente en uno de los ancestros hermanos por eso su probabilidad es de $2/3$. Para simular este proceso usaremos la funcion de R runif (random uniforme), esta funcion nos proporciona un muestreo de un numero al azar entre 0 y 1.
+
+```{r}
+
+runif(1)
+
+```
+
+Si $runif > 0.33333$ nos quedamos con la topologia mas probable, si $runif \leq 0.33333$ nos quedamos con la manos probable de las topologias.
+
+2. Los tiempos de coalescencia
+
+Imaginemos que empezamos con $n=4$ linajes.
+El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
+
+La probabilidad de coalescencia por generación depende de:
+
+El número de pares posibles: $\binom{n}{2}=\frac{n!}{2!(n-2)!}=n(n−1)/2$
+Y de $1/(2N)$, que es la probabilidad de que un par coalesca en una generación.
+El tiempo de espera hasta el evento coalescente es el inverso de esa probabilidad.
+
+- De 4 a 3 linajes:
+    Pares posibles: $C(4,2)=6$ usando el coficiente binomial $\binom{4}{2} = \frac{4!}{2!(4-2)!}$
+    Probabilidad por generación: $\binom{4}{2}.\frac{1}{2N} = 6/(2N)$
+    Tiempo esperado: $E[T_4]=2N/6=10^6/6≈1.67×10^5$
+
+- De 3 a 2 linajes:
+    Pares posibles: $C(3,2)=3$ usando el coficiente binomial $\binom{3}{2} = \frac{3!}{2!(3-2)!}$
+    Probabilidad por generación: $\binom{3}{2}.\frac{1}{2N} = 3/(2N)$
+    Tiempo esperado: $E[T_3]=2N/3≈3.33×10^5$
+
+- De 2 a 1 linajes (MRCA):
+    Pares posibles: $C(2,2)=1$ usando el coficiente binomial $\binom{2}{2} = \frac{2!}{2!(2-2)!}$
+    Probabilidad por generación: $\binom{2}{2}.\frac{1}{2N} = 1/(2N)$
+    Tiempo esperado:  $E[T_2]=2N=10^6$
+
+Entonces los tiempos de espera esperados son:
+
+$T_4≈1.67×10^5$
+
+$T_3≈3.33×10^5$
+
+$T_2=10^6$
+
+3. Tiempo total de ramas del árbol
+
+Cada intervalo de tiempo tiene un cierto número de linajes que lo “recorren”: $Ttotal=(n_1⋅T_4)+(n_2⋅T_3)+(n_3⋅T_2)$
+
+- Con 4 linajes durante $T_4$ : $4 \cdot 1.67 \times 10^5≈6.68 \times 10^5$
+
+- Con 3 linajes durante $T_3$ : $3 \cdot 3.33 \times 10^5≈9.99 \times 10^5$
+
+- Con 2 linajes durante $T_2$ : $2 \cdot 10^6=2 \times 10^6$
+
+Sumando: $Ttotal≈3.67 \times 10^6$
+
+4. Número de sitios segregantes $(S)$
+
+El número de sitios segregantes es simplemente: $S=Ttotal \cdot \mu$ 
+
+$S≈(3.67 \times 10^6) \cdot (10^−5)≈36.7$ mutaciones (sitios segregantes)
+
+5. Cálculo de $\pi$ (diversidad nucleotídica promedio por par)
+
+$\pi$ mide las diferencias promedio entre pares de secuencias.
+
+En el coalescente, la esperanza de $\pi$ es: $\pi =4N\mu$
+
+Con nuestros valores: $\pi=4⋅(5 \times 10^5)⋅10^−5=20$
+
+En la práctica, $\pi$ dependerá de cómo se reparten las 37 mutaciones (sitios segregantes) en el árbol, pero el valor esperado es $\pi ≈ 20$.
+
+Si muchas mutaciones cayeron en ramas profundas (compartidas por muchos individuos), eso hará que muchos pares de secuencias difieran en esas posiciones $\pi$ será grande. Si la mayoría de las mutaciones cayeron en ramas terminales (propias de un solo individuo), entonces solo unos pocos pares mostrarán esas diferencias $\pi$ será más chico.
+
+6. Cálculo de $\theta_W$ (Theta de Watterson)
+
+Se define como: $\theta_W = \frac{S}{a_n}$ donde $a_n = \sum_{i=1}^{n-1}1/i$ entonces $\theta_W = \frac{S}{\sum_{i=1}^{n-1}1/i}$
+
+Para $n=4$: $a_4=1+1/2+1/3≈1.833$
+
+Entonces: $\theta_W=37/1.833≈20.18$
+
+Resultado final
+
+$S=37$
+
+$\pi≈20$
+
+$\theta_W≈20.18$
