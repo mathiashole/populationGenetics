@@ -41,7 +41,7 @@ c. Usar simulaciones para obtener:
 
 Para $n=3$ existe una unica forma de topologia posible. En este caso, dos linajes de los tres coalescen primero, y el tercer linaje se une a estos coalesciendo mas atras en el tiempo. Las particion formada es $(1,2)$, que es equivalente a $(2,1)$ ya que el orden de los grupos no importa. Esto parte $P(n_1, n_2) = \begin{cases} \frac{1}{n-1} & \text{si } n_1 = n_2 \\ \frac{2}{n-1} & \text{si } n_1 \neq n_2\end{cases}$, asi que $P(1,2) = 2/(3-1) = 1$. La probabilidades asociadas a observar esta particion es 1, de esta manera no hay otra topologia posible.
 
-a. ¿Cuál es la esperanza de la antigüedad del ancestro común más cercano ($T_{MRCA}$) a los 3 alelos?
+## a. ¿Cuál es la esperanza de la antigüedad del ancestro común más cercano ($T_{MRCA}$) a los 3 alelos?
 
 La esperanza de $T_i$ está dada por el inverso de la $P(coalescencia | n = i)$ por una muestra del tamaño $i$, donde la $P(coalescencia | n = i) = \binom{i}{2} \frac{1}{2N} = \frac{i(i-1)}{4N}$, entonces la esperanza para un $T_i$ es $\mathbb{E}(T_i)= \frac{1}{P(coalescencia | n = i)} = \frac{1}{\binom{i}{2} \frac{1}{2N}} = \frac{4N}{i(i-1)}$
 
@@ -51,7 +51,7 @@ Sustituyendo con $N = 10^5$
 
 $\mathbb{E}[T_{MRCA}] = \frac{8}{3} \times 10^5 \simeq 2.67 \times 10^5$ generaciones.
 
-b. ¿Cuál es el número esperado de sitios segregantes (polimorficos) en la muestra?
+## b. ¿Cuál es el número esperado de sitios segregantes (polimorficos) en la muestra?
 
 El numero esperado de sitios segregantes en una muestra esta dado por $\mathbb{E}(S) = T_{total} \cdot \mu$
 
@@ -63,7 +63,7 @@ Sustituyendo con $\mu = 10^{-5}$ y $N = 10^5$
 
 $\mathbb{E}[S]=4 \times 10^5 \times 10^{-5} \times (\frac{1}{1} + \frac{1}{2}) = 6$ es el número esperado de sitios segregantes.
 
-c. Usar simulaciones para obtener:
+## c. Usar simulaciones para obtener:
    i. Una muestra aleatoria de 50 realizaciones de $T_{MRCA}$. Compararlas con la esperanza obtenida más arriba.
    ii. Una muestra de 50 realizaciones al azar de S para una genealogía con $T_2$ y $T_3$ iguales a sus respectivas esperanzas.
 
@@ -97,6 +97,8 @@ abline(v = E_TMRCA, col = "red", lwd = 2, lty = 1)
 legend("topright", legend = c("Esperanza teorica"), col = "red", lty = 1)
 
 ```
+
+La esperanza media simulada es ligeramente mayor que la esperanza teorica, esto se puede explicar por la gran varianza que tiene la distribución geométrica y tambien al tamaño moderado de la muestra (50 simulaciones). Por la ley de los Grandes Números, a medida que el número de realizaciones en tu muestra (n=50) aumenta, la media de esa muestra $(\bar{X})$ converge al valor de la esperanza teórica $(\mathbb{E}[X])$. Finalmente, la mayor densidad de los resultados se agrupa alrededor de la esperanza teorica (linea roja).
 
 Imaginemos que empezamos con $n=4$ linajes.
 El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
