@@ -39,25 +39,6 @@ c. Usar simulaciones para obtener:
    i. Una muestra aleatoria de 50 realizaciones de $T_{MRCA}$. Compararlas con la esperanza obtenida más arriba.
    ii. Una muestra de 50 realizaciones al azar de S para una genealogía con $T_2$ y $T_3$ iguales a sus respectivas esperanzas.
 
-
-8. Para $n=4$, obtener en R una simulación de todos los componentes del proceso
-coalescente. Asumir que $N = 5\times 10^{5}$ y $\mu = 10-5$. Para la realización obtenida, calcular $\pi$, $S$
-y $\theta_W$.
-
-Numero de alelos $n=3$
-
-Tamaño efectivo de la población $N=5 \times 10^5$
-
-Tasa de mutación $\mu=10^−5$
-
-Y a partir de esa genealogía calcular:
-
-$\pi$ (diversidad nucleotídica promedio por par)
-
-$S$ (número de sitios segregantes)
-
-$\theta_w$ (estimador de Watterson).
-
 Para $n=3$ existe una unica forma de topologia posible. En este caso, dos linajes de los tres coalescen primero, y el tercer linaje se une a estos coalesciendo mas atras en el tiempo. Las particion formada es $(1,2)$, que es equivalente a $(2,1)$ ya que el orden de los grupos no importa. Esto parte $P(n_1, n_2) = \begin{cases} \frac{1}{n-1} & \text{si } n_1 = n_2 \\ \frac{2}{n-1} & \text{si } n_1 \neq n_2\end{cases}$, asi que $P(1,2) = 2/(3-1) = 1$. La probabilidades asociadas a observar esta particion es 1, de esta manera no hay otra topologia posible.
 
 a. ¿Cuál es la esperanza de la antigüedad del ancestro común más cercano ($T_{MRCA}$) a los 3 alelos?
