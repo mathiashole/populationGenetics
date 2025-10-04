@@ -30,7 +30,7 @@ format:
 # Ejercicio 3: Coalescente con n=3
 
 
-3. Consideremos una muestra de $n=3$ alelos para un locus diploide autosómico en una población de tamaño constante ($N = 10^{5}$), demografía Wright-Fisher y variación genética estrictamente neutra, con tasa de mutación neutra $\mu = 10-5$.
+3. Consideremos una muestra de $n=3$ alelos para un locus diploide autosómico en una población de tamaño constante ($N = 10^5$), demografía Wright-Fisher y variación genética estrictamente neutra, con tasa de mutación neutra $\mu = 10^{-5}$.
 
 
 a. ¿Cuál es la esperanza de la antigüedad del ancestro común más cercano ($T_{MRCA}$) a los 3 alelos?
@@ -53,6 +53,15 @@ $\mathbb{E}[T_{MRCA}] = \frac{8}{3} \times 10^5 \simeq 2.67 \times 10^5$ generac
 
 b. ¿Cuál es el número esperado de sitios segregantes (polimorficos) en la muestra?
 
+El numero esperado de sitios segregantes en una muestra esta dado por $\mathbb{E}(S) = \text{Longitud total de rama} \times \text{Tasa de mutacion} = T_{total} \cdot \mu$
+
+siendo que el el tiempo total (suma de las longitudes de todas las ramas del coalescente) es $\mathbb{E}[T_{total}]=4N \sum_{i=1}^{n-1} \frac{1}{i}$
+
+Entonces el numero esperado de sitios segregantes se puede estimar $\mathbb{E}[S]=4N \mu \sum_{i=1}^{n-1} \frac{1}{i}$
+
+Sustituyendo con $\mu = 10^{-5}$ y $N = 10^5$
+
+$\mathbb{E}[S]=4 \times 10^5 \times 10^{-5} \times (\frac{1}{1} + \frac{1}{2}) = 6$ es el número esperado de sitios segregantes.
 
 Imaginemos que empezamos con $n=4$ linajes.
 El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
