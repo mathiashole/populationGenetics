@@ -136,3 +136,59 @@ $S=37$
 $\pi≈20$
 
 $\theta_W≈20.18$
+
+```{r}
+
+# -----------------------------
+# Parámetros
+# -----------------------------
+N <- 5e5        # tamaño efectivo
+mu <- 1e-5      # tasa de mutación
+n <- 4          # número de secuencias
+
+# -----------------------------
+# 1. Simular tiempos de coalescencia
+# -----------------------------
+# Función para simular tiempo de espera (geométrico)
+simular_T <- function(n_linajes, N) {
+  pares <- choose(n_linajes, 2)
+  p <- pares / (2 * N)     # probabilidad de coalescencia por generación
+  rgeom(1, p)              # tiempo de espera ~ geométrica
+}
+
+# Guardamos los tiempos
+T4 <- simular_T(4, N)
+T3 <- simular_T(3, N)
+T2 <- simular_T(2, N)
+
+cat("T4 =", T4, "\n")
+cat("T3 =", T3, "\n")
+cat("T2 =", T2, "\n")
+
+# -----------------------------
+# 2. Tiempo total de ramas
+# -----------------------------
+T_total <- (4 * T4) + (3 * T3) + (2 * T2)
+cat("Tiempo total de ramas =", T_total, "\n")
+
+# -----------------------------
+# 3. Número de mutaciones (S)
+# -----------------------------
+S <- rpois(1, lambda = T_total * mu)  # Poisson con media T_total * mu
+cat("Número de mutaciones S =", S, "\n")
+
+# -----------------------------
+# 4. Diversidad nucleotídica (π)
+# -----------------------------
+pi_est <- 4 * N * mu
+cat("π esperado =", pi_est, "\n")
+
+# -----------------------------
+# 5. Theta de Watterson (θW)
+# -----------------------------
+a_n <- sum(1 / (1:(n - 1)))
+theta_W <- S / a_n
+cat("θW estimado =", theta_W, "\n")
+
+
+```
