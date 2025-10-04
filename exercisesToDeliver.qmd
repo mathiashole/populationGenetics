@@ -44,7 +44,7 @@ c. Usar simulaciones para obtener:
 coalescente. Asumir que $N = 5\times 10^{5}$ y $\mu = 10-5$. Para la realización obtenida, calcular $\pi$, $S$
 y $\theta_W$.
 
-Queremos simular el coalescente para n=4 alelos, con:
+Numero de alelos $n=3$
 
 Tamaño efectivo de la población $N=5 \times 10^5$
 
@@ -58,13 +58,7 @@ $S$ (número de sitios segregantes)
 
 $\theta_w$ (estimador de Watterson).
 
-1. Para $n=4$ existen dos topologias posibles que tienen sus probabilidades asociadas. Estas topologias se forman con la siguiente distribucion de alelos (2,2) con probabilidad $1/3$ y la distribucion (3,1) con la probabilidad de $2/3$. Esta ultima distribucion puede tener la bifurcacion mas reciente en uno de los ancestros hermanos por eso su probabilidad es de $2/3$. Para simular este proceso usaremos la funcion de R runif (random uniforme), esta funcion nos proporciona un muestreo de un numero al azar entre 0 y 1.
-
-```{r}
-
-runif(1)
-
-```
+Para $n=3$ existe una unica forma de topologia posible. En este caso, dos linajes de los tres coalescen primero, y el tercer linaje se une a estos coalesciendo mas atras en el tiempo. Las particion formada es $(1,2)$, que es equivalente a $(2,1)$ ya que el orden de los grupos no importa. Esto parte $P(n_1, n_2) = \begin{cases} \frac{1}{n-1} & \text{si } n_1 = n_2 \\ \frac{2}{n-1} & \text{si } n_1 \neq n_2\end{cases}$, asi que $P(1,2) = 2/(3-1) = 1$. La probabilidades asociadas a observar esta particion es 1, de esta manera no hay otra topologia posible.
 
 Si $runif > 0.33333$ nos quedamos con la topologia mas probable, si $runif \leq 0.33333$ nos quedamos con la manos probable de las topologias.
 
