@@ -27,7 +27,7 @@ format:
 ---
 
 
-# Ejercicio 8: Simulación del proceso coalescente con n=4
+# Ejercicio 3: Coalescente con n=3
 
 
 3. Consideremos una muestra de $n=3$ alelos para un locus diploide autosómico en una población de tamaño constante ($N = 10^{5}$), demografía Wright-Fisher y variación genética estrictamente neutra, con tasa de mutación neutra $\mu = 10-5$.
@@ -60,9 +60,11 @@ $\theta_w$ (estimador de Watterson).
 
 Para $n=3$ existe una unica forma de topologia posible. En este caso, dos linajes de los tres coalescen primero, y el tercer linaje se une a estos coalesciendo mas atras en el tiempo. Las particion formada es $(1,2)$, que es equivalente a $(2,1)$ ya que el orden de los grupos no importa. Esto parte $P(n_1, n_2) = \begin{cases} \frac{1}{n-1} & \text{si } n_1 = n_2 \\ \frac{2}{n-1} & \text{si } n_1 \neq n_2\end{cases}$, asi que $P(1,2) = 2/(3-1) = 1$. La probabilidades asociadas a observar esta particion es 1, de esta manera no hay otra topologia posible.
 
-Si $runif > 0.33333$ nos quedamos con la topologia mas probable, si $runif \leq 0.33333$ nos quedamos con la manos probable de las topologias.
+a. ¿Cuál es la esperanza de la antigüedad del ancestro común más cercano ($T_{MRCA}$) a los 3 alelos?
 
-2. Los tiempos de coalescencia
+La esperanza de $T_i$ es la inversa de la $P(coalscencia | n = i)$, donde la $P(coalscencia | n = i) = \binom{i}{2} \frac{1}{2N} = \frac{i(i-1)}{4N}$, entonces la esperanza para un $T_i$ es $\mathbb{E}(T_i)= \frac{4N}{i(i-1)}$.
+
+Para $n=3$ alelos tenemos $T_3$ y $T_2$ entonces la esperanza de $T_{MRCA}$ es $\mathbb{E}[T_{MRCA}] = \mathbb{E}[T_3] + \mathbb{E}[T_2]$
 
 Imaginemos que empezamos con $n=4$ linajes.
 El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
