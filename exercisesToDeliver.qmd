@@ -70,7 +70,6 @@ c. Usar simulaciones para obtener:
 ```{r}
 
 N <- 1e5
-n <- 3
 
 # probabilidad de exito
 p3 <- 6/(4*N)
@@ -81,7 +80,7 @@ E_T3 <- 1 / p3
 E_T2 <- 1 / p2
 E_TMRCA <- E_T3 + E_T2
 
-# i. Simulaciones de T_MRCA
+# Simulaciones de T_MRCA
 set.seed(123)  # asegurando que los números sea siempre los mismos
 T3 <- rgeom(50, prob = p3)
 T2 <- rgeom(50, prob = p2)
