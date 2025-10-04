@@ -29,13 +29,15 @@ format:
 
 # Ejercicio 8: Simulación del proceso coalescente con n=4
 
-3. Consideremos una muestra de $n=3$ alelos para un locus diploide autosomico en una poblacion de tamano constante ($N = 10^{5}$), demografia Wright-Fisher y variacion genetica estrictamente neutra, con tasa de mutacion neutra $\mu = 10-5$.
 
-a. ?Cual es la esperanza de la antiguedad del ancestro comun mas cercano ($T_{MRCA}$) a los 3 alelos?
-b. ?Cual es el numero esperado de sitios segregantes (polimorficos) en la muestra?
+3. Consideremos una muestra de $n=3$ alelos para un locus diploide autosómico en una población de tamaño constante ($N = 10^{5}$), demografía Wright-Fisher y variación genética estrictamente neutra, con tasa de mutación neutra $\mu = 10-5$.
+
+
+a. ¿Cuál es la esperanza de la antigüedad del ancestro común más cercano ($T_{MRCA}$) a los 3 alelos?
+b. ¿Cuál es el número esperado de sitios segregantes (polimorficos) en la muestra?
 c. Usar simulaciones para obtener:
-    i. Una muestra aleatoria de 50 realizaciones de $T_{MRCA}$. Compararlas con la esperanza obtenida mas arriba.
-    ii. Una muestra de 50 realizaciones al azar de S para una genealogia con $T_2$ y $T_3$ iguales a sus respectivas esperanzas.
+   i. Una muestra aleatoria de 50 realizaciones de $T_{MRCA}$. Compararlas con la esperanza obtenida más arriba.
+   ii. Una muestra de 50 realizaciones al azar de S para una genealogía con $T_2$ y $T_3$ iguales a sus respectivas esperanzas.
 
 
 8. Para $n=4$, obtener en R una simulación de todos los componentes del proceso
