@@ -43,9 +43,13 @@ Para $n=3$ existe una unica forma de topologia posible. En este caso, dos linaje
 
 a. ¿Cuál es la esperanza de la antigüedad del ancestro común más cercano ($T_{MRCA}$) a los 3 alelos?
 
-La esperanza de $T_i$ es la inversa de la $P(coalscencia | n = i)$, donde la $P(coalscencia | n = i) = \binom{i}{2} \frac{1}{2N} = \frac{i(i-1)}{4N}$, entonces la esperanza para un $T_i$ es $\mathbb{E}(T_i)= \frac{4N}{i(i-1)}$.
+La esperanza de $T_i$ esta dada por el inverso de la $P(coalscencia | n = i)$ por una muestra del tamano $i$, donde la $P(coalscencia | n = i) = \binom{i}{2} \frac{1}{2N} = \frac{i(i-1)}{4N}$, entonces la esperanza para un $T_i$ es $\mathbb{E}(T_i)= \frac{1}{P(coalscencia | n = i)} = \frac{1}{\binom{i}{2} \frac{1}{2N}} = \frac{4N}{i(i-1)}$.
 
-Para $n=3$ alelos tenemos $T_3$ y $T_2$ entonces la esperanza de $T_{MRCA}$ es $\mathbb{E}[T_{MRCA}] = \mathbb{E}[T_3] + \mathbb{E}[T_2]$
+Para $n=3$ alelos tenemos dos coalesecias $T_3$ (de 3 a 2 linajes) y $T_2$ (de 2 a 1 linaje) entonces la esperanza de $T_{MRCA}$ es $\mathbb{E}[T_{MRCA}] = \mathbb{E}[T_3] + \mathbb{E}[T_2] = \frac{4N}{3(3-1)} + \frac{4N}{2(2-1)} = \frac{8}{3}N$. 
+
+Sustituyendo con $N = 10^5$
+
+$\mathbb{E}[T_{MRCA}] = \frac{8}{3} \times 10^5 \simeq 2.67 \times 10^5$ generaciones.
 
 Imaginemos que empezamos con $n=4$ linajes.
 El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
