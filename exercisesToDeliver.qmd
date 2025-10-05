@@ -168,10 +168,10 @@ legend("topright", legend = c("Esperanza teórica"), col = "red", lty = 1, lwd =
 
 # Para cada T2 simulado, el árbol tiene 2 ramas => T_total = 2 * T2
 T_total <- 2 * T2
-lambda <- mu * T_total
+lambda <- 1e-5 * T_total
 
 # Simular S para cada genealogía (Poisson)
-S <- rpois(n_sim, lambda = lambda)
+S <- rpois(50, lambda = lambda)
 
 # Resumen de S
 cat("\nSimulaciones de S:\n")
