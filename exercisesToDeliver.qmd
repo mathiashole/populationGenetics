@@ -34,7 +34,7 @@ b. Mostrar como se obtienen las esperanzas para muestras de alelos de tamano n=2
 
 ## a. explicar que es el SFS y cuales son las esperanzas bajo el modelo neutral estandar. 
 
-El Site Frequency Spectrum (SFS) es una distribución de frecuencias que resume la variabilidad genética en una poblacion o muestra de secuencias de ADN. El SFS  es un histograma que permite clasificar los sitios segregantes (sitios que varían entre los individuos) según la frecuencia con la que aparece el alelo mutante o derivado en la poblacion o la muestra.
+El Site Frequency Spectrum (SFS) es una distribución de frecuencias que resume la variabilidad genética observada en una poblacion o muestra de secuencias de ADN. El SFS muestra mediante una distribucion de frecuencias cuantos sitios del genoma tienen el alelo derivado presente en $1, 2, 3...$ hasta $n-1$ copias dentro de la muestra. Esta distribucion permite identificar los sitios segregantes (sitios que varían entre los individuos) según la frecuencia con la que aparece el alelo mutante o derivado en la poblacion o la muestra.
 
 # Ejercicio 3: Coalescente con n=3
 
