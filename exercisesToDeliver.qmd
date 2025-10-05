@@ -26,6 +26,14 @@ format:
       colorlinks: true
 ---
 
+# Ejercicio 2: Espectro de Frecuencia de Sitios (SFS)
+
+2. Espectro de Frequencia de Sitios (SFS: site frequency spectrum): 
+a. explicar que es el SFS y cuales son las esperanzas bajo el modelo neutral estandar. 
+b. Mostrar como se obtienen las esperanzas para muestras de alelos de tamano n=2 y n=3.
+
+## a. explicar que es el SFS y cuales son las esperanzas bajo el modelo neutral estandar. 
+
 
 # Ejercicio 3: Coalescente con n=3
 
