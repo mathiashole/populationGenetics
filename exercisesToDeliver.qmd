@@ -100,6 +100,25 @@ legend("topright", legend = c("Esperanza teorica"), col = "red", lty = 1)
 
 La esperanza media simulada es ligeramente mayor que la esperanza teorica, esto se puede explicar por la gran varianza que tiene la distribución geométrica y tambien al tamaño moderado de la muestra (50 simulaciones). Por la ley de los Grandes Números, a medida que el número de realizaciones en tu muestra (n=50) aumenta, la media de esa muestra $(\bar{X})$ converge al valor de la esperanza teórica $(\mathbb{E}[X])$. Finalmente, la mayor densidad de los resultados se agrupa alrededor de la esperanza teorica (linea roja).
 
+```{r}
+# número de sitios segregantes
+nS <- 6 # Ttotal * mu
+
+# Simular 50 realizaciones de S
+set.seed(321) # asegurando que los números sea siempre los mismos
+S_sim <- rpois(50, nS)
+
+# Resumen
+mean_S <- mean(S_sim)
+
+# plot simple
+hist(S_sim, main = "Simulación de S (50 rep.)", xlab = "Número de sitios segregantes (S)",
+     col = "lightgreen", border = "white")
+abline(v = nS, col = "red", lwd = 2, lty = 1)
+legend("topright", legend = paste("E[S] teórico =", round(nS,2)), col = "red", lty = 2)
+
+```
+
 Imaginemos que empezamos con $n=4$ linajes.
 El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
 
