@@ -162,6 +162,32 @@ legend("topright", legend = c("Esperanza teórica"), col = "red", lty = 1, lwd =
 
 ```
 
+## b. Una muestra de 50 realizaciones de $S$ combinando la variación al azar de la genealogía con mutaciones al azar.
+
+```{r}
+
+# Para cada T2 simulado, el árbol tiene 2 ramas => T_total = 2 * T2
+T_total <- 2 * T2
+lambda <- mu * T_total
+
+# Simular S para cada genealogía (Poisson)
+S <- rpois(n_sim, lambda = lambda)
+
+# Resumen de S
+cat("\nSimulaciones de S:\n")
+cat("Media simulada S =", mean(S), "  (sd =", sd(S), ")\n")
+
+hist(S,
+     breaks = 15,
+     main = "Distribución de S (variación de genealogía + mutaciones)",
+     xlab = "Número de sitios segregantes (S)",
+     col = "lightgreen", border = "white")
+abline(v = mean(S), col = "darkgreen", lwd = 2)
+legend("topright", legend = c("Media simulada de S"),
+       col = "darkgreen", lty = 1)
+
+```
+
 Imaginemos que empezamos con $n=4$ linajes.
 El proceso coalescente consiste en ver cuánto tardan en irse uniendo hasta llegar a un ancestro común.
 
