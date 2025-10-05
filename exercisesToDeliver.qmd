@@ -35,8 +35,8 @@ b. Mostrar como se obtienen las esperanzas para muestras de alelos de tamano n=2
 ## a. explicar que es el SFS y cuales son las esperanzas bajo el modelo neutral estandar. 
 
 
-# Ejercicio 3: Coalescente con n=3
 
+# Ejercicio 3: Coalescente con n=3
 
 3. Consideremos una muestra de $n=3$ alelos para un locus diploide autosómico en una población de tamaño constante ($N = 10^5$), demografía Wright-Fisher y variación genética estrictamente neutra, con tasa de mutación neutra $\mu = 10^{-5}$.
 
