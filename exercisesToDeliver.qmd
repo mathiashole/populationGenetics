@@ -108,7 +108,7 @@ nS <- 6 # Ttotal * mu
 set.seed(321) # asegurando que los números sea siempre los mismos
 S_sim <- rpois(50, nS)
 
-# Resumen
+# media de simular S
 mean_S <- mean(S_sim)
 
 # plot simple
