@@ -132,7 +132,7 @@ b. Una muestra de 50 realizaciones de $S$ combinando la variación al azar de la
 
 N <- 1e5
 
-# probabilidad de exito
+# Probabilidad de coalescencia
 p2 <- 2/(4*N)
 
 # Esperanzas para T
@@ -146,10 +146,19 @@ T2 <- rgeom(50, prob = p2)
 hist(T2,
      breaks = 15,
      main = "Distribucion simulada de T2",
-     xlab = "Tiempo",
+     xlab = "Tiempo hasta coalescencia (T2)",
      col = "lightblue", border = "white")
 abline(v = E_T2, col = "red", lwd = 2, lty = 1)
 legend("topright", legend = c("Esperanza teórica"), col = "red", lty = 1, lwd = 2)
+
+# hist(T2,
+#      main = "Simulación de T2 (n=2, 50 replicaciones)",
+#      xlab = "Tiempo hasta coalescencia (T2)",
+#      col = "lightblue", border = "white")
+# abline(v = mean(T2), col = "blue", lwd = 2)
+# abline(v = 2*N, col = "red", lwd = 2, lty = 2)
+# legend("topright", legend = c("Media simulada", "Esperanza teórica"),
+#        col = c("blue", "red"), lty = c(1,2))
 
 ```
 
