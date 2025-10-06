@@ -40,8 +40,9 @@ La esperanza bajo el modelo neutral estándar se define como
 
 $\mathbb{E}[S_i] = \theta \cdot \frac{1}{i} = 4N \mu \cdot \frac{1}{i}$
 
-donde $4N\mu$ diversidad genética, combina tamaño poblacional efectivo $(N)$ y la tasa de mutación por sitios $(\mu)$
-$\frac{1}{i}$ factor del tiempo esperado en un momento que hay $i$ linajes en la genealogía.
+donde $4N\mu$ diversidad genética, combina tamaño poblacional efectivo $(N)$ y la tasa de mutación por sitios $(\mu)$.
+
+Siendo $\frac{1}{i}$ el factor del tiempo esperado en un momento que hay $i$ linajes en la genealogía.
 
 ## b. Mostrar como se obtienen las esperanzas para muestras de alelos de tamano n=2 y n=3.
 
