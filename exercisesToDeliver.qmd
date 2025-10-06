@@ -130,7 +130,7 @@ T_MRCA <- T3 + T2
 
 cat("Esperanza teorica de T_MRCA =", E_TMRCA, " y la esperanza simulada T_MRCA =", mean(T_MRCA), "\n")
 
-hist(T_MRCA,
+hist(T_MRCA, 
      main = "Distribucion simulada de T_MRCA",
      xlab = "Tiempo hasta coalescencia",
      col = "lightblue", border = "white")
@@ -153,7 +153,10 @@ S_sim <- rpois(50, nS)
 mean_S <- mean(S_sim)
 
 # plot simple
-hist(S_sim, main = "Simulación de S (50 rep.)", xlab = "Número de sitios segregantes (S)",
+hist(S_sim, 
+     breaks = 15,
+     main = "Simulación de S (50 rep.)", 
+     xlab = "Número de sitios segregantes (S)",
      col = "lightgreen", border = "white")
 abline(v = nS, col = "red", lwd = 2, lty = 1)
 legend("topright", legend = paste("E[S] teórico =", round(nS,2)), col = "red", lty = 1)
@@ -213,8 +216,7 @@ T_2 <- 1e-5 * T_total
 S <- rpois(50, T_2)
 
 # Resumen de S
-cat("\nSimulaciones de S:\n")
-cat("Media simulada S =", mean(S), "  (sd =", sd(S), ")\n")
+cat("Media simulada S =", mean(S), " y desvio estandar =", sd(S), "\n")
 
 hist(S,
      breaks = 15,
