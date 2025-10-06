@@ -44,6 +44,9 @@ $S_i$ el numero de sitios esperados con el alelo derivado,
 $4N\mu$ diversidad genética, combina tamaño poblacional efectivo $(N)$ y la tasa de mutación por sitios $(\mu)$
 $\frac{1}{i}$ factor del tiempo esperado en un momento que hay $i$ linajes en la genealogía.
 
+## b. Mostrar como se obtienen las esperanzas para muestras de alelos de tamano n=2 y n=3.
+
+
 
 # Ejercicio 3: Coalescente con n=3
 
