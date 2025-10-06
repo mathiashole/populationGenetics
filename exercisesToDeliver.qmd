@@ -46,6 +46,11 @@ $\frac{1}{i}$ factor del tiempo esperado en un momento que hay $i$ linajes en la
 
 ## b. Mostrar como se obtienen las esperanzas para muestras de alelos de tamano n=2 y n=3.
 
+Para $n=2$ solo hay una rama interna que puede diferenciarse.
+Toda mutación que se encuentra en rama externa es un singleton, solo una copia tendrá la mutación.
+
+$\mathbb{E}[S_2​]= 4N \mu = θ$
+
 
 
 # Ejercicio 3: Coalescente con n=3
