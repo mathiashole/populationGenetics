@@ -75,11 +75,13 @@ La esperanza de $T_i$ está dada por el inverso de la $P(coalescencia | n = i)$ 
 
 $P(coalescencia | n = i) = \binom{i}{2} \frac{1}{2N} = \frac{i(i-1)}{4N}$, 
 
-entonces la esperanza es 
+entonces la esperanza es 3
 
 $T_i$ es $\mathbb{E}(T_i)= \frac{1}{P(coalescencia | n = i)} = \frac{1}{\binom{i}{2} \frac{1}{2N}} = \frac{4N}{i(i-1)}$
 
-Para $n=3$ alelos tenemos dos coalescencias $T_3$ (de 3 a 2 linajes) y $T_2$ (de 2 a 1 linaje) entonces la esperanza de $T_{MRCA}$ es $\mathbb{E}[T_{MRCA}] = \mathbb{E}[T_3] + \mathbb{E}[T_2] = \frac{4N}{3(3-1)} + \frac{4N}{2(2-1)} = 8/3 N$
+Para $n=3$ alelos tenemos dos coalescencias $T_3$ (de 3 a 2 linajes) y $T_2$ (de 2 a 1 linaje) entonces la esperanza de $T_{MRCA}$ es: 
+
+$\mathbb{E}[T_{MRCA}] = \mathbb{E}[T_3] + \mathbb{E}[T_2] = \frac{4N}{3(3-1)} + \frac{4N}{2(2-1)} = 8/3 N$
 
 Sustituyendo con $N = 10^5$
 
