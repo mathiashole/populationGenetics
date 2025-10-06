@@ -91,15 +91,21 @@ Se espera que los $n=3$ alelos compartan un ancestro común hace aproximadamente
 
 ## b. ¿Cuál es el número esperado de sitios segregantes (polimorficos) en la muestra?
 
-El numero esperado de sitios segregantes en una muestra esta dado por $\mathbb{E}(S) = T_{total} \cdot \mu$
+El numero esperado de sitios segregantes en una muestra esta dado por 
 
-siendo que el el tiempo total (suma de las longitudes de todas las ramas del coalescente) es $\mathbb{E}[T_{total}]=4N \sum_{i=1}^{n-1} \frac{1}{i}$
+$\mathbb{E}(S) = T_{total} \cdot \mu$
+
+siendo que el el tiempo total (suma de las longitudes de todas las ramas del coalescente) es 
+
+$\mathbb{E}[T_{total}]=4N \sum_{i=1}^{n-1} \frac{1}{i}$
 
 Entonces el numero esperado de sitios segregantes se puede estimar $\mathbb{E}[S]=4N \mu \sum_{i=1}^{n-1} \frac{1}{i}$
 
 Sustituyendo con $\mu = 10^{-5}$ y $N = 10^5$
 
-$\mathbb{E}[S]=4 \times 10^5 \times 10^{-5} \times (\frac{1}{1} + \frac{1}{2}) = 6$ es el número esperado de sitios segregantes.
+$\mathbb{E}[S]=4 \times 10^5 \times 10^{-5} \times (\frac{1}{1} + \frac{1}{2}) = 6$ 
+
+Siendo $6$ el número esperado de sitios segregantes.
 
 ## c. Usar simulaciones para obtener:
    i. Una muestra aleatoria de 50 realizaciones de $T_{MRCA}$. Compararlas con la esperanza obtenida más arriba.
