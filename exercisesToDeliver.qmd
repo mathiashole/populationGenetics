@@ -1,11 +1,11 @@
 ---
-title: "P1"
+title: Primera entrega 
 date: today
 date-format: "DD MMMM, YYYY"
 author: 
   Mathias
 abstract:
-    Genetica de poblaciones
+    Genética de poblaciones
 abstractspacing: double
 appendix: false
 fontfamily: libertine
@@ -188,7 +188,6 @@ T2 <- rgeom(50, prob = p2)
 
 # Plot distribucion de T2
 hist(T2,
-     breaks = 15,
      main = "Distribucion simulada de T2",
      xlab = "Tiempo hasta coalescencia (T2)",
      col = "lightblue", border = "white")
