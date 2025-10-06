@@ -32,9 +32,18 @@ format:
 a. explicar que es el SFS y cuales son las esperanzas bajo el modelo neutral estandar. 
 b. Mostrar como se obtienen las esperanzas para muestras de alelos de tamano n=2 y n=3.
 
-## a. explicar que es el SFS y cuales son las esperanzas bajo el modelo neutral estandar. 
+## a. explicar que es el SFS y cuales son las esperanzas bajo el modelo neutral estándar.
 
-El Site Frequency Spectrum (SFS) es una distribución de frecuencias que resume la variabilidad genética observada en una poblacion o muestra de secuencias de ADN. El SFS muestra mediante una distribucion de frecuencias cuantos sitios del genoma tienen el alelo derivado presente en $1, 2, 3...$ hasta $n-1$ copias dentro de la muestra. Esta distribucion permite identificar los sitios segregantes (sitios que varían entre los individuos) según la frecuencia con la que aparece el alelo mutante o derivado en la poblacion o la muestra.
+El Site Frequency Spectrum (SFS) es una distribución de frecuencias que resume la variabilidad genética observada en una población o muestra de secuencias de ADN. En particular, SFS muestra cuantos sitios segregantes presentan el alelo derivado en $1, 2, 3...$ hasta $n-1$  copias dentro de una muestra de tamaño $n$. De esta manera, el SFS describe la frecuencia de las mutaciones según cuantas copias derivadas tienen, lo que permite estudiar procesos evolutivos como es la deriva y la selección.
+
+La esperanza bajo el modelo neutral estándar se define como $\mathbb{E}[S_i] = 4N \mu \cdot \frac{1}{i}$
+
+donde:
+
+$S_i$ el numero de sitios esperados con el alelo derivado,
+$4N\mu$ diversidad genética, combina tamaño poblacional efectivo $(N)$ y la tasa de mutación por sitios $(\mu)$
+$\frac{1}{i}$ factor del tiempo esperado en un momento que hay $i$ linajes en la genealogía.
+
 
 # Ejercicio 3: Coalescente con n=3
 
