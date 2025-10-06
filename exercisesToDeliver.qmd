@@ -223,7 +223,7 @@ hist(S,
      col = "lightgreen", border = "white")
 abline(v = mean(S), col = "darkgreen", lwd = 2)
 legend("topright", legend = c("Media simulada de S"),
-       col = "darkgreen", lty = 1)
+       col = "red", lty = 1)
 
 ```
 
