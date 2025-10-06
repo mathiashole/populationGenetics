@@ -3,7 +3,7 @@ title: Primera entrega
 date: today
 date-format: "DD MMMM, YYYY"
 author: 
-  Mathias
+  Mathias Mangino
 abstract:
     Genética de poblaciones
 abstractspacing: double
