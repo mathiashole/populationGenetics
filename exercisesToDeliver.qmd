@@ -197,13 +197,20 @@ legend("topright", legend = c("Esperanza teórica"), col = "red", lty = 1, lwd =
 ## b. Una muestra de 50 realizaciones de $S$ combinando la variación al azar de la genealogía con mutaciones al azar.
 
 ```{r}
+N <- 1e5
+# Probabilidad de coalescencia
+p2 <- 2/(4*N)
 
-# Para cada T2 simulado, el árbol tiene 2 ramas => T_total = 2 * T2
+# Simulaciones de T2
+set.seed(3)  # asegurando que los números sea siempre los mismos
+T2 <- rgeom(50, prob = p2)
+
 T_total <- 2 * T2
-lambda <- 1e-5 * T_total
+
+T_2 <- 1e-5 * T_total
 
 # Simular S para cada genealogía (Poisson)
-S <- rpois(50, lambda = lambda)
+S <- rpois(50, T_2)
 
 # Resumen de S
 cat("\nSimulaciones de S:\n")
