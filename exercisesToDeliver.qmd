@@ -36,21 +36,22 @@ b. Mostrar como se obtienen las esperanzas para muestras de alelos de tamano n=2
 
 El Site Frequency Spectrum (SFS) es una distribución de frecuencias que resume la variabilidad genética observada en una población o muestra de secuencias de ADN. En particular, SFS muestra cuantos sitios segregantes presentan el alelo derivado en $1, 2, 3...$ hasta $n-1$  copias dentro de una muestra de tamaño $n$. De esta manera, el SFS describe la frecuencia de las mutaciones según cuantas copias derivadas tienen, lo que permite estudiar procesos evolutivos como es la deriva y la selección.
 
-La esperanza bajo el modelo neutral estándar se define como $\mathbb{E}[S_i] = 4N \mu \cdot \frac{1}{i}$
+La esperanza bajo el modelo neutral estándar se define como $\mathbb{E}[S_i] = \theta \cdot \frac{1}{i} = 4N \mu \cdot \frac{1}{i}$
 
-donde:
-
-$S_i$ el numero de sitios esperados con el alelo derivado,
-$4N\mu$ diversidad genética, combina tamaño poblacional efectivo $(N)$ y la tasa de mutación por sitios $(\mu)$
+donde $4N\mu$ diversidad genética, combina tamaño poblacional efectivo $(N)$ y la tasa de mutación por sitios $(\mu)$
 $\frac{1}{i}$ factor del tiempo esperado en un momento que hay $i$ linajes en la genealogía.
 
 ## b. Mostrar como se obtienen las esperanzas para muestras de alelos de tamano n=2 y n=3.
 
-Para $n=2$ solo hay una rama interna que puede diferenciarse.
-Toda mutación que se encuentra en rama externa es un singleton, solo una copia tendrá la mutación.
+Para $n=2$ solo hay $n-1 = 1$, siendo $i = 1$ 
 
-$\mathbb{E}[S_2​]= 4N \mu = θ$
+$\mathbb{E}[S_2​]= \theta \cdot \frac{1}{1} = 4N \mu$
 
+Para $n=3$ hay $n-1 = 2$, hay $i=1$ y $i=2$
+
+$\mathbb{E}[S] = \mathbb{E}[S_1] + \mathbb{E}[S_2] = \theta \cdot \frac{1}{1} + \theta \cdot \frac{1}{2}$
+
+$\mathbb{E}[S] = \frac{3}{2} \cdot \theta = \frac{3}{2} \cdot 4N \mu$
 
 
 # Ejercicio 3: Coalescente con n=3
