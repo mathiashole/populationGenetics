@@ -73,7 +73,7 @@ La esperanza de $T_i$ está dada por el inverso de la $P(coalescencia | n = i)$ 
 
 $P(coalescencia | n = i) = \binom{i}{2} \frac{1}{2N} = \frac{i(i-1)}{4N}$, 
 
-entonces la esperanza es 3
+entonces la esperanza de $T_i$ es
 
 $T_i$ es $\mathbb{E}(T_i)= \frac{1}{P(coalescencia | n = i)} = \frac{1}{\binom{i}{2} \frac{1}{2N}} = \frac{4N}{i(i-1)}$
 
