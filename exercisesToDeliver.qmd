@@ -85,7 +85,9 @@ $\mathbb{E}[T_{MRCA}] = \mathbb{E}[T_3] + \mathbb{E}[T_2] = \frac{4N}{3(3-1)} + 
 
 Sustituyendo con $N = 10^5$
 
-$\mathbb{E}[T_{MRCA}] = \frac{8}{3} \times 10^5 \simeq 2.67 \times 10^5$ generaciones.
+$\mathbb{E}[T_{MRCA}] = \frac{8}{3} \times 10^5 \simeq 2.67 \times 10^5$ 
+
+Se espera que los $n=3$ alelos compartan un ancestro común hace aproximadamente $2.67 \times 10^5$ generaciones.
 
 ## b. ¿Cuál es el número esperado de sitios segregantes (polimorficos) en la muestra?
 
