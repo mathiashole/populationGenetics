@@ -92,9 +92,13 @@ Se espera que los $n=3$ alelos compartan un ancestro común hace aproximadamente
 
 El numero esperado de sitios segregantes en una muestra esta dado por 
 
-$\mathbb{E}(S) = T_{total} \cdot \mu$
+$\mathbb{E}(S) = \mathbb{E}[T_{total}] \cdot \mu$
 
-siendo que el el tiempo total (suma de las longitudes de todas las ramas del coalescente) es 
+siendo que $\mathbb{E}[T_{total}]$ es la esperanza de la longitud total de rama del árbol coalescente. La longitud se estima sumando cada tiempo esperado de cada $T_i$, multiplicado por la cantidad de linajes que acumulan mutaciones en ese tiempo. Siendo para $n=3, \mathbb{E}[Ttotal]$:
+
+$\mathbb{E}[T_{total}] = \mathbb{E}[t_3] \cdot 3 + \mathbb{E}[t_2] \cdot 2 $
+
+De forma generalizada es:
 
 $\mathbb{E}[T_{total}]=4N \sum_{i=1}^{n-1} \frac{1}{i}$
 
