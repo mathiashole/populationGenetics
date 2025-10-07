@@ -144,7 +144,9 @@ legend("topright", legend = c("Esperanza teorica"), col = "red", lty = 1)
 
 ```
 
-La esperanza media simulada es ligeramente mayor que la esperanza teorica, esto se puede explicar por la gran varianza que tiene la distribución geométrica y tambien al tamaño moderado de la muestra (50 simulaciones). Por la ley de los Grandes Números, a medida que el número de realizaciones en tu muestra (n=50) aumenta, la media de esa muestra $(\bar{X})$ converge al valor de la esperanza teórica $(\mathbb{E}[X])$. Finalmente, se puede observar que la mayor densidad de los resultados se agrupa alrededor de la esperanza teorica (linea roja).
+La esperanza media simulada es ligeramente mayor que la esperanza teorica, esto se puede explicar por la gran varianza que tiene la distribución geométrica y tambien al tamaño moderado de la muestra (50 simulaciones). 
+
+Finalmente, el histograma confirma que la mayor parte de los resultados se agrupan alrededor de la esperanza teorica (linea roja). Demostrando la validez que tiene el modelo, ya que por la ley de los Grandes Números, a medida que el número de realizaciones en tu muestra (n=50) aumenta, la media de esa muestra $(\bar{X})$ converge al valor de la esperanza teórica $(\mathbb{E}[X])$.
 
 ```{r}
 # número de sitios segregantes
@@ -176,6 +178,8 @@ a. Una muestra de 50 realizaciones de $T_2$.
 b. Una muestra de 50 realizaciones de $S$ combinando la variación al azar de la genealogía con mutaciones al azar.
 
 ## a. Una muestra de 50 realizaciones de $T_2$.
+
+El tiempo de coalescencia al ancestro común para $n=2$, se modela con la distribución geométrica. Dado que el tiempo de espera hasta el primer evento de coalescencia en generaciones discretas es una distribucion geométrica. 
 
 ```{r}
 
