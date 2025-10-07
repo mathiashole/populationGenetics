@@ -1,11 +1,11 @@
 ---
-title: Primera entrega 
+title: Primer parcial 
 date: today
 date-format: "DD MMMM, YYYY"
 author: 
   Mathias Mangino
 abstract:
-    Genética de poblaciones
+    Genética de poblaciones 2025
 abstractspacing: double
 appendix: false
 fontfamily: libertine
@@ -96,7 +96,7 @@ $\mathbb{E}(S) = \mathbb{E}[T_{total}] \cdot \mu$
 
 siendo que $\mathbb{E}[T_{total}]$ es la esperanza de la longitud total de rama del árbol coalescente. La longitud se estima sumando cada tiempo esperado de cada $T_i$, multiplicado por la cantidad de linajes que acumulan mutaciones en ese tiempo. Siendo para $n=3, \mathbb{E}[Ttotal]$:
 
-$\mathbb{E}[T_{total}] = \mathbb{E}[t_3] \cdot 3 + \mathbb{E}[t_2] \cdot 2 $
+$\mathbb{E}[T_{total}] = \mathbb{E}[t_3] \cdot 3 + \mathbb{E}[t_2] \cdot 2$
 
 De forma generalizada es
 
