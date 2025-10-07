@@ -98,7 +98,7 @@ siendo que $\mathbb{E}[T_{total}]$ es la esperanza de la longitud total de rama 
 
 $\mathbb{E}[T_{total}] = \mathbb{E}[t_3] \cdot 3 + \mathbb{E}[t_2] \cdot 2 $
 
-De forma generalizada es:
+De forma generalizada es
 
 $\mathbb{E}[T_{total}]=4N \sum_{i=1}^{n-1} \frac{1}{i}$
 
@@ -144,7 +144,7 @@ legend("topright", legend = c("Esperanza teorica"), col = "red", lty = 1)
 
 ```
 
-La esperanza media simulada es ligeramente mayor que la esperanza teorica, esto se puede explicar por la gran varianza que tiene la distribución geométrica y tambien al tamaño moderado de la muestra (50 simulaciones). Por la ley de los Grandes Números, a medida que el número de realizaciones en tu muestra (n=50) aumenta, la media de esa muestra $(\bar{X})$ converge al valor de la esperanza teórica $(\mathbb{E}[X])$. Finalmente, la mayor densidad de los resultados se agrupa alrededor de la esperanza teorica (linea roja).
+La esperanza media simulada es ligeramente mayor que la esperanza teorica, esto se puede explicar por la gran varianza que tiene la distribución geométrica y tambien al tamaño moderado de la muestra (50 simulaciones). Por la ley de los Grandes Números, a medida que el número de realizaciones en tu muestra (n=50) aumenta, la media de esa muestra $(\bar{X})$ converge al valor de la esperanza teórica $(\mathbb{E}[X])$. Finalmente, se puede observar que la mayor densidad de los resultados se agrupa alrededor de la esperanza teorica (linea roja).
 
 ```{r}
 # número de sitios segregantes
