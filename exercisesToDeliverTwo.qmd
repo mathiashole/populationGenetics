@@ -54,15 +54,13 @@ El patrón es consistente con una expansión demográfica reciente y rápida (Cu
 Hipótesis: La especie se originó o mantuvo una población grande y estable en el Bosque (evidenciado por $D≈0$). Desde el Bosque, hubo un evento de colonización o expansión hacia la Pradera. Este evento de colonización implicó un fuerte cuello de botella fundador. El cuello de botella en la Pradera redujo drásticamente la diversidad ($\pi$ bajo).
 El crecimiento posterior no ha dado tiempo suficiente para que se acumulen nuevos polimorfismos, llevando a un exceso de alelos de baja frecuencia (singletons) (o pocos alelos en general, haciendo $\phi_{W}$​ muy bajo) y un $D$ fuertemente negativo.
 
-3. Puesta a Prueba de la Hipótesis Demográfica
-
+3. Prueba de la Hipótesis Demográfica
 La forma más robusta de poner a prueba esta hipótesis es el Análisis de Coalescencia y Reconstrucción Demográfica (e.g., usando el SFS o PSMC):
+Estimación de $N_{e}$​ en el Tiempo: Comparar las estimaciones del tamaño efectivo de población ($N_{e}$) en el pasado entre las dos áreas. Se esperaría que la Pradera muestre un $N_{e}$​ ancestral mucho más pequeño que el Bosque, seguido de un crecimiento.
 
-    Estimación de Ne​ en el Tiempo: Comparar las estimaciones del tamaño efectivo de población (Ne​) en el pasado entre las dos áreas. Se esperaría que la Pradera muestre un Ne​ ancestral mucho más pequeño que el Bosque, seguido de un crecimiento exponencial.
+Ajuste del SFS (Espectro de Frecuencias de Sitios): Ajustar modelos demográficos (expansión, cuello de botella, migración) a la forma del SFS observado en la Pradera. El SFS de la Pradera debería ajustarse bien a un modelo de crecimiento rápido.
 
-    Ajuste del SFS (Espectro de Frecuencias de Sitios): Ajustar modelos demográficos (expansión, cuello de botella, migración) a la forma del SFS observado en la Pradera. El SFS de la Pradera debería ajustarse bien a un modelo de crecimiento rápido.
-
-    Prueba HKA (Hudson, Kreitman y Aguadé): Aplicar la prueba HKA a múltiples loci neutrales para confirmar que el patrón de baja π y θW​ se observa en todo el genoma de la Pradera, lo que confirmaría una causa demográfica global, no solo selección local.
+Prueba $HKA$ (Hudson, Kreitman y Aguadé): Aplicar la prueba $HKA$ a múltiples loci neutrales para confirmar que el patrón de baja $\pi$ y $\phi_{W}$ se observa en todo el genoma de la Pradera, lo que confirmaría una causa demográfica global, no solo selección local.
 
 B. Predicciones para los Genes Candidatos (Selección)
 
@@ -115,4 +113,4 @@ Aunque el test Ψ no se puede calcular directamente con π y θW​ (requiere el
 Estadístico,Bosque (Fuente),Pradera (Fundadora),Conclusión
 D de Tajima,≈0,≪0,"El Bosque está en equilibrio, la Pradera ha sufrido una expansión o cuello de botella (dirección del flujo genético)."
 Diversidad (π),Alto (0.050),Bajo (0.025),La pérdida de diversidad es característica de una población recién fundada o que sufrió un cuello de botella.
-Estructura (FCT​),\multicolumn{2}{,c,}{0.100}
+<!-- Estructura (FCT​),\multicolumn{2}{,c,}{0.100} -->
