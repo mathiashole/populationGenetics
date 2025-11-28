@@ -64,11 +64,11 @@ Prueba $HKA$ (Hudson, Kreitman y Aguadé): Aplicar la prueba $HKA$ a múltiples 
 
 B. Predicciones para los Genes Candidatos (Selección)
 
-Ahora analizamos cómo la selección local modificará estos estadísticos, considerando que el fondo demográfico de la Pradera es un D negativo (expansión/cuello de botella) y el del Bosque es D neutro (equilibrio).
+Ahora analizamos cómo la selección local cambia estos estadísticos, considerando que el fondo demográfico de la Pradera es un $D$ negativo (expansión reciente/cuello de botella) y el del Bosque es $D$ neutro (se encuentra en equilibrio).
 
 Gen 1: Selección Direccional en la Pradera (Pelajes Claros)
 
-Este escenario describe una Barrida Selectiva (Selective Sweep) en la Pradera debido a un alelo ventajoso (pelaje claro).
+Dado, los resultados de los diferentes estadisticos, este es un escenario que describe una Barrida Selectiva (Selective Sweep) en la Pradera debido a un alelo ventajoso (pelaje claro), generando una seleccion a favor de esta nueva variante y generando una gran region seleccionada al rededor de esta variante (analogia de el avion con pasajeros).
 
 Estadístico	Pradera (Gen 1)	Justificación
 π	≈0 (Extremadamente bajo)	La barrida selectiva elimina la variación preexistente en la región, dejando la diversidad cercana a cero.
