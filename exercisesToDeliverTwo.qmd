@@ -51,11 +51,8 @@ Comparamos los estadísticos en las dos áreas geográficas para inferir la hist
 
 El patrón es consistente con una expansión demográfica reciente y rápida (Cuello de Botella) que ocurrió en la Pradera.
 
-Hipótesis: La especie se originó o mantuvo una población grande y estable en el Bosque (evidenciado por D≈0). Desde el Bosque, hubo un evento de colonización o expansión hacia la Pradera. Este evento de colonización implicó un fuerte cuello de botella fundador.
-
-    El cuello de botella en la Pradera redujo drásticamente la diversidad (π bajo).
-
-    El crecimiento posterior no ha dado tiempo suficiente para que se acumulen nuevos polimorfismos, llevando a un exceso de alelos de baja frecuencia (o pocos alelos en general, haciendo θW​ muy bajo) y un D fuertemente negativo.
+Hipótesis: La especie se originó o mantuvo una población grande y estable en el Bosque (evidenciado por $D≈0$). Desde el Bosque, hubo un evento de colonización o expansión hacia la Pradera. Este evento de colonización implicó un fuerte cuello de botella fundador. El cuello de botella en la Pradera redujo drásticamente la diversidad ($\pi$ bajo).
+El crecimiento posterior no ha dado tiempo suficiente para que se acumulen nuevos polimorfismos, llevando a un exceso de alelos de baja frecuencia (singletons) (o pocos alelos en general, haciendo $\phi_{W}$​ muy bajo) y un $D$ fuertemente negativo.
 
 3. Puesta a Prueba de la Hipótesis Demográfica
 
