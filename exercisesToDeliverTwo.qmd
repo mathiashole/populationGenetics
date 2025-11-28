@@ -30,10 +30,9 @@ Tests y Pruebas a Utilizar
 
 Para responder a las preguntas, utilizaríamos los siguientes tests basados en los estadísticos proporcionados:
 
-    Test D de Tajima: Para detectar desviaciones del modelo neutral en cada área geográfica (bosque/pradera).
-    D=Varianza(π−θW​)π−θW​​
+Test $D$ de Tajima: Para detectar desviaciones del modelo neutral en cada área geográfica (bosque/pradera). $D= \frac{\pi - \phi}{varianza(\pi - \phi)}$​​
 
-    Estadísticos F (AMOVA): Para cuantificar la estructuración genética a diferentes niveles. FCT​ mide la diferenciación entre el Bosque y la Pradera. FSC​ mide la diferenciación entre subpoblaciones dentro de cada área.
+Estadísticos F (AMOVA): Para cuantificar la estructuración genética a diferentes niveles. $F_{CT}$​ mide la diferenciación entre el Bosque y la Pradera. $F_{CT}$​ mide la diferenciación entre subpoblaciones dentro de cada área.
 
 A. Escenario de Expansión Geográfica
 
