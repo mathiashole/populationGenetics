@@ -25,3 +25,97 @@ format:
       number-sections: true
       colorlinks: true
 ---
+
+Tests y Pruebas a Utilizar
+
+Para responder a las preguntas, utilizaríamos los siguientes tests basados en los estadísticos proporcionados:
+
+    Test D de Tajima: Para detectar desviaciones del modelo neutral en cada área geográfica (bosque/pradera).
+    D=Varianza(π−θW​)π−θW​​
+
+    Estadísticos F (AMOVA): Para cuantificar la estructuración genética a diferentes niveles. FCT​ mide la diferenciación entre el Bosque y la Pradera. FSC​ mide la diferenciación entre subpoblaciones dentro de cada área.
+
+A. Escenario de Expansión Geográfica
+
+1. Inferencias Demográficas a partir de los Datos Promedio
+
+Comparamos los estadísticos en las dos áreas geográficas para inferir la historia demográfica:
+
+Estadístico,Bosque,Pradera,Interpretación
+Diversidad (π),Alto (0.050),Bajo (0.025),El Bosque tiene el doble de diversidad que la Pradera.
+Sitios Segregantes (θW​),Alto (0.053),Muy Bajo (0.010),La Pradera tiene una cantidad de alelos raros extremadamente baja.
+D de Tajima,D≈0,D≪0,El Bosque está cerca del equilibrio. La Pradera tiene un D fuertemente negativo (D≈(0.025−0.010)/Var>0).
+Estructura (FCT​),\multicolumn{2}{,c,}{0.100}
+
+2. Proponer un Escenario de Expansión (Hipótesis)
+
+El patrón es consistente con una expansión demográfica reciente y rápida (Cuello de Botella) que ocurrió en la Pradera.
+
+Hipótesis: La especie se originó o mantuvo una población grande y estable en el Bosque (evidenciado por D≈0). Desde el Bosque, hubo un evento de colonización o expansión hacia la Pradera. Este evento de colonización implicó un fuerte cuello de botella fundador.
+
+    El cuello de botella en la Pradera redujo drásticamente la diversidad (π bajo).
+
+    El crecimiento posterior no ha dado tiempo suficiente para que se acumulen nuevos polimorfismos, llevando a un exceso de alelos de baja frecuencia (o pocos alelos en general, haciendo θW​ muy bajo) y un D fuertemente negativo.
+
+3. Puesta a Prueba de la Hipótesis Demográfica
+
+La forma más robusta de poner a prueba esta hipótesis es el Análisis de Coalescencia y Reconstrucción Demográfica (e.g., usando el SFS o PSMC):
+
+    Estimación de Ne​ en el Tiempo: Comparar las estimaciones del tamaño efectivo de población (Ne​) en el pasado entre las dos áreas. Se esperaría que la Pradera muestre un Ne​ ancestral mucho más pequeño que el Bosque, seguido de un crecimiento exponencial.
+
+    Ajuste del SFS (Espectro de Frecuencias de Sitios): Ajustar modelos demográficos (expansión, cuello de botella, migración) a la forma del SFS observado en la Pradera. El SFS de la Pradera debería ajustarse bien a un modelo de crecimiento rápido.
+
+    Prueba HKA (Hudson, Kreitman y Aguadé): Aplicar la prueba HKA a múltiples loci neutrales para confirmar que el patrón de baja π y θW​ se observa en todo el genoma de la Pradera, lo que confirmaría una causa demográfica global, no solo selección local.
+
+B. Predicciones para los Genes Candidatos (Selección)
+
+Ahora analizamos cómo la selección local modificará estos estadísticos, considerando que el fondo demográfico de la Pradera es un D negativo (expansión/cuello de botella) y el del Bosque es D neutro (equilibrio).
+
+Gen 1: Selección Direccional en la Pradera (Pelajes Claros)
+
+Este escenario describe una Barrida Selectiva (Selective Sweep) en la Pradera debido a un alelo ventajoso (pelaje claro).
+
+Estadístico	Pradera (Gen 1)	Justificación
+π	≈0 (Extremadamente bajo)	La barrida selectiva elimina la variación preexistente en la región, dejando la diversidad cercana a cero.
+θW​	≈0 (Extremadamente bajo)	Por la misma razón, todos los polimorfismos se eliminan.
+D de Tajima	D≪0	El valor negativo demográfico de la Pradera se exacerba. La falta casi total de diversidad local crea un D de Tajima mucho más negativo que el promedio genómico de la Pradera.
+LD (Desequilibrio de Ligamiento)	Alto	Habrá un haplotipo extendido y de alta frecuencia en la región del Gen 1, la "huella" de la mutación favorable que se fijó rápidamente.
+FSC​ (Local)	Bajo	Si la selección fijó el alelo en todas las subpoblaciones de la Pradera, la diferenciación entre subpoblaciones localmente en este gen (FSC​) será muy baja o nula.
+
+Gen 2: Selección Equilibradora en Ambos Ambientes (Regulación, Concentración de Orina)
+
+La selección equilibradora (balanceadora) mantiene múltiples alelos en frecuencias intermedias, aumentando la diversidad localmente.
+
+Estadístico	Bosque y Pradera (Gen 2)	Justificación
+π	Alto (Mayor que el promedio genómico)	La selección mantiene la diversidad. La diversidad por pares (π) se infla debido a los alelos de frecuencia intermedia.
+θW​	Menor (Relativamente)	Los alelos se mantienen en frecuencias medias, en lugar de acumularse como alelos raros.
+D de Tajima	D>0	El exceso de alelos de frecuencia intermedia genera un D de Tajima positivo. Este D>0 sería una anomalía en la Pradera (cuyo fondo es D<0) y una desviación en el Bosque (cuyo fondo es D≈0).
+LD (Desequilibrio de Ligamiento)	Bajo	El polimorfismo es antiguo. El tiempo y la recombinación han descompuesto las asociaciones, manteniendo sólo el sitio bajo selección en alta diversidad.
+FCT​ (Local)	Bajo	Si la selección equilibradora favorece el mismo polimorfismo en ambos ambientes, la diferenciación genética entre el Bosque y la Pradera en este gen será menor que el promedio genómico (FCT​=0.100).
+
+Este test es altamente relevante para la parte (a) del ejercicio, ya que fue diseñado específicamente para detectar y determinar la dirección de una expansión geográfica basándose en datos genéticos, que es justamente la hipótesis que proponemos para la especie de ratón.
+
+Uso del Test de Peter y Slatkin (Ψ)
+
+Propósito del Test
+
+El índice Ψ (Psi) fue desarrollado por Peter y Slatkin (2013) para detectar asimetrías en el espectro de frecuencias alélicas entre pares de poblaciones. Estas asimetrías son la firma genética de una expansión de rango o colonización secuencial (efectos fundadores) .
+
+¿Cómo se Aplicaría al Problema del Ratón?
+
+En la Parte (a), inferimos que la expansión fue del Bosque (población ancestral más grande) a la Pradera (población cuello de botella/fundadora).
+
+    Cálculo: Se calcularía el índice Ψ utilizando los SNPs genómicos entre pares de subpoblaciones.
+
+    Resultado Esperado: Si la expansión ocurrió del Bosque a la Pradera, el valor de Ψ se espera que sea positivo al calcularlo en la dirección Bosque → Pradera.
+
+    Ventaja sobre FST​: Ψ es más sensible para detectar expansiones recientes que el FST​ o las clines de heterocigosidad, ya que se centra en el cambio de frecuencia de alelos raros que se pierden durante los eventos fundadores secuenciales.
+
+Integración con los Estadísticos Existentes
+
+Aunque el test Ψ no se puede calcular directamente con π y θW​ (requiere el Espectro de Frecuencias de Sitios completo), los resultados del ejercicio ya sugieren la dirección de la expansión, reforzando la necesidad de aplicar Ψ:
+
+Estadístico,Bosque (Fuente),Pradera (Fundadora),Conclusión
+D de Tajima,≈0,≪0,"El Bosque está en equilibrio, la Pradera ha sufrido una expansión o cuello de botella (dirección del flujo genético)."
+Diversidad (π),Alto (0.050),Bajo (0.025),La pérdida de diversidad es característica de una población recién fundada o que sufrió un cuello de botella.
+Estructura (FCT​),\multicolumn{2}{,c,}{0.100}
