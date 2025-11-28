@@ -45,7 +45,7 @@ Comparamos los estadísticos en las dos áreas geográficas para inferir la hist
 | Diversidad (π)          | Alto (0.050) |   Bajo (0.025)   |El Bosque tiene el doble de diversidad que la Pradera.                                                   |
 | Sitios Segregantes (θW​) | Alto (0.053) | Muy Bajo (0.010) | La Pradera tiene una cantidad de alelos raros extremadamente baja.                                      |
 | D de Tajima             |     D≈0      |      D≪0        | El Bosque está cerca del equilibrio. La Pradera tiene un D fuertemente negativo (D≈(0.025−0.010)/Var>0). |
-| Estructura (FCT​)        | \multicolumn{2}{,c,}{0.100} |
+<!-- | Estructura (FCT​)        | \multicolumn{2}{,c,}{0.100} | -->
 
 2. Proponer un Escenario de Expansión (Hipótesis)
 
