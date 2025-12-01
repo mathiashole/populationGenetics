@@ -38,11 +38,7 @@ Test $D$ de Tajima: Para detectar desviaciones del modelo neutral en cada área 
 Estadísticos F (AMOVA): Para cuantificar la estructuración genética a diferentes niveles. $F_{CT}$​ mide la diferenciación entre el Bosque y la Pradera. $F_{CT}$​ mide la diferenciación entre subpoblaciones dentro de cada área.
 
 
-Escenario de Expansión Geográfica
-
-1. Inferencias Demográficas a partir de los Datos Promedio
-
-Comparamos los estadísticos en las dos áreas geográficas para inferir la historia demográfica:
+## Escenario de Expansión Geográfica
 
 |  Estadístico                    |        Bosque            |            Pradera           |
 |---------------------------------|--------------------------|------------------------------|
@@ -53,16 +49,11 @@ Comparamos los estadísticos en las dos áreas geográficas para inferir la hist
 
 El Bosque tiene el doble de diversidad nucleotidica que la Pradera, esta diversidad se genera por acumulación prolongada de mutaciones. En la Pradera la diversidad nuclotidica es menor, dos veces menor, lo que sugiere un cuello de botella/efecto fundador por esta perdida de diversidad.
 
-El bosque $\phi_{W} \approx \pi$ por lo que se encuentra de forma equilibrada, siendo esperable encontrar SNPs raros. Sin embargo, la Pradera tine pocos sitios segregantes y una cantidad de alelos raros en baja cantidad. Esto ultimo, es un patron de un cuello de botella, efecto fundador o una expansión reciente.
+El bosque $\phi_{W} \approx \pi$ por lo que se encuentra de forma equilibrada, siendo esperable encontrar SNPs raros. Sin embargo, la Pradera tine pocos sitios segregantes y una cantidad de alelos raros en baja cantidad. Esto ultimo, es un patron de un cuello de botella/efecto fundador.
 
-Podemos hacer una aproximacion del test de **Tajima's D** sin calcularlo, usando solo la diferencia entre diversidad nucleotidica y sitios segregantes. Para el $bosque = 0.050 - 0.053 = -0.003 \rightarrow D \approx 0$, lo que corresponde a un equilibrio. Sin enbargo, la $pradera = 0.025 - 0.010 = 0.015 \rightarrow D \gg 0$, esto sugiere un cuello de botella, efecto fundador o expansion reciente (pérdida de sitios segregantes).
+Aunque no es posible calcular **Tajima’s D** sin conocer el tamaño muestral, sí puede inferirse su signo. Usando solo la diferencia entre diversidad nucleotidica y sitios segregantes. Para el $bosque = 0.050 - 0.053 = -0.003 \rightarrow D \approx 0$, lo que corresponde a un estabilidad de la poblacion. En la $pradera = 0.025 - 0.010 = 0.015 \rightarrow D > 0$, esto sugiere un cuello de botella/efecto fundador.
 
-2. Proponer un Escenario de Expansión (Hipótesis)
-
-El patrón es consistente con una expansión demográfica reciente y rápida (Cuello de Botella) que ocurrió en la Pradera.
-
-Hipótesis: La especie se originó o mantuvo una población grande y estable en el Bosque (evidenciado por $D≈0$). Desde el Bosque, hubo un evento de colonización o expansión hacia la Pradera. Este evento de colonización implicó un fuerte cuello de botella fundador. El cuello de botella en la Pradera redujo drásticamente la diversidad ($\pi$ bajo).
-El crecimiento posterior no ha dado tiempo suficiente para que se acumulen nuevos polimorfismos, llevando a un exceso de alelos de baja frecuencia (singletons) (o pocos alelos en general, haciendo $\phi_{W}$​ muy bajo) y un $D$ fuertemente negativo.
+Hipótesis: La especie mantuvo una población ancestral estable en el Bosque. Desde allí, ocurrie una expansión o evento de fundador hacia la Pradera acompañado de un cuello de botella, lo que explica la pérdida de variantes segregantes ($\phi_{W}$ bajo) y la reducción de diversidad ($\pi$). La posterior expansión luego del evento en la Pradera no ha permitido aún la acumulación de nuevas mutaciones, manteniendo un patrón compatible con un evento fundador.
 
 3. Prueba de la Hipótesis Demográfica
 La forma más robusta de poner a prueba esta hipótesis es el Análisis de Coalescencia y Reconstrucción Demográfica (e.g., usando el SFS o PSMC):
