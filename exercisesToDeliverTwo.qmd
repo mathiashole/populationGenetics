@@ -47,7 +47,7 @@ Estadísticos F (AMOVA): Para cuantificar la estructuración genética a diferen
 | $F_{SC}$                        | Alto ($0.050 \pm 0.010$) | Bajo ($0.010 \pm 0.002$)     |
 | Estructura ($F_{CT}$​)           |                  ($0.100 \pm 0.020$)                    |
 
-El Bosque tiene el doble de diversidad nucleotidica que la Pradera, esta diversidad se genera por acumulación prolongada de mutaciones. En la Pradera la diversidad nuclotidica es menor, dos veces menor, lo que sugiere un cuello de botella/efecto fundador por esta perdida de diversidad.
+El Bosque presenta una diversidad nucleotídica aproximadamente el doble que la Pradera $\pi = 0.050$ vs. $0.025$. La alta diversidad en el Bosque es consistente con una población grande y ancestral, donde la variación se acumulo durante un largos período. En la Pradera la diversidad nuclotidica es menor, dos veces menor, lo que sugiere un cuello de botella/efecto fundador por esta perdida de diversidad.
 
 En el bosque se observa $\phi_{W} \approx \pi$, lo que indica una distribución equilibrada de variantes raras y de las comunes, este patron es consistente para poblaciones que estan en equilibrio demográfico. Sin embargo, la Pradera tine pocos sitios segregantes y una cantidad de alelos raros en baja cantidad. Esto ultimo, es un patron de un cuello de botella/efecto fundador.
 
