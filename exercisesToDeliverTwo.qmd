@@ -26,6 +26,9 @@ format:
       colorlinks: true
 ---
 
+# A. Proponer un posible escenario de expansión geográfica de la especie y cómo podría ponerse a prueba dicha hipótesis. 
+
+
 Tests y Pruebas a Utilizar
 
 Para responder a las preguntas, utilizaríamos los siguientes tests basados en los estadísticos proporcionados:
@@ -34,7 +37,6 @@ Test $D$ de Tajima: Para detectar desviaciones del modelo neutral en cada área 
 
 Estadísticos F (AMOVA): Para cuantificar la estructuración genética a diferentes niveles. $F_{CT}$​ mide la diferenciación entre el Bosque y la Pradera. $F_{CT}$​ mide la diferenciación entre subpoblaciones dentro de cada área.
 
-# A. Proponer un posible escenario de expansión geográfica de la especie y cómo podría ponerse a prueba dicha hipótesis. 
 
 Escenario de Expansión Geográfica
 
