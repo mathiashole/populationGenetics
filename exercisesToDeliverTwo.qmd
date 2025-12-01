@@ -34,7 +34,19 @@ Test $D$ de Tajima: Para detectar desviaciones del modelo neutral en cada área 
 
 Estadísticos F (AMOVA): Para cuantificar la estructuración genética a diferentes niveles. $F_{CT}$​ mide la diferenciación entre el Bosque y la Pradera. $F_{CT}$​ mide la diferenciación entre subpoblaciones dentro de cada área.
 
-A. Escenario de Expansión Geográfica
+# A. Proponer un posible escenario de expansión geográfica de la especie y cómo podría ponerse a prueba dicha hipótesis. 
+
+Escenario de Expansión Geográfica
+
+```{r, eval= true}
+
+TajimaD_bosque <- (0.050 - 0.053) / (sqrt((0.005^2) + (0.003^2)))
+TajimaD_bosque
+TajimaD_pradera <- (0.025 - 0.010)/ (sqrt((0.005^2) + (0.003^2)))
+TajimaD_pradera
+
+
+```
 
 1. Inferencias Demográficas a partir de los Datos Promedio
 
@@ -44,9 +56,9 @@ Comparamos los estadísticos en las dos áreas geográficas para inferir la hist
 |---------------------------------|--------------------------|------------------------------|
 | Diversidad ($\pi$)              | Alto ($0.050 \pm 0.005$) |   Bajo ($0.025 \pm 0.003$)   |
 | Sitios Segregantes ($\phi_{W}$​) | Alto ($0.053 \pm 0.003$) | Muy Bajo ($0.010 \pm 0.002$) |
-| $D$ de Tajima                   |           D≈0            |              D≪0             |
+| $D$ de Tajima                   |           $D \approx 0$  |              $D \gg 0$       |
 | $F_{SC}$                        | Alto ($0.050 \pm 0.010$) | Bajo ($0.010 \pm 0.002$)     |
-| Estructura ($F_{CT}$​)                |                  ($0.100 \pm 0.020$)                    |
+| Estructura ($F_{CT}$​)           |                  ($0.100 \pm 0.020$)                    |
 
 El Bosque tiene el doble de diversidad que la Pradera.
 La Pradera tiene una cantidad de alelos raros extremadamente baja.
