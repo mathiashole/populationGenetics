@@ -57,6 +57,8 @@ Hipótesis: La especie mantuvo una población ancestral estable en el Bosque. De
 
 ## Prueba de la Hipótesis Demográfica
 
+AMOVA $F_{SC}$ y $F_{CT}$
+
 Ajuste del SFS (Espectro de Frecuencias de Sitios): Ajustar modelos demográficos (expansión, cuello de botella, migración) a la forma del SFS observado en la Pradera. El SFS de la Pradera debería ajustarse bien a un modelo de crecimiento rápido.
 
 B. Predicciones para los Genes Candidatos (Selección)
