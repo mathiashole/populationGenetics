@@ -40,16 +40,6 @@ Estadísticos F (AMOVA): Para cuantificar la estructuración genética a diferen
 
 Escenario de Expansión Geográfica
 
-```{r}
-
-TajimaD_bosque <- (0.050 - 0.053) / (sqrt((0.005^2) + (0.003^2)))
-TajimaD_bosque
-TajimaD_pradera <- (0.025 - 0.010)/ (sqrt((0.005^2) + (0.003^2)))
-TajimaD_pradera
-
-
-```
-
 1. Inferencias Demográficas a partir de los Datos Promedio
 
 Comparamos los estadísticos en las dos áreas geográficas para inferir la historia demográfica:
@@ -58,13 +48,14 @@ Comparamos los estadísticos en las dos áreas geográficas para inferir la hist
 |---------------------------------|--------------------------|------------------------------|
 | Diversidad ($\pi$)              | Alto ($0.050 \pm 0.005$) |   Bajo ($0.025 \pm 0.003$)   |
 | Sitios Segregantes ($\phi_{W}$​) | Alto ($0.053 \pm 0.003$) | Muy Bajo ($0.010 \pm 0.002$) |
-| $D$ de Tajima                   |           $D \approx 0$  |              $D \gg 0$       |
 | $F_{SC}$                        | Alto ($0.050 \pm 0.010$) | Bajo ($0.010 \pm 0.002$)     |
 | Estructura ($F_{CT}$​)           |                  ($0.100 \pm 0.020$)                    |
 
-El Bosque tiene el doble de diversidad que la Pradera.
-La Pradera tiene una cantidad de alelos raros extremadamente baja.
-El Bosque está cerca del equilibrio. La Pradera tiene un D fuertemente negativo (D≈(0.025−0.010)/Var>0).
+El Bosque tiene el doble de diversidad nucleotidica que la Pradera, esta diversidad se genera por acumulación prolongada de mutaciones. En la Pradera la diversidad nuclotidica es menor, dos veces menor, lo que sugiere un cuello de botella/efecto fundador por esta perdida de diversidad.
+
+El bosque $\phi_{W} \approx \pi$ por lo que se encuentra de forma equilibrada, siendo esperable encontrar SNPs raros. Sin embargo, la Pradera tine pocos sitios segregantes y una cantidad de alelos raros en baja cantidad. Esto ultimo, es un patron de un cuello de botella, efecto fundador o una expansión reciente.
+
+Podemos hacer una aproximacion del test de **Tajima's D** sin calcularlo, usando solo la diferencia entre diversidad nucleotidica y sitios segregantes. Para el $bosque = 0.050 - 0.053 = -0.003 \rightarrow D \approx 0$, lo que corresponde a un equilibrio. Sin enbargo, la $pradera = 0.025 - 0.010 = 0.015 \rightarrow D \gg 0$, esto sugiere un cuello de botella, efecto fundador o expansion reciente (pérdida de sitios segregantes).
 
 2. Proponer un Escenario de Expansión (Hipótesis)
 
