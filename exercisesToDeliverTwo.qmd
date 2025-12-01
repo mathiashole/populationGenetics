@@ -55,13 +55,9 @@ Aunque no es posible calcular **Tajima’s D** sin conocer el tamaño muestral, 
 
 Hipótesis: La especie mantuvo una población ancestral estable en el Bosque. Desde allí, ocurrie una expansión o evento de fundador hacia la Pradera acompañado de un cuello de botella, lo que explica la pérdida de variantes segregantes ($\phi_{W}$ bajo) y la reducción de diversidad ($\pi$). La posterior expansión luego del evento en la Pradera no ha permitido aún la acumulación de nuevas mutaciones, manteniendo un patrón compatible con un evento fundador.
 
-3. Prueba de la Hipótesis Demográfica
-La forma más robusta de poner a prueba esta hipótesis es el Análisis de Coalescencia y Reconstrucción Demográfica (e.g., usando el SFS o PSMC):
-Estimación de $N_{e}$​ en el Tiempo: Comparar las estimaciones del tamaño efectivo de población ($N_{e}$) en el pasado entre las dos áreas. Se esperaría que la Pradera muestre un $N_{e}$​ ancestral mucho más pequeño que el Bosque, seguido de un crecimiento.
+## Prueba de la Hipótesis Demográfica
 
 Ajuste del SFS (Espectro de Frecuencias de Sitios): Ajustar modelos demográficos (expansión, cuello de botella, migración) a la forma del SFS observado en la Pradera. El SFS de la Pradera debería ajustarse bien a un modelo de crecimiento rápido.
-
-Prueba $HKA$ (Hudson, Kreitman y Aguadé): Aplicar la prueba $HKA$ a múltiples loci neutrales para confirmar que el patrón de baja $\pi$ y $\phi_{W}$ se observa en todo el genoma de la Pradera, lo que confirmaría una causa demográfica global, no solo selección local.
 
 B. Predicciones para los Genes Candidatos (Selección)
 
