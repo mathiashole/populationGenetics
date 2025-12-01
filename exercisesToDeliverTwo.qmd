@@ -38,7 +38,7 @@ Estadísticos F (AMOVA): Para cuantificar la estructuración genética a diferen
 
 Escenario de Expansión Geográfica
 
-```{r, eval= true}
+```{r}
 
 TajimaD_bosque <- (0.050 - 0.053) / (sqrt((0.005^2) + (0.003^2)))
 TajimaD_bosque
