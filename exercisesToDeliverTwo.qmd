@@ -94,3 +94,13 @@ $n=\frac{q_{0}/2}{q_{0}^2/2}$; $n = q_{0}/q_{0}^2$
 Finalmente, el número de generaciones para reducir a la mitad la frecuencia del alelo recesivo es el inverso de la frecuencia inicial.
 
 $n = \frac{1}{q_{0}}$
+
+## B. Selección parcial contra recesivos
+
+La ecuación parcial contra el recesivo es
+
+$sn=\frac{​q_{0}​−q_{n}​​}{q_{0}​q_{n}} + \ln \left[ \frac{q_{0}​(1-q_{n})}{q_{n}(​1-q_{0})} \right]$
+
+Podemos sustituir como en el anterior ejercicio A
+
+$\frac{​q_{0}​−q_{n}​​}{q_{0}​q_{n}} = \frac{1}{q_{0}}$
