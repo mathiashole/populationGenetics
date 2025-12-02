@@ -83,17 +83,14 @@ Sustituyendo $q_{n} = \frac{1}{2}q_{0}$ en la ecuación contra el recesivo
 
 $n=\frac{​q_{0}​−q_{0}/2​​}{q_{0}​(q_{n}/2)}$
 
-Sustitución Sustituimos la condición qn​=21​q0​ en la ecuación:
-n=q0​⋅(21​q0​)q0​−21​q0​​$
+Para el numerador usamos $q_{0}.1 = \frac{2}{2}q_{0}$ sustituimos
 
-Simplificación del Numerador
-q0​−21​q0​=21​q0​
+$\frac{2q_{0}}{2} - \frac{q_{0}}{2} = \frac{2q_{0} - q_{0}}{2} = \frac{q_{0}}{2}$
 
-Simplificación del Denominador
-q0​⋅(21​q0​)=21​q02​
+Entonces sustituimos
 
-Sustitución en la Fórmula de n
-n=21​q02​21​q0​​
+$n=\frac{q_{0}/2}{q_{0}^2/2}$; $n = q_{0}/q_{0}^2$
 
-Cancelamos 21​ y un q0​:
-n=q02​q0​​=q0​1​
+Finalmente, el número de generaciones para reducir a la mitad la frecuencia del alelo recesivo es el inverso de la frecuencia inicial.
+
+$n = \frac{1}{q_{0}}$
