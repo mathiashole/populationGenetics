@@ -104,3 +104,7 @@ $sn=\frac{​q_{0}​−q_{n}​​}{q_{0}​q_{n}} + \ln \left[ \frac{q_{0}​(
 Podemos sustituir el primer termino como en el anterior ejercicio A
 
 $\frac{​q_{0}​−q_{n}​​}{q_{0}​q_{n}} = \frac{1}{q_{0}}$
+
+sustituimos la siguiente expresion sabiendo que $q_{n} = \frac{1}{2}q_{0}$
+
+$\ln \left[ \frac{q_{0}​(1-q_{n})}{q_{n}(​1-q_{0})} \right] = \ln \left[ \frac{q_{0}​(1-(q_{0}/2))}{(q_{0}/2)(​1-q_{0})} \right] = \ln \left[ \frac{1-q_{n}/2}{1/2(​1-q_{0})} \right]$
