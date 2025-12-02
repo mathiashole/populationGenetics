@@ -33,17 +33,17 @@ format:
 |  Estadístico                    |        Bosque            |            Pradera           |
 |---------------------------------|--------------------------|------------------------------|
 | Diversidad ($\pi$)              | Alto ($0.050 \pm 0.005$) |   Bajo ($0.025 \pm 0.003$)   |
-| Sitios Segregantes ($\phi_{W}$​) | Alto ($0.053 \pm 0.003$) | Muy Bajo ($0.010 \pm 0.002$) |
+| Sitios Segregantes ($\theta{W}$​) | Alto ($0.053 \pm 0.003$) | Muy Bajo ($0.010 \pm 0.002$) |
 | $F_{SC}$                        | Alto ($0.050 \pm 0.010$) | Bajo ($0.010 \pm 0.002$)     |
 | Estructura ($F_{CT}$​)           |                  ($0.100 \pm 0.020$)                    |
 
 El Bosque presenta una diversidad nucleotídica aproximadamente el doble que la Pradera $\pi = 0.050$ vs. $0.025$. La alta diversidad en el Bosque es consistente con una población grande y ancestral, donde la variación se acumulo durante un largos período. En la Pradera la diversidad nuclotidica es menor, dos veces menor, lo que sugiere un cuello de botella/efecto fundador por esta perdida de diversidad.
 
-En el bosque se observa $\phi_{W} \approx \pi$, lo que indica una distribución equilibrada de variantes raras y de las comunes, este patron es consistente para poblaciones que estan en equilibrio demográfico. Sin embargo, la Pradera tine pocos sitios segregantes y una cantidad de alelos raros en baja cantidad. Esto ultimo, es un patron de un cuello de botella/efecto fundador.
+En el bosque se observa $\theta{W} \approx \pi$, lo que indica una distribución equilibrada de variantes raras y de las comunes, este patron es consistente para poblaciones que estan en equilibrio demográfico. Sin embargo, la Pradera tine pocos sitios segregantes y una cantidad de alelos raros en baja cantidad. Esto ultimo, es un patron de un cuello de botella/efecto fundador.
 
 Aunque no es posible calcular **Tajima’s D** sin conocer el tamaño muestral, sí puede inferirse su signo. Usando solo la diferencia entre diversidad nucleotidica y sitios segregantes. Para el $Bosque = 0.050 - 0.053 = -0.003 \rightarrow D \approx 0$, lo que corresponde a un estabilidad de la poblacion. En contraste, se observan valores muy bajos para la $Pradera = 0.025 - 0.010 = 0.015 \rightarrow D > 0$, hay muy pocos sitios segregantes y una pérdida marcada de alelos raros, esto es un patron característico de un evento fundador.
 
-Un escenario posible es que hay una población ancestral estable en el Bosque, desde allí, ocurrie una expansión o evento de fundador hacia la Pradera acompañado de un cuello de botella, lo que explica los sitios segregantes ($\phi_{W}$ bajo) y la reducción de diversidad nucleotidica ($\pi$). La posterior expansión luego del evento en la Pradera no ha permitido aún la acumulación de nuevas mutaciones, manteniendo un patrón compatible con un evento fundador.
+Un escenario posible es que hay una población ancestral estable en el Bosque, desde allí, ocurrie una expansión o evento de fundador hacia la Pradera acompañado de un cuello de botella, lo que explica los sitios segregantes ($\theta{W}$ bajo) y la reducción de diversidad nucleotidica ($\pi$). La posterior expansión luego del evento en la Pradera no ha permitido aún la acumulación de nuevas mutaciones, manteniendo un patrón compatible con un evento fundador.
 
 ## Prueba de la Hipótesis Demográfica
 
@@ -57,13 +57,9 @@ Finalmente, para evaluar la expansión, usamos el test $\psi$ desarrollado por P
 
 ## B. ¿Qué podría esperarse para los genes candidatos a haber evolucionado bajo selección positiva en los siguientes escenarios?
 
-### Gen 1: la selección direccional favorece una clase alélica particular, caracterizada por un cambio no sinónimo, en la pradera, que está asociada a pelajes más claros.
+### Gen 1: Selección Direccional en la Pradera (Pelajes Claros)
 
-Ahora analizamos cómo la selección local cambia estos estadísticos, considerando que el fondo demográfico de la Pradera es un $D$ negativo (expansión reciente/cuello de botella) y el del Bosque es $D$ neutro (se encuentra en equilibrio).
-
-Gen 1: Selección Direccional en la Pradera (Pelajes Claros)
-
-Dado, los resultados de los diferentes estadisticos, este es un escenario que describe una Barrida Selectiva (Selective Sweep) en la Pradera debido a un alelo ventajoso (pelaje claro), generando una seleccion a favor de esta nueva variante y generando una gran region seleccionada al rededor de esta variante (analogia de el avion con pasajeros).
+Este es un escenario que describe una Barrida Selectiva (Selective Sweep) en la Pradera debido a un alelo ventajoso (un cambio no sinonimo). Al propagarse rapido genera una gran region seleccionada al rededor de esta nueva variante. Asimismo, se espera que la diversidad genietica $\pi$ y los sitios segregantes $\theta_{W}$ local tengan valores significativamente bajos $(\approx 0)$, en contraste al promedio genomico de la Pradera. Si es una barrida selectiva reciente, el test de Tajima's  debe ser $D \ll 0$ localmente en la region del gen y con un $D$ diferente de fondo. Dadas estas caracteristicas, es de esperar un desequilibrio de ligamiento (LD) extendido, dado que el alelo seleccionado no ha tenido tiempo de recombinarse con el resto del genoma. Teniendo un haplotipo de alta frecuencia y gran longitud en la poblacion.  
 
 Estadístico	Pradera (Gen 1)	Justificación
 π	≈0 (Extremadamente bajo)	La barrida selectiva elimina la variación preexistente en la región, dejando la diversidad cercana a cero.
