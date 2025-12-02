@@ -55,7 +55,9 @@ Luego, para evaluar si son procesos demográficos (expansión o cuello de botell
 
 Finalmente, para evaluar la expansión, usamos el test $\psi$ desarrollado por Peter & Slatkin, diseñado para detectar expansiones recientes. Su señal direccional combinado con la señal especial, usando TDOA, permiten estimar el punto de origen de la expancion. Si el origen inferido se localiza en la región del Bosque, entonces tenemos evidencia directa en favor de la hipótesis Bosque $\rightarrow$ Pradera.
 
-B. Predicciones para los Genes Candidatos (Selección)
+## B. ¿Qué podría esperarse para los genes candidatos a haber evolucionado bajo selección positiva en los siguientes escenarios?
+
+### Gen 1: la selección direccional favorece una clase alélica particular, caracterizada por un cambio no sinónimo, en la pradera, que está asociada a pelajes más claros.
 
 Ahora analizamos cómo la selección local cambia estos estadísticos, considerando que el fondo demográfico de la Pradera es un $D$ negativo (expansión reciente/cuello de botella) y el del Bosque es $D$ neutro (se encuentra en equilibrio).
 
