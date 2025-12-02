@@ -101,6 +101,6 @@ La ecuación parcial contra el recesivo es
 
 $sn=\frac{​q_{0}​−q_{n}​​}{q_{0}​q_{n}} + \ln \left[ \frac{q_{0}​(1-q_{n})}{q_{n}(​1-q_{0})} \right]$
 
-Podemos sustituir como en el anterior ejercicio A
+Podemos sustituir el primer termino como en el anterior ejercicio A
 
 $\frac{​q_{0}​−q_{n}​​}{q_{0}​q_{n}} = \frac{1}{q_{0}}$
