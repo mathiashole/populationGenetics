@@ -70,3 +70,30 @@ En este escenario, un mismo polimorfismo se mantiene por selección equilibrador
 # Ejercicio 3
 
 ## A. Selección total contra recesivos
+
+Se quiere econtrar el número de generaciones necesarias para bajar a la mitad la frecuencia del alelo
+
+$q_{n} = \frac{1}{2}q_{0}$
+
+La ecuación contra el recesivo es
+
+$n=\frac{​q_{0}​−q_{n}​​}{q_{0}​q_{n}}$
+
+Sustituyendo $q_{n} = \frac{1}{2}q_{0}$ en la ecuación contra el recesivo
+
+$n=\frac{​q_{0}​−q_{0}/2​​}{q_{0}​(q_{n}/2)}$
+
+Sustitución Sustituimos la condición qn​=21​q0​ en la ecuación:
+n=q0​⋅(21​q0​)q0​−21​q0​​$
+
+Simplificación del Numerador
+q0​−21​q0​=21​q0​
+
+Simplificación del Denominador
+q0​⋅(21​q0​)=21​q02​
+
+Sustitución en la Fórmula de n
+n=21​q02​21​q0​​
+
+Cancelamos 21​ y un q0​:
+n=q02​q0​​=q0​1​
