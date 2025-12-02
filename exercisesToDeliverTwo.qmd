@@ -53,13 +53,29 @@ En el bosque se observa $\phi_{W} \approx \pi$, lo que indica una distribución 
 
 Aunque no es posible calcular **Tajima’s D** sin conocer el tamaño muestral, sí puede inferirse su signo. Usando solo la diferencia entre diversidad nucleotidica y sitios segregantes. Para el $Bosque = 0.050 - 0.053 = -0.003 \rightarrow D \approx 0$, lo que corresponde a un estabilidad de la poblacion. En contraste, se observan valores muy bajos para la $Pradera = 0.025 - 0.010 = 0.015 \rightarrow D > 0$, hay muy pocos sitios segregantes y una pérdida marcada de alelos raros, esto es un patron característico de un evento fundador.
 
-Hipótesis: La especie mantuvo una población ancestral estable en el Bosque. Desde allí, ocurrie una expansión o evento de fundador hacia la Pradera acompañado de un cuello de botella, lo que explica la pérdida de variantes segregantes ($\phi_{W}$ bajo) y la reducción de diversidad ($\pi$). La posterior expansión luego del evento en la Pradera no ha permitido aún la acumulación de nuevas mutaciones, manteniendo un patrón compatible con un evento fundador.
+Un escenario posible es que hay una población ancestral estable en el Bosque, desde allí, ocurrie una expansión o evento de fundador hacia la Pradera acompañado de un cuello de botella, lo que explica los sitios segregantes ($\phi_{W}$ bajo) y la reducción de diversidad nucleotidica ($\pi$). La posterior expansión luego del evento en la Pradera no ha permitido aún la acumulación de nuevas mutaciones, manteniendo un patrón compatible con un evento fundador.
 
 ## Prueba de la Hipótesis Demográfica
 
-AMOVA $F_{SC}$ y $F_{CT}$
+Para evaluar dicha hipotesis, proponemos hacerlo de forma exaustiva haciendo uso de diferentes test estadisticos.
 
-Ajuste del SFS (Espectro de Frecuencias de Sitios): Ajustar modelos demográficos (expansión, cuello de botella, migración) a la forma del SFS observado en la Pradera. El SFS de la Pradera debería ajustarse bien a un modelo de crecimiento rápido.
+Evaluar estructura genética (AMOVA: $F_{SC}$ y $F_{CT}$).
+Uno de los estadisticos presentes en el trabajo, el valor de $F_{CT}$ confirmaría una fuerte diferenciación entre Pradera y Bosque, concordante con un proceso fundador reciente. $F_{SC}$ permite ver el grado de estructura dentro de cada sitio, $F_{SC}$ alto de Bosque indica subpoblaciones bien diferenciasdas entre si, concordante con una poblacion grande y antigua. En cambio, la Pradera muestra un $F_{SC}$ bajo, subpoblaciones practicamente indistinguible entre si, esto es lo esperado para un evento fundador reciente.
+
+Análisis de ancestría (Admixture).
+Permite determinar si la Pradera representa un subconjunto del pool génico del Bosque (patrón típico de colonización unidireccional) y evaluar si hubo mezcla posterior entre ambientes.
+
+Tests de neutralidad.
+
+Tajima’s D: valores cercanos a cero en Bosque y positivos en Pradera respaldarían un cuello de botella reciente; valores negativos podrían sugerir selección positiva.
+
+Fu’s F: muy sensible a expansiones y pérdidas de haplotipos, útil para diferenciar cuellos de botella de selección.
+
+Espectro de Frecuencias Alélicas (SFS).
+La forma del SFS permitiría distinguir entre expansión, cuello de botella y selección positiva. Además, con herramientas como dadi o fastsimcoal2 se pueden comparar modelos alternativos (origen en Bosque vs. origen en Pradera, con o sin flujo génico) y estimar parámetros demográficos.
+
+Test ψ de Stajich & Hahn y análisis TDOA.
+Específicamente diseñado para detectar expansiones espaciales recientes. El signo y magnitud de ψ permiten inferir la dirección de expansión, y el método TDOA permite localizar el origen geográfico. Si el origen estimado se ubica en el Bosque, esto respaldaría directamente la hipótesis de expansión Bosque → Pradera.
 
 B. Predicciones para los Genes Candidatos (Selección)
 
