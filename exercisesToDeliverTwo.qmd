@@ -65,38 +65,6 @@ En este caso, se espera que el alelo no sinónimo favorecido en la Pradera haya 
 
 En este escenario, un mismo polimorfismo se mantiene por selección equilibradora tanto en Bosque como en Pradera. La seleccion equilibradora aumenta la diversidad local dado que se preserva dos o más haplotipos en un largo periodo de tiempo. Por lo tanto, se espera que $\pi \gg 0$ en la región del gen, siendo más alto que el promedio genómico en ambas áreas. Además, el mantenimiento de variantes en frecuencias intermedias genera un patrón característico en el Espectro de Frecuencias Alelicas (SFS) exceso de alelos comunes y déficit de alelos raros (aumenta la panza de la distribucion). Esto se puede ver en Tajima's D con un $D \gg 0$ en la region del gen. Dado que la seleccion equilibradora favorece el mismo polimorfismo en ambos ambientes, no se espera divergencia grande entre Bosque y Pradera en este locus. Por lo tanto, el $F_{CT}$ local debe ser $\ll 0.100$ que el valor genomico promedio.
 
-se espera que la seleccion equilibradora aumente la diversidad dado que hay dos alelos coexistiendo durante un largo periodo de tiempo. Siendo $\pi$ mayor que el $\pi$ promedio de Bosque como Pradera. Además, el mantenimiento de alelos de frecuencias intermedias genera un exceso de alelos comunes y un deficit de alelos raros. Se esperaria un $D \gg 0$ significativo para la region del gen. Finalmente, se esperaria un $F_CT < 0.100$ dado que la seleccion favorece el mismo polimorfismo en ambos ambientes, la seleccion previene la divergencia entre Bosque y Pradera.
+# Ejercicio 3
 
-Estadístico	Bosque y Pradera (Gen 2)	Justificación
-π	Alto (Mayor que el promedio genómico)	La selección mantiene la diversidad. La diversidad por pares (π) se infla debido a los alelos de frecuencia intermedia.
-θW​	Menor (Relativamente)	Los alelos se mantienen en frecuencias medias, en lugar de acumularse como alelos raros.
-D de Tajima	D>0	El exceso de alelos de frecuencia intermedia genera un D de Tajima positivo. Este D>0 sería una anomalía en la Pradera (cuyo fondo es D<0) y una desviación en el Bosque (cuyo fondo es D≈0).
-LD (Desequilibrio de Ligamiento)	Bajo	El polimorfismo es antiguo. El tiempo y la recombinación han descompuesto las asociaciones, manteniendo sólo el sitio bajo selección en alta diversidad.
-FCT​ (Local)	Bajo	Si la selección equilibradora favorece el mismo polimorfismo en ambos ambientes, la diferenciación genética entre el Bosque y la Pradera en este gen será menor que el promedio genómico (FCT​=0.100).
-
-Este test es altamente relevante para la parte (a) del ejercicio, ya que fue diseñado específicamente para detectar y determinar la dirección de una expansión geográfica basándose en datos genéticos, que es justamente la hipótesis que proponemos para la especie de ratón.
-
-Uso del Test de Peter y Slatkin (Ψ)
-
-Propósito del Test
-
-El índice Ψ (Psi) fue desarrollado por Peter y Slatkin (2013) para detectar asimetrías en el espectro de frecuencias alélicas entre pares de poblaciones. Estas asimetrías son la firma genética de una expansión de rango o colonización secuencial (efectos fundadores) .
-
-¿Cómo se Aplicaría al Problema del Ratón?
-
-En la Parte (a), inferimos que la expansión fue del Bosque (población ancestral más grande) a la Pradera (población cuello de botella/fundadora).
-
-    Cálculo: Se calcularía el índice Ψ utilizando los SNPs genómicos entre pares de subpoblaciones.
-
-    Resultado Esperado: Si la expansión ocurrió del Bosque a la Pradera, el valor de Ψ se espera que sea positivo al calcularlo en la dirección Bosque → Pradera.
-
-    Ventaja sobre FST​: Ψ es más sensible para detectar expansiones recientes que el FST​ o las clines de heterocigosidad, ya que se centra en el cambio de frecuencia de alelos raros que se pierden durante los eventos fundadores secuenciales.
-
-Integración con los Estadísticos Existentes
-
-Aunque el test Ψ no se puede calcular directamente con π y θW​ (requiere el Espectro de Frecuencias de Sitios completo), los resultados del ejercicio ya sugieren la dirección de la expansión, reforzando la necesidad de aplicar Ψ:
-
-Estadístico,Bosque (Fuente),Pradera (Fundadora),Conclusión
-D de Tajima,≈0,≪0,"El Bosque está en equilibrio, la Pradera ha sufrido una expansión o cuello de botella (dirección del flujo genético)."
-Diversidad (π),Alto (0.050),Bajo (0.025),La pérdida de diversidad es característica de una población recién fundada o que sufrió un cuello de botella.
-<!-- Estructura (FCT​),\multicolumn{2}{,c,}{0.100} -->
+## A. Selección total contra recesivos
