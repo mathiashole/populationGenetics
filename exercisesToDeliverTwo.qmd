@@ -59,16 +59,9 @@ Finalmente, para evaluar la expansión, usamos el test $\psi$ desarrollado por P
 
 ### Gen 1: Selección Direccional en la Pradera (Pelajes Claros)
 
-Este es un escenario que describe una Barrida Selectiva (Selective Sweep) en la Pradera debido a un alelo ventajoso (un cambio no sinonimo). Al propagarse rapido genera una gran region seleccionada al rededor de esta nueva variante. Asimismo, se espera que la diversidad genietica $\pi$ y los sitios segregantes $\theta_{W}$ local tengan valores significativamente bajos $(\approx 0)$, en contraste al promedio genomico de la Pradera. Si es una barrida selectiva reciente, el test de Tajima's  debe ser $D \ll 0$ localmente en la region del gen y con un $D$ diferente de fondo. Dadas estas caracteristicas, es de esperar un desequilibrio de ligamiento (LD) extendido, dado que el alelo seleccionado no ha tenido tiempo de recombinarse con el resto del genoma. Teniendo un haplotipo de alta frecuencia y gran longitud en la poblacion.  
+En este caso, se espera que el alelo no sinónimo favorecido en la Pradera haya generado una barrida selectiva (selective sweep) en la región que incluye al gen. Una barrida reciente reduce la variación genética local, teniendo un $\pi$ y $\theta_{W}$ que debe ser $(\approx 0)$, mientras que el promedio genómico de Pradera debe ser mas alto. Además, bajo una barrida reciente se espera que Tajima’s D sea negativo $D \ll 0$ en la región del gen. Esto debe ser contrastante con el $D$ global de Pradera. Otra caractristica esperada es un desequilibrio de ligamiento (LD) extendido alrededor del alelo favorecido, el haplotipo tendrá una alta frecuencia y una gran longitud dado que no ha pasado tiempo suficiente para la recombinación.
 
-Estadístico	Pradera (Gen 1)	Justificación
-π	≈0 (Extremadamente bajo)	La barrida selectiva elimina la variación preexistente en la región, dejando la diversidad cercana a cero.
-θW​	≈0 (Extremadamente bajo)	Por la misma razón, todos los polimorfismos se eliminan.
-D de Tajima	D≪0	El valor negativo demográfico de la Pradera se exacerba. La falta casi total de diversidad local crea un D de Tajima mucho más negativo que el promedio genómico de la Pradera.
-LD (Desequilibrio de Ligamiento)	Alto	Habrá un haplotipo extendido y de alta frecuencia en la región del Gen 1, la "huella" de la mutación favorable que se fijó rápidamente.
-FSC​ (Local)	Bajo	Si la selección fijó el alelo en todas las subpoblaciones de la Pradera, la diferenciación entre subpoblaciones localmente en este gen (FSC​) será muy baja o nula.
-
-Gen 2: Selección Equilibradora en Ambos Ambientes (Regulación, Concentración de Orina)
+## Gen 2: Selección Equilibradora en Ambos Ambientes (Regulación, Concentración de Orina)
 
 La selección equilibradora (balanceadora) mantiene múltiples alelos en frecuencias intermedias, aumentando la diversidad localmente.
 
