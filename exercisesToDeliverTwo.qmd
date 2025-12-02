@@ -28,16 +28,6 @@ format:
 
 # A. Proponer un posible escenario de expansión geográfica de la especie y cómo podría ponerse a prueba dicha hipótesis. 
 
-
-Tests y Pruebas a Utilizar
-
-Para responder a las preguntas, utilizaríamos los siguientes tests basados en los estadísticos proporcionados:
-
-Test $D$ de Tajima: Para detectar desviaciones del modelo neutral en cada área geográfica (bosque/pradera). $D= \frac{\pi - \phi}{varianza(\pi - \phi)}$​​
-
-Estadísticos F (AMOVA): Para cuantificar la estructuración genética a diferentes niveles. $F_{CT}$​ mide la diferenciación entre el Bosque y la Pradera. $F_{CT}$​ mide la diferenciación entre subpoblaciones dentro de cada área.
-
-
 ## Escenario de Expansión Geográfica
 
 |  Estadístico                    |        Bosque            |            Pradera           |
@@ -57,10 +47,13 @@ Un escenario posible es que hay una población ancestral estable en el Bosque, d
 
 ## Prueba de la Hipótesis Demográfica
 
-Para evaluar dicha hipotesis, proponemos hacerlo de forma exaustiva haciendo uso de diferentes test estadisticos.
+Para poner a prueba la hipótesis de que la población de Pradera se originó a partir de una expansión reciente desde el Bosque, debemos utilizar diferentes  análisis, proporcionando distintos enfoques para entender la historia poblacional. 
 
-Evaluar estructura genética (AMOVA: $F_{SC}$ y $F_{CT}$).
-Uno de los estadisticos presentes en el trabajo, el valor de $F_{CT}$ confirmaría una fuerte diferenciación entre Pradera y Bosque, concordante con un proceso fundador reciente. $F_{SC}$ permite ver el grado de estructura dentro de cada sitio, $F_{SC}$ alto de Bosque indica subpoblaciones bien diferenciasdas entre si, concordante con una poblacion grande y antigua. En cambio, la Pradera muestra un $F_{SC}$ bajo, subpoblaciones practicamente indistinguible entre si, esto es lo esperado para un evento fundador reciente.
+En primer lugar, analizar la estructura genética con el $F_{CT}$ y $F_{SC}$ proporcionados. El $F_{CT}$ de forma moderada confirma diferenciación entre Pradera y Bosque. $F_{SC}$ alto de Bosque indica subpoblaciones con aislamiento parcial entre las subpoblaciones, Pradera muestra un $F_{SC}$ bajo, subpoblaciones entre si son homogeneas, esto es lo esperado para un expansion recinete/efecto fundador.
+
+Luego, para evaluar si son procesos demográficos (expansión o cuello de botella) o a selección, proponemos usar tests de neutralidad como Tajima’s D. Valores cercanos a cero en Bosque (estable) y desviados en Pradera serían compatibles con un cuello de botella, valores negativos podrían indicar expansion reciente o barrida selectiva (nivel local). Pudiendo ser útil modelar el Espectro de Frecuencias Alélicas (SFS), permitiendo comparar directamente modelos demográficos e identificar cuál describe mejor los datos.
+
+
 
 Análisis Structure
 Permite determinar si la Pradera representa un subconjunto del pool génico del Bosque (patrón típico de colonización unidireccional) y evaluar si hubo mezcla posterior entre ambientes.
