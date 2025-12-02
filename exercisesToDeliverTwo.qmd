@@ -26,9 +26,9 @@ format:
       colorlinks: true
 ---
 
-# A. Proponer un posible escenario de expansión geográfica de la especie y cómo podría ponerse a prueba dicha hipótesis. 
+# Ejercicio 1
 
-## Escenario de Expansión Geográfica
+## A. Proponer un posible escenario de expansión geográfica de la especie y cómo podría ponerse a prueba dicha hipótesis. 
 
 |  Estadístico                    |        Bosque            |            Pradera           |
 |---------------------------------|--------------------------|------------------------------|
@@ -36,6 +36,8 @@ format:
 | Sitios Segregantes ($\theta{W}$​) | Alto ($0.053 \pm 0.003$) | Muy Bajo ($0.010 \pm 0.002$) |
 | $F_{SC}$                        | Alto ($0.050 \pm 0.010$) | Bajo ($0.010 \pm 0.002$)     |
 | Estructura ($F_{CT}$​)           |                  ($0.100 \pm 0.020$)                    |
+
+### Escenario de Expansión Geográfica
 
 El Bosque presenta una diversidad nucleotídica aproximadamente el doble que la Pradera $\pi = 0.050$ vs. $0.025$. La alta diversidad en el Bosque es consistente con una población grande y estable que ha estado en equilibrio demográfico durante mucho tiempo, lo que le permite acumular variación. En Pradera la diversidad nucleotidica es reducida a la mitad y muy bajos sitios segregantes. Esta pérdida de variación es caracteristico de un cuello de botella o evento fundador.
 
@@ -45,7 +47,7 @@ Aunque no es posible calcular **Tajima’s D** sin conocer el tamaño muestral, 
 
 Un escenario posible es que hay una población ancestral estable en el Bosque, desde allí, ocurrie un evento de fundador hacia la Pradera acompañado de un cuello de botella, lo que explica los sitios segregantes ($\theta{W}$ bajo) y la reducción de diversidad nucleotidica ($\pi$). La posterior expansión luego del evento en la Pradera no ha permitido aún la acumulación de nuevas mutaciones, manteniendo un patrón compatible con un evento fundador.
 
-## Prueba de la Hipótesis Demográfica
+### Prueba de la Hipótesis Demográfica
 
 Para poner a prueba la hipótesis de que la población de Pradera se originó a partir de una expansión reciente desde el Bosque, debemos utilizar diferentes  análisis, proporcionando distintos enfoques para entender la historia poblacional. 
 
