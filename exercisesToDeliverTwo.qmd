@@ -53,7 +53,7 @@ En primer lugar, analizar la estructura genética con el $F_{CT}$ y $F_{SC}$ pro
 
 Luego, para evaluar si son procesos demográficos (expansión o cuello de botella) o a selección, proponemos usar tests de neutralidad como Tajima’s D. Valores cercanos a cero en Bosque (estable) y desviados en Pradera serían compatibles con un cuello de botella, valores negativos podrían indicar expansion reciente o barrida selectiva (nivel local). Pudiendo ser útil modelar el Espectro de Frecuencias Alélicas (SFS), permitiendo comparar directamente modelos demográficos e identificar cuál describe mejor los datos.
 
-Finalmente, para evaluar la expansión, usamos el test $\psi$ desarrollado por Peter & Slatkin, diseñado para detectar expansiones recientes. La señal direccional y especialmente, usando del enfoque TDOA, permiten estimar el punto de origen de la expancion. Si el origen inferido se localiza en la región de Bosque, ello constituiría evidencia directa en favor de la hipótesis Bosque → Pradera. En conjunto, la integración de estos enfoques —ancestría, estructura, demografía y dirección espacial— permite distinguir entre expansión reciente, deriva, mezcla o selección positiva, y evaluar de manera robusta el escenario histórico propuesto.
+Finalmente, para evaluar la expansión, usamos el test $\psi$ desarrollado por Peter & Slatkin, diseñado para detectar expansiones recientes. Su señal direccional combinado con la señal especial, usando TDOA, permiten estimar el punto de origen de la expancion. Si el origen inferido se localiza en la región del Bosque, entonces tenemos evidencia directa en favor de la hipótesis Bosque $\rightarrow$ Pradera.
 
 B. Predicciones para los Genes Candidatos (Selección)
 
