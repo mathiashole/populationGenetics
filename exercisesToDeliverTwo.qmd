@@ -61,7 +61,7 @@ Finalmente, para evaluar la expansión, usamos el test $\psi$ desarrollado por P
 
 En este caso, se espera que el alelo no sinónimo favorecido en la Pradera haya generado una barrida selectiva (selective sweep) en la región que incluye al gen. Una barrida reciente reduce la variación genética local, teniendo un $\pi$ y $\theta_{W}$ que debe ser $(\approx 0)$, mientras que el promedio genómico de Pradera debe ser mas alto. Además, bajo una barrida reciente se espera que Tajima’s D sea negativo $D \ll 0$ en la región del gen. Esto debe ser contrastante con el $D$ global de Pradera. Otra caractristica esperada es un desequilibrio de ligamiento (LD) extendido alrededor del alelo favorecido, el haplotipo tendrá una alta frecuencia y una gran longitud dado que no ha pasado tiempo suficiente para la recombinación.
 
-## Gen 2: Selección Equilibradora en Ambos Ambientes (Regulación, Concentración de Orina)
+## Gen 2: Selección Equilibradora en Ambos Ambientes (Concentración de Orina)
 
 La selección equilibradora (balanceadora) mantiene múltiples alelos en frecuencias intermedias, aumentando la diversidad localmente.
 
