@@ -53,22 +53,7 @@ En primer lugar, analizar la estructura genética con el $F_{CT}$ y $F_{SC}$ pro
 
 Luego, para evaluar si son procesos demográficos (expansión o cuello de botella) o a selección, proponemos usar tests de neutralidad como Tajima’s D. Valores cercanos a cero en Bosque (estable) y desviados en Pradera serían compatibles con un cuello de botella, valores negativos podrían indicar expansion reciente o barrida selectiva (nivel local). Pudiendo ser útil modelar el Espectro de Frecuencias Alélicas (SFS), permitiendo comparar directamente modelos demográficos e identificar cuál describe mejor los datos.
 
-
-
-Análisis Structure
-Permite determinar si la Pradera representa un subconjunto del pool génico del Bosque (patrón típico de colonización unidireccional) y evaluar si hubo mezcla posterior entre ambientes.
-
-Tests de neutralidad.
-
-Tajima’s D: valores cercanos a cero en Bosque y positivos en Pradera respaldarían un cuello de botella reciente; valores negativos podrían sugerir selección positiva.
-
-Fu’s F: muy sensible a expansiones y pérdidas de haplotipos, útil para diferenciar cuellos de botella de selección.
-
-Espectro de Frecuencias Alélicas (SFS).
-La forma del SFS permitiría distinguir entre expansión, cuello de botella y selección positiva. Además, con herramientas como dadi o fastsimcoal2 se pueden comparar modelos alternativos (origen en Bosque vs. origen en Pradera, con o sin flujo génico) y estimar parámetros demográficos.
-
-Test ψ de Stajich & Hahn y análisis TDOA.
-Específicamente diseñado para detectar expansiones espaciales recientes. El signo y magnitud de ψ permiten inferir la dirección de expansión, y el método TDOA permite localizar el origen geográfico. Si el origen estimado se ubica en el Bosque, esto respaldaría directamente la hipótesis de expansión Bosque → Pradera.
+Finalmente, para evaluar la expansión, usamos el test $\psi$ desarrollado por Peter & Slatkin, diseñado para detectar expansiones recientes. La señal direccional y especialmente, usando del enfoque TDOA, permiten estimar el punto de origen de la expancion. Si el origen inferido se localiza en la región de Bosque, ello constituiría evidencia directa en favor de la hipótesis Bosque → Pradera. En conjunto, la integración de estos enfoques —ancestría, estructura, demografía y dirección espacial— permite distinguir entre expansión reciente, deriva, mezcla o selección positiva, y evaluar de manera robusta el escenario histórico propuesto.
 
 B. Predicciones para los Genes Candidatos (Selección)
 
