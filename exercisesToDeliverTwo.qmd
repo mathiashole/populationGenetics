@@ -21,7 +21,8 @@ urlcolor: darkblue
 highlight-style: arrow
 format: 
     pdf:
-      toc: true
+      toc: false
+      toc-depth: 2
       number-sections: true
       colorlinks: true
 ---
