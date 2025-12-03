@@ -50,7 +50,7 @@ Un escenario posible es que hay una población ancestral estable en el Bosque, d
 
 ### Prueba de la Hipótesis Demográfica
 
-Para poner a prueba la hipótesis de que la población de Pradera se originó a partir de una expansión reciente desde el Bosque, debemos utilizar diferentes  análisis, proporcionando distintos enfoques para entender la historia poblacional. 
+Para poner a prueba la hipótesis de que el Bosque actúa como población estable, mientras que la población de la Pradera se formó a través de un evento de cuello de botella seguido de un periodo de expansión, con un flujo génico Bosque $\rightarrow$ Pradera, debemos utilizar diferentes  análisis, proporcionando distintos enfoques para entender la historia poblacional. 
 
 En primer lugar, analizar la estructura genética con el $F_{CT}$ y $F_{SC}$ proporcionados. El $F_{CT}$ diferenciación moderada pero significativa entre las dos áreas (Bosque vs. Pradera), compatible con el aislamiento por distancia tras un evento fundador. El Bosque presenta un $F_{SC}$ moderado, sugiriendo estructura local con cierto grado de aislamiento entre las subpoblaciones. En cambio, para Pradera muestra un $F_{SC}$ bajo, subpoblaciones entre si son homogeneas. Esta homogeneidad es caracteristica de una rápida mezcla.
 
