@@ -72,15 +72,11 @@ En este escenario, un mismo polimorfismo se mantiene por selección equilibrador
 
 ## Calcular los coeficientes de endocría (F) de los individuos m, I y k
 
-$m$ es un individuo perteneciente a la generación 900 de una población de tamaño efectivo que varia cíclicamente siguiendo la secuencia 10 generaciones con N = 50, 10 generaciones con N = 200, 10 generaciones con N = 1000.
+### Endogamia del individuo m
 
-El ciclo de 30 generaciones se repite de forma estable. El individuo $m$ lo colocamos en una población diferente y grande, apareandose con una pareja no emparetada. Debemos calcular el coficiente de endogamia de m $F_{m}$
+El individuo m pertenece a la generación 900 en una población donde el tamaño efectivo varia cíclicamente 10 generaciones con N = 50, 10 generaciones con N = 200, 10 generaciones con N = 1000.
 
-El coeficiente de endogamia luego de $t$ generaciones
-
-$F_{t} = 1 - \prod_{i=1}^{t} \left(1 - \frac{1}{2N_{i}} \right)$
-
-Tenemos un ciclo de 30 generaciones ($10$ a $N=50$, $10$ a $N=200$, $10$ a $N=1000$) que se repite. $m$ está en la generación $900$ $\rightarrow$ $900/30 = 30$ ciclos completos.
+El ciclo de 30 generaciones se repite de forma estable. Tenemos un ciclo de 30 generaciones ($10$ a $N=50$, $10$ a $N=200$, $10$ a $N=1000$) que se repite. $m$ está en la generación $900$ $\rightarrow$ $900/30 = 30$ ciclos.
 
 $R1=\left(1-\frac{1}{2 \cdot 50}\right) = (0.99)^{10} \approx 0.9043821$ 
 
@@ -90,19 +86,29 @@ $R3=\left(1-\frac{1}{2 \cdot 1000}\right) = (0.9995)^{10} \approx 0.9950112$
 
 Producto por ciclo $R_{ciclo} = R1R2R3 \approx 0.87762498$
 
-Luego de 30 ciclos la probabilidad de no coalescer es $R_{ciclos}^{30} \approx 0.01991908$ siendo 
+Luego de 30 ciclos $R_{ciclos}^{30} \approx 0.01991908$ siendo 
 
 $F_{m} = 1 - 0.01991908 \approx 0.98008092$
 
-Coeficiente de consanguinidad entre primos $(KH)$
+El individuo m tiene un coeficiente de endogamia muy alto.
+
+### Cosanguinidad entre K y H
+
+Los padres de K y H son hermanos, pero las parejas de esos padres provienen de otra población y no están emparentadas, son primos.
 
 $R_{KH} = \left(\frac{1}{2}\right)^4(1 + F_{m})$ $\rightarrow$ $R_{KH} = \frac{1}{16}\cdot(1 + 0.98008092)$
+
+$R_{KH} \approx 0.123755$
+
+### Endogamia del individuo I
 
 La endogamia de I hijo de K y H
 
 $F_{I} = R_{KH}$
 
 $R_{I} \approx 0.123755$
+
+### Endogamia de los individuos K y H
 
 Los padres de K y H son endogámicos, pero su pareja no es emparentada con con estos, por lo que los hijos K y H no es endogámico por parentesco.
 
@@ -148,11 +154,11 @@ $\frac{​q_{0}​−q_{n}​​}{q_{0}​q_{n}} = \frac{1}{q_{0}}$
 
 sustituimos la siguiente expresion sabiendo que necesitamos bajar a la mitad la frecuencia del alelo $q_{n} = \frac{1}{2}q_{0}$
 
-$\ln \left[ \frac{q_{0}​(1-q_{n})}{q_{n}(​1-q_{0})} \right] = \ln \left[ \frac{q_{0}​(1-(q_{0}/2))}{(q_{0}/2)(​1-q_{0})} \right] = \ln \left[ \frac{1-q_{n}/2}{1/2(​1-q_{0})} \right]$
+$\ln \left[ \frac{q_{0}​(1-q_{n})}{q_{n}(​1-q_{0})} \right] = \ln \left[ \frac{q_{0}​(1-(q_{0}/2))}{(q_{0}/2)(​1-q_{0})} \right]$
 
 Para eliminar el $\frac{1}{2}$ multiplicamos por el reciproco $\frac{2}{1}$ multiplicando en el numerador y denominador
 
-$\frac{1-q_{n}/2}{1/2(​1-q_{0})} \cdot \frac{2}{2} = \frac{2-q_{0}}{1-q_{0}}$
+$\frac{q_{0}​(1-(q_{0}/2))}{(q_{0}/2)(​1-q_{0})} \cdot \frac{2}{2} = \frac{2-q_{0}}{1-q_{0}}$
 
 Finalmente, Para despejar $n$, dividimos ambos lados de la ecuación por el coeficiente de selección $s$
 
