@@ -40,7 +40,7 @@ format:
 
 ### Escenario de Expansión Geográfica
 
-El Bosque presenta una diversidad nucleotídica aproximadamente el doble que la Pradera $\pi = 0.050$ vs. $0.025$. La alta diversidad en el Bosque es consistente con una población grande y estable que ha estado en equilibrio demográfico durante mucho tiempo, lo que le permite acumular variación. En Pradera la diversidad nucleotidica es reducida a la mitad y muy bajos sitios segregantes. Esta pérdida de variación es caracteristico de un cuello de botella o evento fundador.
+El Bosque presenta una diversidad nucleotídica aproximadamente el doble que la Pradera $\pi = 0.050$ vs. $0.025$. La alta diversidad en el Bosque es consistente con una población grande y estable que esta en equilibrio demográfico durante tiempo, acumulando variación. En Pradera la diversidad nucleotidica es reducida a la mitad y con pocos sitios segregantes. Esta pérdida de variación es caracteristico de un cuello de botella o evento fundador.
 
 En el bosque se observa $\theta{W} \approx \pi$, lo que indica una distribución equilibrada de variantes raras y de las comunes, este patron es consistente para poblaciones que estan en equilibrio demográfico. Sin embargo, la Pradera tine pocos sitios segregantes y una cantidad de alelos raros en baja cantidad. Esto ultimo, es un patron de un cuello de botella/efecto fundador.
 
