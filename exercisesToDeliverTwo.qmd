@@ -46,7 +46,7 @@ En el bosque se observa $\theta_{W} \approx \pi$, lo que indica una distribució
 
 Aunque no es posible calcular Tajima’s D con nuestros datos, se puede inferirse su signo. Usando solo la diferencia entre diversidad nucleotidica y sitios segregantes. Para el $Bosque = 0.050 - 0.053 = -0.003 \approx 0$, lo que corresponde equilibrio mutación-deriva, siendo estable durante tiempo. En contraste, la $Pradera = 0.025 - 0.010 = 0.015 > 0$, tiene las caracteristicas de un cuello de botella/efecto fundador que ocurrió hace un tiempo suficiente para que la deriva elimine los alelos raros y desplace las frecuencias restantes a valores intermedios.
 
-Un escenario posible es que hay una población ancestral estable en el Bosque, deonde ocurrio un evento fundador hacia la Pradera acompañado de un cuello de botella. La deriva genética durante el cuello de botella eliminó los alelos raros y nuevos reduciendo $\theta_{W}$ y $\pi$ bajo, pero mayor $\theta_{W}$​.
+Un escenario posible es que hay una población ancestral estable en el Bosque, deonde ocurrio un evento fundador hacia la Pradera acompañado de un cuello de botella. La deriva genética durante el cuello de botella eliminó los alelos raros y nuevos $\theta_{W}$ y $\pi$ bajo, pero mayor $\theta_{W}$​.
 
 ### Prueba de la Hipótesis Demográfica
 
@@ -78,29 +78,27 @@ El individuo m pertenece a la generación 900 en una población donde el tamaño
 
 El ciclo de 30 generaciones se repite de forma estable. Tenemos un ciclo de 30 generaciones ($10$ a $N=50$, $10$ a $N=200$, $10$ a $N=1000$) que se repite. $m$ está en la generación $900$ $\rightarrow$ $900/30 = 30$ ciclos.
 
-$R1=\left(1-\frac{1}{2 \cdot 50}\right) = (0.99)^{10} \approx 0.9043821$ 
+$\left(1-\frac{1}{2 \cdot 50}\right) = (0.99)^{10} \approx 0.9043821$ 
 
-$R2=\left(1-\frac{1}{2 \cdot 200}\right) = (0.9975)^{10} \approx 0.9752794$
+$\left(1-\frac{1}{2 \cdot 200}\right) = (0.9975)^{10} \approx 0.9752794$
 
-$R3=\left(1-\frac{1}{2 \cdot 1000}\right) = (0.9995)^{10} \approx 0.9950112$ 
+$\left(1-\frac{1}{2 \cdot 1000}\right) = (0.9995)^{10} \approx 0.9950112$ 
 
-Producto por ciclo $R_{ciclo} = R1R2R3 \approx 0.87762498$
+Producto por ciclo $ciclo = ciclo1 \cdot ciclo2 \cdot ciclo3 \approx 0.87762498$
 
-Luego de 30 ciclos $R_{ciclos}^{30} \approx 0.01991908$ siendo 
+Luego de 30 ciclos $(ciclos)^{30} \approx 0.01991908$ siendo 
 
 $F_{m} = 1 - 0.01991908 \approx 0.98008092$
 
 El individuo m tiene un coeficiente de endogamia muy alto.
 
-### Cosanguinidad entre K y H
+### Endogamia del individuo I
 
-Los padres de K y H son hermanos, pero las parejas de esos padres provienen de otra población y no están emparentadas, son primos.
+Consanguinidad entre primos integrando la endogamia de m
 
 $R_{KH} = \left(\frac{1}{2}\right)^4(1 + F_{m})$ $\rightarrow$ $R_{KH} = \frac{1}{16}\cdot(1 + 0.98008092)$
 
 $R_{KH} \approx 0.123755$
-
-### Endogamia del individuo I
 
 La endogamia de I hijo de K y H
 
