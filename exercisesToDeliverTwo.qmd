@@ -1,11 +1,11 @@
 ---
-title: Second 
+title: Genética de poblaciones, 2025
 date: today
 date-format: "DD MMMM, YYYY"
 author: 
   Mathias
 abstract:
-    Genética de poblaciones 2025
+    Segundo parcial
 abstractspacing: double
 appendix: false
 fontfamily: libertine
