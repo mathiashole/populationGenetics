@@ -89,6 +89,20 @@ Luego de 30 ciclos la probabilidad de no coalescer es $R_{ciclos}^{30} \approx 0
 
 $F_{m} = 1 - 0.01991908 \approx 0.98008092$
 
+Coeficiente de consanguinidad entre primos $(KH)$
+
+$R_{KH} = \left(\frac{1}{2}\right)^4(1 + F_{m})$ $\rightarrow$ $R_{KH} = \frac{1}{16}\cdot(1 + 0.98008092)$
+
+La endogamia de I hijo de K y H
+
+$F_{I} = R_{KH}$
+
+$R_{KH} \approx 0.123755$
+
+No se produce endogamia en K o H. Por tanto, aunque los padres de k sean endogámicos, si su pareja es no emparentada con él, el hijo no es endogámico por parentesco.
+
+$F_{K} = F_{H} = 0$
+
 # Ejercicio 3
 
 ## A. Selección total contra recesivos
