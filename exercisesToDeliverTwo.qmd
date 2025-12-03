@@ -126,7 +126,7 @@ $n=\frac{​q_{0}​−q_{n}​​}{q_{0}​q_{n}}$
 
 Sustituyendo $q_{n} = \frac{1}{2}q_{0}$ en la ecuación contra el recesivo
 
-$n=\frac{​q_{0}​−q_{0}/2​​}{q_{0}​(q_{n}/2)}$
+$n=\frac{​q_{0}​−q_{0}/2​​}{q_{0}​(q_{0}/2)}$
 
 Para el numerador usamos $q_{0}.1 = \frac{2}{2}q_{0}$ sustituimos
 
