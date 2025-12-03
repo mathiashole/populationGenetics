@@ -71,9 +71,16 @@ En este escenario, un mismo polimorfismo se mantiene por selección equilibrador
 
 ## Calcular los coeficientes de endocría (F) de los individuos m, I y k
 
-La endogamia acumulada de m, es la probabilidad de no coalescencia en $t$ generaciones es el producto $\prod_{i}\left(1-\frac{1}{2N_{i}}\right)$. Entonces
+$m$ es un individuo perteneciente a la generación 900 de una población de tamaño efectivo que varia cíclicamente siguiendo la secuencia
+10 generaciones con N = 50
+10 generaciones con N = 200
+10 generaciones con N = 1000
 
-$1 - \prod_{i=1}^{t} \left(1 - \frac{1}{2N_{i}} \right)$
+El ciclo de 30 generaciones se repite de forma estable. El individuo $m$ lo colocamos en una población diferente y grande, apareandose con una pareja no emparetada. Debemos calcular el coficiente de endogamia de m $F_{m}$
+
+El coeficiente de endogamia luego de $t$ generaciones
+
+$F_{t} = 1 - \prod_{i=1}^{t} \left(1 - \frac{1}{2N_{i}} \right)$
 
 Tenemos un ciclo de 30 generaciones ($10$ a $N=50$, $10$ a $N=200$, $10$ a $N=1000$) que se repite. $m$ está en la generación $900$ $\rightarrow$ $900/30 = 30$ ciclos completos.
 
