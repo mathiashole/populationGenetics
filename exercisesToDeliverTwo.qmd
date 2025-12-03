@@ -71,10 +71,7 @@ En este escenario, un mismo polimorfismo se mantiene por selección equilibrador
 
 ## Calcular los coeficientes de endocría (F) de los individuos m, I y k
 
-$m$ es un individuo perteneciente a la generación 900 de una población de tamaño efectivo que varia cíclicamente siguiendo la secuencia
-10 generaciones con N = 50
-10 generaciones con N = 200
-10 generaciones con N = 1000
+$m$ es un individuo perteneciente a la generación 900 de una población de tamaño efectivo que varia cíclicamente siguiendo la secuencia 10 generaciones con N = 50, 10 generaciones con N = 200, 10 generaciones con N = 1000.
 
 El ciclo de 30 generaciones se repite de forma estable. El individuo $m$ lo colocamos en una población diferente y grande, apareandose con una pareja no emparetada. Debemos calcular el coficiente de endogamia de m $F_{m}$
 
@@ -104,9 +101,9 @@ La endogamia de I hijo de K y H
 
 $F_{I} = R_{KH}$
 
-$R_{KH} \approx 0.123755$
+$R_{I} \approx 0.123755$
 
-No se produce endogamia en K o H. Por tanto, aunque los padres de k sean endogámicos, si su pareja es no emparentada con él, el hijo no es endogámico por parentesco.
+Los padres de K y H son endogámicos, pero su pareja no es emparentada con con estos, por lo que los hijos K y H no es endogámico por parentesco.
 
 $F_{K} = F_{H} = 0$
 
