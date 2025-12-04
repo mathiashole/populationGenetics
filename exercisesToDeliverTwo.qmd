@@ -165,3 +165,5 @@ $n= \frac{1}{s} \left(  \frac{1​​}{q_{0}} + \ln \left[ \frac{2-q_{0}}{​1-q
 # geneRax
 
 $E_{e} = p^L + p^S (E_{f}E_{g}) + p^D (E_{e}^2) + p^T (E_{e}E_{e})$
+
+$E_{e} = \sum_{h} \in \mathscr{T}(e) \frac{E_{h}}{\lvert \mathscr{T}(e) \rvert}$
