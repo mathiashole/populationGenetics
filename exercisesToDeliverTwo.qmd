@@ -167,3 +167,5 @@ $n= \frac{1}{s} \left(  \frac{1​​}{q_{0}} + \ln \left[ \frac{2-q_{0}}{​1-q
 $E_{e} = p^L + p^S (E_{f}E_{g}) + p^D (E_{e}^2) + p^T (E_{e}E_{e})$
 
 $E_{e} = \sum_{h} \in \mathscr{T}(e) \frac{E_{h}}{\lvert \mathscr{T}(e) \rvert}$
+
+$[E_{e}]^{n} = p^L + p^S [E_{f}]^{n-1}[E_{g}^{n-1}] + p^D ([E_{e}]^{n-1})^{2} + p^T [E_{e}]^{n-1} \sum_{h} \in \mathscr{T}(e) [E_{e}]^{n-1}/\mathscr{T}(e)$
