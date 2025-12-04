@@ -173,3 +173,5 @@ $[E_{e}]^{n} = p^L + p^S [E_{f}]^{n-1}[E_{g}^{n-1}] + p^D ([E_{e}]^{n-1})^{2} + 
 $P_{u,e} = p^S (P_{v,g} P_{w,f} + P_{w,g} P_{v,f}) + p^S (E_{f} P_{v,g} + P_{v,f} E_{g}) + p^D (P_{v,e} P_{w,e}) + p^D (2P_{v,e} P_{e}) + p^T (P_{w}^e P_{v,e} + P_{v}^{e} P_{v,e}) + p^T (P_{v,e} E_{e} + E_{e} P{u,e})$
 
 $P_{u,e} = \sum_{h} \in \mathscr{T}(e) \frac{P_{u,e}}{\lvert \mathscr{T}(e) \rvert}$
+
+$L(S,N,G)= \sum_{s \in V(S)} P_{r,s}/\sum_{s \in V(S)}(1-E_{s})$
