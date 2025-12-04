@@ -161,3 +161,7 @@ $\frac{q_{0}​(1-(q_{0}/2))}{(q_{0}/2)(​1-q_{0})} \cdot \frac{2}{2} = \frac{2
 Finalmente, Para despejar $n$, dividimos ambos lados de la ecuación por el coeficiente de selección $s$
 
 $n= \frac{1}{s} \left(  \frac{1​​}{q_{0}} + \ln \left[ \frac{2-q_{0}}{​1-q_{0}} \right]\right)$
+
+# geneRax
+
+$E_{e} = p^L + p^S (E_{f}E_{g}) + p^D (E_{e}^2) + p^T (E_{e}E_{e})$
